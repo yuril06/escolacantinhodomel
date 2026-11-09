@@ -35,3 +35,25 @@ Cada painel tem uma cor e uma tinta. Sem gradiente, sem sombra em repouso, sem l
 - Margens externas: 20px celular, 32px desktop.
 - Seções separadas por troca de campo de cor, 120–200px de respiro.
 - A borda de mel escorrendo (SVG) aparece só na transição da primeira tela e no rodapé.
+
+## Revisão de 09/11/2026: espaços para fotos
+
+As fotos antigas (baixa resolução) saíram do site e estão em `../fotos-antigas-baixa-qualidade/`.
+No lugar de cada uma há um espaço reservado branco (`.ph`), com o nome da foto que deve entrar ali.
+
+Para colocar uma foto nova, troque o bloco inteiro:
+
+```html
+<div class="ph ph-45" role="img" aria-label="..."> ... </div>
+```
+
+por uma imagem com as **mesmas classes** mais `ph-photo` (`ph-45` = 4:5, `ph-32` = 3:2, `ph-fill` = preenche o espaço):
+
+```html
+<img class="ph ph-45 ph-photo" src="img/nova-foto.jpg" alt="Descrição da foto" width="1200" height="1500" loading="lazy">
+```
+
+Use fotos com no mínimo 1200px no lado maior.
+
+**Parte viva, agora são três:** "Aberto agora" no topo (horário de Brasília), "Um dia no Cantinho" (arrastar a abelha
+de 6h30 a 19h) e "Monte a matrícula" (chips de idade e período, nome opcional, mensagem pronta para o WhatsApp).
