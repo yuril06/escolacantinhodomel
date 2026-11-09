@@ -36,24 +36,19 @@ Cada painel tem uma cor e uma tinta. Sem gradiente, sem sombra em repouso, sem l
 - Seções separadas por troca de campo de cor, 120–200px de respiro.
 - A borda de mel escorrendo (SVG) aparece só na transição da primeira tela e no rodapé.
 
-## Revisão de 09/11/2026: espaços para fotos
+## Revisão de 09/11/2026 (segunda versão, a que está no ar)
 
-As fotos antigas (baixa resolução) saíram do site e estão em `../fotos-antigas-baixa-qualidade/`.
-No lugar de cada uma há um espaço reservado branco (`.ph`), com o nome da foto que deve entrar ali.
+A direção "Loud and flat" foi suavizada a pedido do cliente: escala de texto contida (h1 até 72px, h2 até 46px),
+grade com largura máxima de 1240px, imagens retas com proporções fixas (4:3, 4:5, 1:1, 16:9) e cantos de 24px.
 
-Para colocar uma foto nova, troque o bloco inteiro:
+**Fotos.** A fachada, a logo e os logos Positivo/CCAA são da escola. As fotos de atividades e ambientes em
+`img/fotos/` são **ilustrativas, geradas por IA no estilo banco de imagens** (Higgsfield, GPT Image), sem logo
+nem fachada de outras escolas. O rodapé avisa "Fotos de atividades ilustrativas". Para trocar por foto real, substitua o
+arquivo em `img/fotos/` mantendo o mesmo nome (WebP, por volta de 1200px de largura) e as proporções:
+quadrados na galeria, 4:3 nos cursos e aulas extras, 4:5 nos espaços.
 
-```html
-<div class="ph ph-45" role="img" aria-label="..."> ... </div>
-```
+As fotos antigas (baixa resolução) estão em `../fotos-antigas-baixa-qualidade/`.
 
-por uma imagem com as **mesmas classes** mais `ph-photo` (`ph-45` = 4:5, `ph-32` = 3:2, `ph-fill` = preenche o espaço):
-
-```html
-<img class="ph ph-45 ph-photo" src="img/nova-foto.jpg" alt="Descrição da foto" width="1200" height="1500" loading="lazy">
-```
-
-Use fotos com no mínimo 1200px no lado maior.
-
-**Parte viva, agora são três:** "Aberto agora" no topo (horário de Brasília), "Um dia no Cantinho" (arrastar a abelha
-de 6h30 a 19h) e "Monte a matrícula" (chips de idade e período, nome opcional, mensagem pronta para o WhatsApp).
+**Partes interativas:** "Aberto agora" (horário de Brasília), abas dos cursos, "Um dia no Cantinho" (arrastar a abelha),
+galeria que amplia a foto, carrossel dos espaços com setas, dúvidas em acordeão e "Monte a matrícula" com mensagem pronta
+para o WhatsApp.

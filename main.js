@@ -3,27 +3,6 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  /* ---------- Ajusta palavras gigantes à largura ---------- */
-  const fit = () => {
-    const els = $$('[data-fit]');
-    els.forEach((el) => { el.style.fontSize = ''; });
-    const small = innerWidth <= 760;
-    const sizes = els.map((el) => {
-      if (small && el.closest('.mega')) return 0;
-      const box = el.closest('.wrap') || el.parentElement;
-      const cs = getComputedStyle(box);
-      const avail = box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-      const w = el.offsetWidth;
-      const size = parseFloat(getComputedStyle(el).fontSize);
-      return w && avail ? Math.floor(size * (avail / w) * 0.992) : 0;
-    });
-    els.forEach((el, i) => { if (sizes[i]) el.style.fontSize = sizes[i] + 'px'; });
-  };
-  const refit = () => requestAnimationFrame(fit);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refit);
-  addEventListener('resize', refit);
-  fit();
-
   /* ---------- Menu ---------- */
   const btn = $('.menu-btn');
   const menu = $('#menu');
@@ -39,7 +18,7 @@
     btn.addEventListener('click', () => set(!menu.classList.contains('open')));
     menu.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('open')) { set(false); btn.focus(); } });
-    matchMedia('(min-width: 1081px)').addEventListener('change', (m) => { if (m.matches) set(false); });
+    matchMedia('(min-width: 1041px)').addEventListener('change', (m) => { if (m.matches) set(false); });
   }
 
   /* ---------- Aberto agora? (horário de Brasília) ---------- */
@@ -55,25 +34,50 @@
     const { day, min } = brNow();
     const weekday = !['Sat', 'Sun'].includes(day);
     const open = weekday && min >= 390 && min < 1140;
-    const txt = $('.status-txt', status);
     status.classList.toggle('open', open);
     status.classList.toggle('closed', !open);
     let when = 'amanhã';
     if (weekday && min < 390) when = 'hoje';
     else if (day === 'Fri' || day === 'Sat') when = 'segunda';
-    txt.textContent = open ? 'Aberto agora · até as 19h' : 'Fechado agora · abre ' + when + ' às 6h30';
+    $('.status-txt', status).textContent = open ? 'Aberto agora · até as 19h' : 'Fechado agora · abre ' + when + ' às 6h30';
   };
   updateStatus();
   setInterval(updateStatus, 60000);
 
+  /* ---------- Abas dos cursos ---------- */
+  const tabs = $$('.tabs [role="tab"]');
+  if (tabs.length) {
+    const select = (tab, focus) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        const p = document.getElementById(t.getAttribute('aria-controls'));
+        p.hidden = !on;
+        if (on && !reduce) { p.classList.remove('enter'); void p.offsetWidth; p.classList.add('enter'); }
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', (e) => {
+        const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (k) { e.preventDefault(); select(tabs[(i + k + tabs.length) % tabs.length], true); }
+        if (e.key === 'Home') { e.preventDefault(); select(tabs[0], true); }
+        if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1], true); }
+      });
+    });
+    tabs.forEach((t) => { document.getElementById(t.getAttribute('aria-controls')).hidden = t.getAttribute('aria-selected') !== 'true'; });
+  }
+
   /* ---------- Um dia no Cantinho ---------- */
   const day = [
-    [390, 'Chegada e café da manhã', 'O portão abre às 6h30. Quem chega cedo toma café com calma, na nossa cozinha.'],
+    [390, 'Chegada e café da manhã', 'O portão abre às 6h30. Quem chega cedo toma café com calma, preparado na nossa cozinha.'],
     [465, 'Roda de conversa', 'A turma se encontra, canta, conta as novidades e combina o dia.'],
     [525, 'Atividades do Sistema Positivo', 'Hora de aprender fazendo: linguagem, números, natureza e muita mão na massa.'],
     [600, 'Lanche e parquinho', 'Fruta fresquinha e depois parquinho, para correr, subir e descer.'],
     [675, 'Almoço', 'Comida feita na hora, com o cardápio da nutricionista Aline Fregozzi.'],
-    [735, 'Saída do meio período e descanso', 'Quem fica no meio período da manhã vai para casa. Os outros descansam no soninho.'],
+    [735, 'Saída do meio período e descanso', 'Quem fica meio período vai para casa. Os outros descansam no soninho.'],
     [855, 'Atividades da tarde', 'Histórias, artes, dramatização e brincadeiras dirigidas em sala.'],
     [930, 'Lanche da tarde', 'Uma pausa gostosa antes da próxima aventura.'],
     [975, 'Aulas extras', 'Ballet, taekwondo, musicalização, futebol, inglês, artes e educação física, conforme a grade da turma.'],
@@ -82,16 +86,14 @@
   ];
   const range = $('#clock-range');
   if (range) {
-    const tEl = $('#clock-time'), title = $('#clock-title'), text = $('#clock-text'), now = $('.clock-now'), fill = $('#clock-fill');
-    const track = $('.clock-track');
+    const tEl = $('#clock-time'), title = $('#clock-title'), text = $('#clock-text'), now = $('.clock-now'), track = $('.clock-track');
     let last = -1;
     const show = (v) => {
       v = Number(v);
       let i = 0;
       day.forEach((d, k) => { if (v >= d[0]) i = k; });
       tEl.textContent = fmt(v);
-      const p = (v - 390) / (1140 - 390);
-      track.style.setProperty('--v', p);
+      track.style.setProperty('--v', (v - 390) / 750);
       range.setAttribute('aria-valuetext', fmt(v) + ', ' + day[i][1].toLowerCase());
       if (i !== last) {
         title.textContent = day[i][1];
@@ -101,59 +103,60 @@
       }
     };
     const { day: wd, min } = brNow();
-    const startAt = !['Sat', 'Sun'].includes(wd) && min >= 390 && min <= 1140 ? Math.round(min / 15) * 15 : 480;
-    range.value = startAt;
+    range.value = !['Sat', 'Sun'].includes(wd) && min >= 390 && min <= 1140 ? Math.round(min / 15) * 15 : 480;
     show(range.value);
     range.addEventListener('input', () => show(range.value));
   }
 
-  /* ---------- Fitas que rolam sozinhas: duplica para loop contínuo ---------- */
-  ['.ribbon-track', '.strip-track'].forEach((sel) => {
-    const track = $(sel);
-    if (!track || reduce) return;
-    [...track.children].forEach((c) => {
-      const k = c.cloneNode(true);
-      k.setAttribute('aria-hidden', 'true');
-      k.removeAttribute('aria-label');
-      k.removeAttribute('role');
-      track.appendChild(k);
+  /* ---------- Acordeão das dúvidas (animado) ---------- */
+  $$('.acc details').forEach((d) => {
+    const sum = $('summary', d), body = $('.acc-body', d);
+    sum.addEventListener('click', (e) => {
+      if (reduce) return;
+      e.preventDefault();
+      if (d.open) {
+        const a = body.animate([{ height: body.offsetHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 260, easing: 'cubic-bezier(.2,.8,.2,1)' });
+        a.onfinish = () => { d.open = false; };
+      } else {
+        d.open = true;
+        body.animate([{ height: '0px', opacity: 0 }, { height: body.offsetHeight + 'px', opacity: 1 }], { duration: 340, easing: 'cubic-bezier(.2,.8,.2,1)' });
+      }
     });
   });
-  const strip = $('.strip');
-  const toggle = $('.strip-toggle');
-  if (strip && toggle) {
-    if (reduce) toggle.hidden = true;
-    toggle.addEventListener('click', () => {
-      const paused = strip.classList.toggle('paused');
-      toggle.setAttribute('aria-pressed', String(paused));
-      toggle.textContent = paused ? 'Mover' : 'Pausar';
-    });
+
+  /* ---------- Espaços: setas do carrossel ---------- */
+  const sc = $('.rooms-scroller');
+  if (sc) {
+    const navs = $$('.nav-btn');
+    const upd = () => {
+      navs.forEach((b) => {
+        const dir = Number(b.dataset.dir);
+        b.disabled = dir < 0 ? sc.scrollLeft <= 4 : sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4;
+      });
+    };
+    navs.forEach((b) => b.addEventListener('click', () => {
+      const card = sc.querySelector('figure');
+      sc.scrollBy({ left: Number(b.dataset.dir) * (card.offsetWidth + 16) * 2, behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    sc.addEventListener('scroll', upd, { passive: true });
+    addEventListener('resize', upd);
+    upd();
   }
 
-  /* ---------- Aulas extras: abre uma por vez, com animação ---------- */
-  const bars = $$('#bars details');
-  bars.forEach((d) => {
-    const sum = $('summary', d);
-    sum.addEventListener('click', (e) => {
-      e.preventDefault();
-      const opening = !d.open;
-      if (opening) bars.forEach((o) => { if (o !== d && o.open) collapse(o); });
-      opening ? expand(d) : collapse(d);
-    });
-    function expand(el) {
-      el.open = true;
-      if (reduce) return;
-      const b = $('.bar-body', el);
-      const h = b.offsetHeight;
-      b.animate([{ height: '0px', opacity: 0 }, { height: h + 'px', opacity: 1 }], { duration: 420, easing: 'cubic-bezier(.2,.8,.2,1)' });
-    }
-    function collapse(el) {
-      if (reduce) { el.open = false; return; }
-      const b = $('.bar-body', el);
-      const a = b.animate([{ height: b.offsetHeight + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' });
-      a.onfinish = () => { el.open = false; };
-    }
-  });
+  /* ---------- Galeria: amplia a foto ---------- */
+  const lb = $('#lightbox');
+  if (lb && typeof lb.showModal === 'function') {
+    const lbImg = $('img', lb), lbCap = $('.lb-cap', lb);
+    $$('.zoom').forEach((z) => z.addEventListener('click', () => {
+      const im = $('img', z);
+      lbImg.src = im.currentSrc || im.src;
+      lbImg.alt = im.alt;
+      lbCap.textContent = z.dataset.cap || '';
+      lb.showModal();
+    }));
+    $('.lb-close', lb).addEventListener('click', () => lb.close());
+    lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+  }
 
   /* ---------- Monte a matrícula ---------- */
   const form = $('#enroll');
@@ -166,8 +169,8 @@
       const per = p.startsWith('meio') ? p : 'período ' + p;
       const nome = kid.value.trim();
       cls.textContent = turma;
-      meta.textContent = 'Turma indicada para ' + faixa + ', ' + per;
-      if (turma !== lastTurma && lastTurma && !reduce) { cls.classList.remove('pop'); void cls.offsetWidth; cls.classList.add('pop'); }
+      meta.textContent = faixa + ' · ' + p;
+      if (lastTurma && turma !== lastTurma && !reduce) { cls.classList.remove('pop'); void cls.offsetWidth; cls.classList.add('pop'); }
       lastTurma = turma;
       const quem = nome ? 'Gostaria de informações de matrícula para ' + nome + ', de ' + faixa : 'Tenho uma criança de ' + faixa;
       const t = 'Olá! Vim pelo site do Cantinho do Mel. ' + quem + ' (turma ' + turma + '), ' + per + '. Pode me passar os valores e um horário para visita?';
@@ -186,22 +189,25 @@
 
   /* ---------- Entradas em sequência ---------- */
   const groups = [
-    '.hero-lede > *', '.hero-side > *', '.hero-foot > *',
-    '.about-pin > *', '.portrait',
-    '.courses-head > *', '.sheet-text > *',
-    '.day-head > *', '.spec', '.clock',
-    '.extras-col > *', '.bars details',
-    '.stair span', '.mission-photos .ph', '.mission-note',
-    '.tile', '.card > *',
-    '.band-grid > *',
-    '.contact-head > *', '.enroll-picks > *', '.ticket', '.contact-info', '.map',
-    '.foot-top > *', '.foot-call > *'
+    '.hero-text > *', '.hero-facts li', '.hero-photo',
+    '.seals-in > *',
+    '.mosaic > *', '.about-text > h2', '.about-text > .lede', '.pillars li',
+    '.sec-head > *', '.tabs', '.panels',
+    '.clock',
+    '.act',
+    '.mission-photo', '.mission-text > *',
+    '.gal-grid li', '.rooms-scroller figure',
+    '.faq-side > *', '.acc details',
+    '.enroll-picks > *', '.ticket',
+    '.contact-info', '.map',
+    '.foot-cta > *'
   ];
   const parts = [];
   groups.forEach((sel) => {
     $$(sel).forEach((el, i) => {
+      if (el.classList.contains('rv')) return;
       el.classList.add('rv');
-      el.style.setProperty('--d', String(i % 6));
+      el.style.setProperty('--d', String(i % 5));
       parts.push(el);
     });
   });
@@ -210,72 +216,64 @@
   } else {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
     parts.forEach((el) => io.observe(el));
   }
 
   /* ---------- Números que contam ---------- */
-  const counters = $$('[data-count]');
   if (!reduce && 'IntersectionObserver' in window) {
     const co = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
         co.unobserve(e.target);
         const el = e.target, end = Number(el.dataset.count);
-        const start = end > 1000 ? end - 40 : 0;
-        const t0 = performance.now(), dur = 1300;
+        const start = end > 1000 ? end - 30 : 0;
+        const t0 = performance.now(), dur = 1200;
         const tick = (t) => {
           const k = Math.min(1, (t - t0) / dur);
-          const ease = 1 - Math.pow(1 - k, 3);
-          el.textContent = String(Math.round(start + (end - start) * ease));
+          el.textContent = String(Math.round(start + (end - start) * (1 - Math.pow(1 - k, 3))));
           if (k < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
       });
     }, { threshold: .6 });
-    counters.forEach((c) => co.observe(c));
+    $$('[data-count]').forEach((c) => co.observe(c));
   }
 
-  /* ---------- Rolagem: topo, abelha, nome que pesa, foto ---------- */
+  /* ---------- Rolagem: topo, abelha, foto do topo, botão do WhatsApp ---------- */
   const top = $('#top');
   const bee = $('.progress');
-  const mega = $('.mega-line');
   const heroImg = $('.hero-photo img');
   const fab = $('.wa-fab');
-  let lastY = scrollY, ticking = false;
+  let lastY = scrollY, ticking = false, idle;
   const onScroll = () => {
     ticking = false;
     const y = scrollY;
-    const max = document.documentElement.scrollHeight - innerHeight;
-    top.classList.toggle('scrolled', y > 24);
+    const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    top.classList.toggle('scrolled', y > 20);
     if (bee) {
       bee.style.setProperty('--p', Math.min(1, Math.max(0, y / max)).toFixed(4));
-      bee.style.setProperty('--tilt', Math.max(-14, Math.min(14, (y - lastY) * .8)).toFixed(1));
+      bee.style.setProperty('--tilt', Math.max(-12, Math.min(12, (y - lastY) * .6)).toFixed(1));
+      clearTimeout(idle); idle = setTimeout(() => bee.style.setProperty('--tilt', 0), 160);
     }
-    if (fab) fab.classList.toggle('show', y > innerHeight * .6);
-    if (!reduce) {
-      const k = Math.min(1, y / (innerHeight * .9));
-      if (mega) mega.style.transform = 'scale(' + (1 - k * .07).toFixed(4) + ')';
-      if (heroImg) heroImg.style.transform = 'scale(' + (1.08 - k * .08).toFixed(4) + ') translateY(' + (k * -3).toFixed(2) + '%)';
+    if (fab) fab.classList.toggle('show', y > innerHeight * .5);
+    if (heroImg && !reduce) {
+      const k = Math.min(1, y / innerHeight);
+      heroImg.style.transform = 'scale(' + (1.04 - k * .04).toFixed(4) + ')';
     }
     lastY = y;
   };
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();
-  if (bee) {
-    let idle;
-    addEventListener('scroll', () => { clearTimeout(idle); idle = setTimeout(() => bee.style.setProperty('--tilt', 0), 160); }, { passive: true });
-  }
 
   /* ---------- Link ativo no menu ---------- */
-  const links = $$('.menu a[href^="#"]');
+  const links = $$('.menu a[href^="#"]:not(.btn)');
   const map = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
   if ('IntersectionObserver' in window) {
     const so = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         const a = map.get(e.target.id);
-        if (!a) return;
-        if (e.isIntersecting) { links.forEach((l) => l.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true'); }
+        if (a && e.isIntersecting) { links.forEach((l) => l.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true'); }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     map.forEach((_, id) => { const s = document.getElementById(id); if (s) so.observe(s); });

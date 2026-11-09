@@ -17,8 +17,8 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/fachada.jpg" imagesrcset="img/fachada-900.jpg 900w, img/fachada.jpg 1846w" imagesizes="(max-width: 700px) 100vw, 86vw">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/fachada.jpg" imagesrcset="img/fachada-900.jpg 900w, img/fachada.jpg 1846w" imagesizes="(max-width: 760px) 100vw, 1240px">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {
@@ -48,30 +48,32 @@
 <body>
 <script>document.documentElement.classList.add('js')</script>
 
-<!-- Ícone usado nos espaços reservados para fotos -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-img" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="7" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="17" cy="19" r="4" fill="currentColor"/><path d="M8 35l10-10 7 7 6-6 10 10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
   <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10 10.1 5.3 16 5.3S26.7 10 26.7 15.8 21.9 26.5 16 26.5zm5.9-8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-hex" viewBox="0 0 24 24"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0114 0C19 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
 </svg>
 
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
 <header class="top" id="top">
-  <div class="top-bar wrap">
-    <a class="brand" href="#topo" aria-label="Cantinho do Mel, voltar ao início">
-      <img src="img/logo.webp" alt="Cantinho do Mel, Educação Infantil e Berçário" width="1200" height="250">
-    </a>
-    <nav id="menu" class="menu" aria-label="Principal">
-      <a href="#escola">A escola</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#rotina">O dia</a>
-      <a href="#extras">Aulas extras</a>
-      <a href="#duvidas">Dúvidas</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn-navy menu-cta" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Cantinho%20do%20Mel." target="_blank" rel="noopener">Agendar visita</a>
-    </nav>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn-txt">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+  <div class="top-bar">
+    <div class="container top-in">
+      <a class="brand" href="#topo" aria-label="Cantinho do Mel, voltar ao início">
+        <img src="img/logo.webp" alt="Cantinho do Mel, Educação Infantil e Berçário" width="1200" height="250">
+      </a>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#escola">A escola</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#rotina">Rotina</a>
+        <a href="#extras">Aulas extras</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-navy menu-cta" href="#matricula">Agendar visita</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn-txt">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
   </div>
   <div class="drip-row" aria-hidden="true">
     <svg class="drip" viewBox="0 0 1440 60" preserveAspectRatio="none" focusable="false"><path d="M0 0H1440V14C1418 14 1414 44 1398 44S1380 14 1352 14 1322 22 1306 22 1290 14 1262 14 1238 52 1218 52 1196 14 1168 14 1140 28 1124 28 1106 14 1078 14 1056 40 1040 40 1022 14 994 14 968 24 952 24 936 14 908 14 884 56 862 56 840 14 812 14 790 30 774 30 758 14 730 14 706 46 688 46 670 14 642 14 618 22 602 22 586 14 558 14 532 50 512 50 492 14 464 14 440 32 424 32 408 14 380 14 356 42 338 42 320 14 292 14 268 24 252 24 236 14 208 14 182 54 162 54 142 14 114 14 92 30 76 30 60 14 32 14 16 38 0 38Z"/></svg>
@@ -83,325 +85,258 @@
 
 <!-- HERO -->
 <section id="topo" class="hero" aria-labelledby="hero-title">
-  <div class="hero-top wrap">
-    <div class="hero-lede">
-      <p>Educação infantil e berçário em Santo André desde 1992. Bebês a partir de 4 meses, das 6h30 às 19h. <strong>Matrículas abertas para 2027.</strong></p>
-      <div class="hero-actions">
-        <a class="btn btn-navy btn-lg" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20matr%C3%ADculas%20no%20Cantinho%20do%20Mel." target="_blank" rel="noopener"><svg width="22" height="22" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
-        <a class="link-arrow" href="#matricula">Monte a matrícula <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span class="status-txt">Segunda a sexta, 6h30 às 19h</span></p>
+        <h1 id="hero-title">Um cantinho doce para crescer</h1>
+        <p class="lede">Educação infantil e berçário no Parque das Nações, em Santo André, desde 1992. Bebês a partir de 4 meses, das 6h30 às 19h.</p>
+        <div class="hero-actions">
+          <a class="btn btn-navy btn-lg" href="#matricula">Montar a matrícula</a>
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20matr%C3%ADculas%20no%20Cantinho%20do%20Mel." target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-side">
-      <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span class="status-txt">Segunda a sexta, 6h30 às 19h</span></p>
-      <p class="hero-call"><a href="tel:+551126778022">(11) 2677-8022</a><br><a href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">@escola_cantinho_do_mel</a></p>
-    </div>
-  </div>
-
-  <div class="mega-wrap wrap">
-    <h1 id="hero-title" class="mega" translate="no"><span class="mega-line" data-fit><span class="w">Cantinho</span> <span class="w">do</span> <span class="w">Mel</span></span><span class="sr"> · Escola de Educação Infantil e Berçário em Santo André</span></h1>
-  </div>
-
-  <div class="hero-foot wrap">
-    <p>Rua Colúmbia, 438 · Parque das Nações · Santo André</p>
-    <p>Berçário · Nível I a IV · 7 aulas extras</p>
-  </div>
-
-  <figure class="hero-photo">
-    <div class="hero-photo-in">
-      <img src="img/fachada.jpg" srcset="img/fachada-900.jpg 900w, img/fachada.jpg 1846w" sizes="(max-width: 700px) 100vw, 86vw" alt="Fachada da escola na Rua Colúmbia, 438: faixa amarela de mel escorrendo, letras azuis Cantinho do Mel, muro pintado com sol e abelhas e a abelha gigante no telhado" width="1846" height="852" fetchpriority="high">
-    </div>
-    <figcaption>A nossa fachada, na Rua Colúmbia, 438. É só procurar a abelha no telhado.</figcaption>
-  </figure>
-</section>
-
-<!-- Fita de palavras -->
-<div class="ribbon" aria-hidden="true">
-  <div class="ribbon-track">
-    <span>Berçário I</span><span>Berçário II</span><span>Nível I</span><span>Nível II</span><span>Nível III</span><span>Nível IV</span><span>Ballet</span><span>Taekwondo</span><span>Musicalização</span><span>Inglês CCAA</span><span>Futebol</span><span>Artes</span><span>Cozinha própria</span><span>Sistema Positivo</span>
-  </div>
-</div>
-
-<!-- SOBRE: título fixo, retratos passam -->
-<section id="escola" class="about" aria-labelledby="about-title">
-  <div class="about-grid wrap">
-    <div class="about-pin">
-      <h2 id="about-title" class="about-title">Desde 1992</h2>
-      <p class="about-lede">A Escola Cantinho do Mel atende crianças a partir de 4 meses, num ambiente aconchegante, seguro e estimulador. O berçário tem planejamento próprio para cada faixa etária, e a Educação Infantil usa o Sistema de Ensino Positivo.</p>
-      <ul class="facts">
-        <li><strong data-count="34">34</strong> anos no Parque das Nações</li>
-        <li><strong>4 meses</strong> idade mínima no berçário</li>
-        <li><strong data-count="7">7</strong> aulas extras dentro da escola</li>
+      <ul class="hero-facts" aria-label="Em números">
+        <li><strong data-count="1992">1992</strong><span>o ano em que abrimos</span></li>
+        <li><strong><span data-count="4">4</span> meses</strong><span>idade mínima no berçário</span></li>
+        <li><strong>12h30</strong><span>de portas abertas por dia</span></li>
+        <li><strong data-count="7">7</strong><span>aulas extras na escola</span></li>
       </ul>
-      <a class="btn btn-navy" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Cantinho%20do%20Mel." target="_blank" rel="noopener">Agendar uma visita</a>
     </div>
-    <div class="about-list">
-      <article class="portrait">
-        <div class="ph ph-45" role="img" aria-label="Espaço reservado para foto: uma escola de bairro"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · fachada ou pátio</span></span></div>
-        <h3>Uma escola de bairro</h3>
-        <p class="role">Parque das Nações</p>
-        <p>Em atividade desde 1992, com um amplo espaço e instalações pensadas só para a educação infantil.</p>
-      </article>
-      <article class="portrait">
-        <div class="ph ph-45" role="img" aria-label="Espaço reservado para foto: equipe com afeto"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · equipe</span></span></div>
-        <h3>Equipe com afeto</h3>
-        <p class="role">Profissionais qualificados</p>
-        <p>Uma equipe qualificada, com muito profissionalismo e carinho, que acompanha cada aluno de forma humana e sensível.</p>
-      </article>
-      <article class="portrait">
-        <div class="ph ph-45" role="img" aria-label="Espaço reservado para foto: família por perto"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · evento com famílias</span></span></div>
-        <h3>Família por perto</h3>
-        <p class="role">Datas e eventos</p>
-        <p>Festa junina, Dia dos Pais, carnaval: a família participa da vida da escola, e o dia a dia chega pela agenda digital.</p>
-      </article>
-      <article class="portrait">
-        <div class="ph ph-45" role="img" aria-label="Espaço reservado para foto: aprender fazendo"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · atividade em sala</span></span></div>
-        <h3>Aprender fazendo</h3>
-        <p class="role">Sistema de Ensino Positivo</p>
-        <p>Na Educação Infantil o aluno aprende com atividades práticas, programadas à medida que os conteúdos avançam.</p>
-      </article>
-      <article class="portrait">
-        <div class="ph ph-45" role="img" aria-label="Espaço reservado para foto: horários flexíveis"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · chegada ou saída</span></span></div>
-        <h3>Horários flexíveis</h3>
-        <p class="role">6h30 às 19h</p>
-        <p>Meio período, semi-integral ou integral, num ambiente seguro e bem assessorado que atende à rotina de cada família.</p>
-      </article>
-    </div>
+
+    <figure class="hero-photo">
+      <img src="img/fachada.jpg" srcset="img/fachada-900.jpg 900w, img/fachada.jpg 1846w" sizes="(max-width: 760px) 100vw, 1240px" alt="Fachada da escola na Rua Colúmbia, 438: faixa amarela de mel escorrendo, letras azuis Cantinho do Mel, muro pintado com sol e abelhas e a abelha gigante no telhado" width="1846" height="852" fetchpriority="high">
+      <figcaption class="hero-tag"><svg width="20" height="20" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Rua Colúmbia, 438</strong> Parque das Nações · Santo André</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- CURSOS: folhas que empilham -->
-<section id="cursos" class="courses" aria-labelledby="cursos-title">
-  <div class="courses-head wrap">
-    <h2 id="cursos-title" class="h-xl">Nossos cursos</h2>
-    <p>Do primeiro colo ao último ano antes do fundamental: cada turma tem sala, rotina e planejamento próprios.</p>
-  </div>
-  <div class="sheets">
-    <article class="sheet sheet-honey" style="--i:0">
-      <div class="sheet-text">
-        <h3>Berçário</h3>
-        <div>
-          <p>Cuidado e educação num ambiente tranquilo, que transmite confiança, afeto e aprendizagens que fazem sentido para os bebês. Cada bebê é acompanhado individualmente por profissionais qualificados, com supervisão direta da coordenação.</p>
-          <ul class="chips" aria-label="Turmas do berçário"><li>Berçário I · 4 a 11 meses</li><li>Berçário II · 1 ano</li></ul>
-        </div>
-      </div>
-      <div class="ph ph-fill" role="img" aria-label="Espaço reservado para foto do berçário"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · berçário</span></span></div>
-    </article>
-    <article class="sheet sheet-orange" style="--i:1">
-      <div class="sheet-text">
-        <h3>Educação Infantil</h3>
-        <div>
-          <p>Uma base sólida para o crescimento saudável. Atividades que desenvolvem a criança física, social e emocionalmente, e muita linguagem com histórias, dramatização e brincadeiras, respeitando o jeito de cada um.</p>
-          <ul class="chips" aria-label="Turmas da Educação Infantil"><li>Nível I · 2 anos</li><li>Nível II · 3 anos</li><li>Nível III · 4 anos</li><li>Nível IV · 5 anos</li></ul>
-        </div>
-      </div>
-      <div class="ph ph-fill" role="img" aria-label="Espaço reservado para foto da Educação Infantil"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · roda de conversa</span></span></div>
-    </article>
-    <article class="sheet sheet-navy" style="--i:2">
-      <div class="sheet-text">
-        <h3>Alimentação</h3>
-        <div>
-          <p>Tudo é preparado em cozinha própria, com alimentos fresquinhos e refeições equilibradas. A equipe recebe treinamento periódico de higiene, conservação e manipulação dos alimentos.</p>
-          <ul class="chips" aria-label="Destaques da alimentação"><li>Cardápio da nutricionista Aline Fregozzi</li><li>Respeita o pediatra de cada criança</li><li>Aula de nutrição</li></ul>
-        </div>
-      </div>
-      <div class="ph ph-fill" role="img" aria-label="Espaço reservado para foto da cozinha ou da hora do lanche"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · hora do lanche</span></span></div>
-    </article>
-    <article class="sheet sheet-sky" style="--i:3">
-      <div class="sheet-text">
-        <h3>Proposta pedagógica</h3>
-        <div>
-          <p>Formação integral: capacidades motoras, afetivas, sociais e cognitivas. Partimos da realidade de cada aluno e, com estímulos e desafios, ele age sobre o mundo, entende o que fez e constrói o próprio conhecimento.</p>
-          <ul class="chips" aria-label="Pilares da proposta"><li>Dinâmica</li><li>Global</li><li>Significativa</li></ul>
-        </div>
-      </div>
-      <div class="ph ph-fill" role="img" aria-label="Espaço reservado para foto de atividade pedagógica"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · atividade prática</span></span></div>
-    </article>
-  </div>
-</section>
-
-<!-- O DIA: duas palavras gigantes + linha do dia interativa -->
-<section id="rotina" class="day" aria-labelledby="day-title">
-  <div class="day-head wrap">
-    <h2 id="day-title" class="h-l">Um dia inteiro com a gente</h2>
-    <p>O portão abre às 6h30 e a última saída é às 19h, de segunda a sexta. Meio período, semi-integral ou integral; o integral inclui todas as refeições, feitas na nossa cozinha.</p>
-  </div>
-  <div class="day-spec wrap" aria-hidden="true">
-    <div class="spec"><p class="spec-word">6h30</p></div>
-    <div class="spec"><p class="spec-word">19h</p></div>
-  </div>
-
-  <div class="clock wrap" id="clock">
-    <div class="clock-read">
-      <p class="clock-time" id="clock-time" aria-hidden="true">8h00</p>
-      <div class="clock-now" aria-live="polite">
-        <h3 id="clock-title">Roda de conversa</h3>
-        <p id="clock-text">A turma se encontra, canta, conta as novidades e combina o dia.</p>
-      </div>
-    </div>
-    <label class="clock-label" for="clock-range">Arraste para ver o que acontece em cada hora</label>
-    <div class="clock-track">
-      <div class="clock-fill" id="clock-fill"></div>
-      <input type="range" id="clock-range" min="390" max="1140" step="15" value="480" aria-describedby="clock-title" aria-valuetext="8h00, roda de conversa">
-      <ol class="clock-marks" aria-hidden="true">
-        <li style="--p:0">6h30</li><li style="--p:.2">9h</li><li style="--p:.4">11h30</li><li style="--p:.6">14h</li><li style="--p:.8">16h30</li><li style="--p:1">19h</li>
-      </ol>
-    </div>
-    <p class="clock-note">Rotina de referência para a Educação Infantil; cada turma tem a sua.</p>
-    <noscript><p class="clock-note">Chegada e café a partir das 6h30 · roda de conversa · atividades do Sistema Positivo · parque · almoço · descanso · lanche · aulas extras · jantar · saída até 19h.</p></noscript>
-  </div>
-</section>
-
-<!-- EXTRAS: palavra gigante, barras -->
-<section id="extras" class="extras" aria-labelledby="extras-title">
-  <div class="extras-grid wrap">
-    <div class="extras-col">
-      <h2 id="extras-title" class="extras-word">Extras</h2>
-      <p class="extras-intro">Valorizar a criatividade e oferecer estímulos diferentes ajuda a criança a desenvolver várias habilidades. Por isso o Cantinho do Mel tem sete aulas especiais, dentro da escola.</p>
-    </div>
-    <div class="bars" id="bars">
-      <details open>
-        <summary><span>Ballet</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>Dançar é divertido e faz bem ao corpo e às emoções. Melhora a coordenação motora, traz disciplina e esforço, e favorece a criatividade, a musicalidade e o trabalho em grupo.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto da aula de ballet"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · ballet</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Educação física</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>O movimento do corpo tem papel essencial no desenvolvimento infantil: expressa emoções, melhora a postura e a linguagem corporal e desenvolve a capacidade afetiva e intelectual.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto da educação física"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · educação física</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Taekwondo</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>Concentração e disciplina. Ao dominar o corpo, a criança ganha autoestima e segurança, aprende honestidade, lealdade, companheirismo, respeito e humildade, e conhece costumes de outra cultura.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto do taekwondo"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · taekwondo</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Musicalização</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>A iniciação musical estimula áreas do cérebro que ajudam outras linguagens e muitas habilidades motoras e intelectuais. E é uma forma de a criança expressar o que sente.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto da musicalização"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · musicalização</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Futebol</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>Desenvolve caminhar, saltar e correr, e também arremessar e chutar a bola. Movimento que tem papel essencial na educação infantil.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto do futebol"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · futebol</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Inglês</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>É na Educação Infantil que a criança mais desenvolve suas potencialidades. Quanto antes começar o contato com o inglês, mais facilidade e naturalidade ela terá. Em parceria com o CCAA.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto da aula de inglês"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · inglês</span></span></div>
-        </div>
-      </details>
-      <details>
-        <summary><span>Artes</span><i aria-hidden="true"></i></summary>
-        <div class="bar-body">
-          <p>A criança pensa como um artista: entra fácil no faz de conta e usa o dom de fantasiar. Um simples traço vira o telhado de uma casa.</p>
-          <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto da aula de artes"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · artes</span></span></div>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- MISSÃO: frase em escada -->
-<section id="missao" class="mission" aria-labelledby="mission-title">
-  <div class="mission-grid wrap">
-    <p class="stair">
-      <span>Conhecimento, afeto</span>
-      <span>e um ambiente</span>
-      <span>aconchegante para</span>
-      <span>formar cidadãos</span>
-      <span>conscientes.</span>
-    </p>
-    <div class="mission-photos">
-      <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · pintura</span></span></div>
-      <div class="ph ph-32" role="img" aria-label="Espaço reservado para foto"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Foto · brincadeira</span></span></div>
-    </div>
-    <div class="mission-note">
-      <h2 id="mission-title">Missão, visão e valores</h2>
-      <p>Nossa visão é ser referência em berçário e educação infantil. Nossos valores: cooperação, transparência, respeito, comprometimento, inovação e formação dos alunos.</p>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA: parede de ladrilhos -->
-<section id="galeria" class="wall" aria-labelledby="wall-title">
-  <div class="tiles">
-    <div class="tile t-honey tile-first"><h2 id="wall-title" class="tile-word tile-head">Aconteceu na escola</h2><a class="tile-cap tile-ig" href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">Mais no Instagram <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto de atividades"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Atividades</span></span></div></div>
-    <div class="tile t-navy"><p class="tile-word" data-count="1992">1992</p><p class="tile-cap">o ano em que abrimos</p></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto do ballet"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Ballet</span></span></div></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto das salas"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Nossas salas</span></span></div></div>
-    <div class="tile t-orange"><p class="tile-word"><span data-count="4">4</span>m</p><p class="tile-cap">idade mínima no berçário</p></div>
-    <div class="tile t-sky"><p class="tile-word" data-count="438">438</p><p class="tile-cap">Rua Colúmbia</p></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto do taekwondo"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Taekwondo</span></span></div></div>
-    <div class="tile t-sky"><p class="tile-word" data-count="7">7</p><p class="tile-cap">aulas extras</p></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto da hora do lanche"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Hora do lanche</span></span></div></div>
-    <div class="tile t-honey"><p class="tile-word">12h30</p><p class="tile-cap">de portas abertas por dia</p></div>
-    <div class="tile tile-ph"><div class="ph" role="img" aria-label="Espaço reservado para foto da musicalização"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Musicalização</span></span></div></div>
-  </div>
-</section>
-
-<!-- PARCEIROS: cartão impresso -->
-<section id="parceiros" class="partners" aria-labelledby="partners-title">
-  <div class="card">
-    <h2 id="partners-title">Quem caminha com a gente</h2>
-    <p class="names">Positivo, sistema de ensino&nbsp;· CCAA, inglês&nbsp;· Kid Note, agenda digital&nbsp;· N'Atividade, esporte e nutrição&nbsp;· Aline Fregozzi, nutricionista</p>
-    <ul class="logos" aria-label="Logos dos parceiros">
+<!-- Selos -->
+<section class="seals" aria-label="Parceiros">
+  <div class="container seals-in">
+    <p class="seals-txt">Escola conveniada ao <strong>Sistema de Ensino Positivo</strong>, inglês com o <strong>CCAA</strong>, agenda digital <strong>Kid Note</strong> e cardápio da nutricionista <strong>Aline Fregozzi</strong>.</p>
+    <ul class="seal-logos">
       <li><img src="img/positivo.webp" alt="Sistema de Ensino Positivo, escola conveniada" width="800" height="365" loading="lazy"></li>
       <li><img src="img/ccaa.webp" alt="CCAA" width="700" height="508" loading="lazy"></li>
-      <li><div class="ph ph-logo" role="img" aria-label="Espaço reservado para o logo Kid Note"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Logo · Kid Note</span></span></div></li>
-      <li><div class="ph ph-logo" role="img" aria-label="Espaço reservado para o logo N'Atividade"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Logo · N'Atividade</span></span></div></li>
     </ul>
   </div>
 </section>
 
-<!-- DÚVIDAS: uma faixa por pergunta -->
-<section id="duvidas" class="faq" aria-labelledby="faq-title">
-  <div class="band band-head"><h2 id="faq-title" class="wrap">Perguntas das famílias</h2></div>
-  <div class="band"><div class="wrap band-grid"><h3>Com que idade meu filho pode começar?</h3><p>No berçário recebemos bebês a partir de 4 meses. Depois, a criança segue pelos níveis da Educação Infantil (Nível I a Nível IV), sempre com planejamento próprio para cada faixa etária.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Qual é o horário da escola?</h3><p>De segunda a sexta, das 6h30 às 19h. Você escolhe entre meio período, semi-integral ou integral, com horários flexíveis para a sua rotina.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Qual material didático vocês usam?</h3><p>A Educação Infantil usa o Sistema de Ensino Positivo, da Editora Positivo. Somos escola conveniada. O berçário tem planejamentos próprios para cada idade.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Como funciona a alimentação?</h3><p>As refeições são feitas em cozinha própria, com alimentos frescos. O cardápio é da nutricionista Aline Fregozzi e respeita a orientação do pediatra da criança. Restrições e alergias são combinadas com a família.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Como é a estrutura da escola?</h3><p>Salas próprias para Berçário I, Berçário II e cada nível da Educação Infantil, além de biblioteca, brinquedoteca, parquinho, quadra coberta e cozinha própria. Venha conhecer pessoalmente.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Como acompanho o dia do meu filho?</h3><p>Pela agenda digital Kid Note, no celular: recados, rotina e comunicados da escola chegam direto para a família.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>A escola é segura?</h3><p>Sim. A escola tem sistema de segurança com câmeras e alarme e uma vaga exclusiva de embarque e desembarque escolar na porta. Os bebês são supervisionados de perto pela coordenação.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Quais aulas extras estão incluídas?</h3><p>Ballet, educação física, taekwondo, musicalização, futebol, inglês e artes, todas dentro da escola. Pergunte no WhatsApp quais estão incluídas no período que você escolher.</p></div></div>
-  <div class="band"><div class="wrap band-grid"><h3>Como faço a matrícula e quanto custa?</h3><p>As matrículas estão abertas. Os valores dependem do período e da turma, então o melhor caminho é montar a matrícula aqui embaixo, chamar no WhatsApp (11) 94871-4027 ou agendar uma visita.</p></div></div>
+<!-- A ESCOLA -->
+<section id="escola" class="section about" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <div class="mosaic">
+      <div class="m-a frame"><img src="img/fotos/sala.webp" alt="Professora acompanhando crianças numa atividade com massinha e formas de madeira" width="880" height="1168" loading="lazy"></div>
+      <div class="m-b frame"><img src="img/fotos/leitura.webp" alt="Educadora lendo um livro ilustrado para crianças pequenas sentadas no tapete" width="1168" height="880" loading="lazy"></div>
+      <div class="m-c frame"><img src="img/fotos/patio.webp" alt="Crianças brincando com bolas coloridas ao ar livre" width="1168" height="880" loading="lazy"></div>
+    </div>
+    <div class="about-text">
+      <h2 id="about-title">Desde 1992 no Parque das Nações</h2>
+      <p class="lede">Atendemos crianças a partir de 4 meses num ambiente aconchegante, seguro e estimulador. O berçário tem planejamento próprio para cada idade, e a Educação Infantil usa o Sistema de Ensino Positivo.</p>
+      <ul class="pillars">
+        <li><svg aria-hidden="true"><use href="#i-hex"/></svg><div><h3>Equipe com afeto</h3><p>Profissionais qualificados que acompanham cada aluno de forma humana e sensível.</p></div></li>
+        <li><svg aria-hidden="true"><use href="#i-hex"/></svg><div><h3>Aprender fazendo</h3><p>Atividades práticas, programadas à medida que os conteúdos avançam.</p></div></li>
+        <li><svg aria-hidden="true"><use href="#i-hex"/></svg><div><h3>Família por perto</h3><p>Datas comemorativas na escola e o dia a dia no celular, pela agenda Kid Note.</p></div></li>
+        <li><svg aria-hidden="true"><use href="#i-hex"/></svg><div><h3>Segurança</h3><p>Câmeras, alarme e vaga exclusiva de embarque e desembarque na porta.</p></div></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- CONTATO: faixa de ambientes + matrícula -->
-<section id="contato" class="contact" aria-labelledby="contact-title">
-  <div class="strip" aria-label="Ambientes da escola">
-    <div class="strip-track">
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto do Berçário I"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Berçário I</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto do Berçário II"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Berçário II</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da sala do Nível I"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Sala do Nível I</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da sala do Nível IV"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Sala do Nível IV</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da biblioteca"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Biblioteca</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da brinquedoteca"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Brinquedoteca</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto do parquinho"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Parquinho</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da quadra coberta"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Quadra coberta</span></span></div>
-      <div class="ph strip-ph" role="img" aria-label="Espaço reservado para foto da cozinha"><span class="ph-in"><svg aria-hidden="true"><use href="#i-img"/></svg><span>Cozinha</span></span></div>
+<!-- CURSOS: abas -->
+<section id="cursos" class="section courses" aria-labelledby="cursos-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="cursos-title">Nossos cursos</h2>
+      <p>Do primeiro colo ao último ano antes do fundamental, cada turma tem sala, rotina e planejamento próprios.</p>
     </div>
-    <button class="strip-toggle" type="button" aria-pressed="false">Pausar</button>
+
+    <div class="tabs" role="tablist" aria-label="Cursos">
+      <button type="button" role="tab" id="tab-1" aria-controls="pan-1" aria-selected="true">Berçário</button>
+      <button type="button" role="tab" id="tab-2" aria-controls="pan-2" aria-selected="false" tabindex="-1">Educação Infantil</button>
+      <button type="button" role="tab" id="tab-3" aria-controls="pan-3" aria-selected="false" tabindex="-1">Alimentação</button>
+      <button type="button" role="tab" id="tab-4" aria-controls="pan-4" aria-selected="false" tabindex="-1">Proposta pedagógica</button>
+    </div>
+
+    <div class="panels">
+      <article class="panel" role="tabpanel" id="pan-1" aria-labelledby="tab-1">
+        <div class="frame r-43"><img src="img/fotos/bercario.webp" alt="Bebê engatinhando no tapete em direção à educadora" width="1168" height="880" loading="lazy"></div>
+        <div class="panel-text">
+          <h3>Berçário</h3>
+          <p>Cuidado e educação num ambiente tranquilo, que transmite confiança, afeto e aprendizagens que fazem sentido para os bebês. Cada bebê é acompanhado individualmente por profissionais qualificados, com supervisão direta da coordenação.</p>
+          <ul class="chips" aria-label="Turmas"><li>Berçário I · 4 a 11 meses</li><li>Berçário II · 1 ano</li></ul>
+          <a class="link-arrow" href="#matricula">Montar matrícula no berçário <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="panel" role="tabpanel" id="pan-2" aria-labelledby="tab-2">
+        <div class="frame r-43"><img src="img/fotos/roda.webp" alt="Crianças sentadas em roda no tapete, cantando com a professora" width="1168" height="880" loading="lazy"></div>
+        <div class="panel-text">
+          <h3>Educação Infantil</h3>
+          <p>Uma base sólida para o crescimento saudável. Atividades que desenvolvem a criança física, social e emocionalmente, e muita linguagem com histórias, dramatização e brincadeiras, respeitando o jeito de cada um.</p>
+          <ul class="chips" aria-label="Turmas"><li>Nível I · 2 anos</li><li>Nível II · 3 anos</li><li>Nível III · 4 anos</li><li>Nível IV · 5 anos</li></ul>
+          <a class="link-arrow" href="#matricula">Montar matrícula na Educação Infantil <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <article class="panel" role="tabpanel" id="pan-3" aria-labelledby="tab-3">
+        <div class="frame r-43"><img src="img/fotos/lanche.webp" alt="Crianças pequenas almoçando e comendo frutas à mesa" width="1168" height="880" loading="lazy"></div>
+        <div class="panel-text">
+          <h3>Alimentação</h3>
+          <p>Tudo é preparado em cozinha própria, com alimentos fresquinhos e refeições equilibradas. A equipe recebe treinamento periódico de higiene, conservação e manipulação dos alimentos.</p>
+          <ul class="chips" aria-label="Destaques"><li>Cardápio da nutricionista Aline Fregozzi</li><li>Respeita o pediatra de cada criança</li><li>Aula de nutrição</li></ul>
+        </div>
+      </article>
+      <article class="panel" role="tabpanel" id="pan-4" aria-labelledby="tab-4">
+        <div class="frame r-43"><img src="img/fotos/blocos.webp" alt="Mãos de crianças separando blocos de madeira coloridos sobre a mesa" width="1168" height="880" loading="lazy"></div>
+        <div class="panel-text">
+          <h3>Proposta pedagógica</h3>
+          <p>Formação integral: capacidades motoras, afetivas, sociais e cognitivas. Partimos da realidade de cada aluno e, com estímulos e desafios, ele age sobre o mundo, entende o que fez e constrói o próprio conhecimento.</p>
+          <ul class="chips" aria-label="Pilares"><li>Aprendizagem dinâmica</li><li>Global</li><li>Significativa</li></ul>
+        </div>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="wrap" id="matricula">
-    <div class="contact-head">
-      <h2 id="contact-title" class="h-l">Monte a matrícula</h2>
-      <p class="contact-lede">Escolha a idade da criança e o período. A gente mostra a turma indicada e abre o WhatsApp com a mensagem pronta, é só enviar.</p>
+<!-- ROTINA -->
+<section id="rotina" class="section day" aria-labelledby="day-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="day-title">Um dia no Cantinho</h2>
+      <p>O portão abre às 6h30 e a última saída é às 19h. Meio período, semi-integral ou integral; o integral inclui todas as refeições.</p>
     </div>
 
+    <div class="clock" id="clock">
+      <div class="clock-read">
+        <p class="clock-time" id="clock-time" aria-hidden="true">8h00</p>
+        <div class="clock-now" aria-live="polite">
+          <h3 id="clock-title">Roda de conversa</h3>
+          <p id="clock-text">A turma se encontra, canta, conta as novidades e combina o dia.</p>
+        </div>
+      </div>
+      <label class="clock-label" for="clock-range">Arraste a abelha para ver cada momento do dia</label>
+      <div class="clock-track">
+        <div class="clock-fill"></div>
+        <input type="range" id="clock-range" min="390" max="1140" step="15" value="480" aria-describedby="clock-title" aria-valuetext="8h00, roda de conversa">
+        <ol class="clock-marks" aria-hidden="true">
+          <li style="--p:0">6h30</li><li style="--p:.2">9h</li><li style="--p:.4">11h30</li><li style="--p:.6">14h</li><li style="--p:.8">16h30</li><li style="--p:1">19h</li>
+        </ol>
+      </div>
+      <p class="clock-note">Rotina de referência da Educação Infantil; cada turma tem a sua.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section id="extras" class="section extras" aria-labelledby="extras-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="extras-title">Sete aulas extras, dentro da escola</h2>
+      <p>Estímulos diferentes ajudam a criança a desenvolver várias habilidades, sem a família precisar levar a outro lugar.</p>
+    </div>
+    <ul class="extras-grid">
+      <li class="act"><div class="frame r-43"><img src="img/fotos/ballet.webp" alt="Meninas de collant e tutu numa aula de ballet infantil" width="1168" height="880" loading="lazy"></div><h3>Ballet</h3><p>Coordenação, disciplina, musicalidade e trabalho em grupo.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/edfisica.webp" alt="Crianças pulando dentro de bambolês na quadra" width="1168" height="880" loading="lazy"></div><h3>Educação física</h3><p>Postura, linguagem corporal e um corpo que expressa emoções.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/taekwondo.webp" alt="Crianças de dobok branco treinando chute de taekwondo" width="1168" height="880" loading="lazy"></div><h3>Taekwondo</h3><p>Concentração, autoestima, respeito e companheirismo.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/musica.webp" alt="Crianças tocando pandeiro e xilofone com o professor de violão" width="1168" height="880" loading="lazy"></div><h3>Musicalização</h3><p>Estimula a linguagem e ajuda a criança a expressar o que sente.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/futebol.webp" alt="Crianças jogando futebol na quadra coberta" width="1168" height="880" loading="lazy"></div><h3>Futebol</h3><p>Correr, saltar, chutar e arremessar, em equipe.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/ingles.webp" alt="Crianças aprendendo palavras em inglês com cartões ilustrados" width="1168" height="880" loading="lazy"></div><h3>Inglês</h3><p>Contato cedo com a língua, em parceria com o CCAA.</p></li>
+      <li class="act"><div class="frame r-43"><img src="img/fotos/artes.webp" alt="Criança pintando com pincel e tinta colorida" width="1168" height="880" loading="lazy"></div><h3>Artes</h3><p>Faz de conta e criatividade: um traço vira o telhado de uma casa.</p></li>
+      <li class="act act-cta">
+        <h3>Quais estão no seu período?</h3>
+        <p>Depende da turma e do período escolhido. A gente te conta tudo no WhatsApp.</p>
+        <a class="btn btn-navy" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Quais%20aulas%20extras%20est%C3%A3o%20inclu%C3%ADdas%20em%20cada%20per%C3%ADodo%3F" target="_blank" rel="noopener">Perguntar no WhatsApp</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- MISSÃO -->
+<section id="missao" class="mission" aria-labelledby="mission-title">
+  <div class="container mission-grid">
+    <div class="frame mission-photo"><img src="img/fotos/pintura.webp" alt="Criança sorrindo com as mãos sujas de tinta colorida" width="1168" height="880" loading="lazy"></div>
+    <div class="mission-text">
+      <h2 id="mission-title">Missão, visão e valores</h2>
+      <blockquote class="quote"><p>Conhecimento, afeto e um ambiente aconchegante para formar cidadãos conscientes.</p></blockquote>
+      <dl class="mvv">
+        <div><dt>Visão</dt><dd>Ser referência em berçário e educação infantil.</dd></div>
+        <div><dt>Valores</dt><dd>Cooperação, transparência, respeito, comprometimento, inovação e formação dos alunos.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="section gallery" aria-labelledby="gal-title">
+  <div class="container">
+    <div class="sec-head sec-head-row">
+      <div>
+        <h2 id="gal-title">A vida na escola</h2>
+        <p>Festas, apresentações e o dia a dia das turmas. Toque numa foto para ampliar.</p>
+      </div>
+      <a class="link-arrow" href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">Mais no Instagram <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ul class="gal-grid">
+      <li class="g-wide"><button type="button" class="frame zoom" data-cap="Festa da família"><img src="img/fotos/familia.webp" alt="Pais e filhos brincando juntos numa festa da escola" width="1344" height="752" loading="lazy"></button></li>
+      <li><button type="button" class="frame zoom" data-cap="Carnaval"><img src="img/fotos/carnaval.webp" alt="Crianças fantasiadas no carnaval" width="1024" height="1024" loading="lazy"></button></li>
+      <li><button type="button" class="frame zoom" data-cap="Dia dos Pais"><img src="img/fotos/pais.webp" alt="Pai e filho fazendo uma atividade juntos" width="1024" height="1024" loading="lazy"></button></li>
+      <li><button type="button" class="frame zoom" data-cap="Atividade sensorial"><img src="img/fotos/sensorial.webp" alt="Criança explorando uma caixa sensorial" width="1024" height="1024" loading="lazy"></button></li>
+      <li><button type="button" class="frame zoom" data-cap="Hora da história"><img src="img/fotos/historia.webp" alt="Crianças atentas ouvindo uma história" width="1024" height="1024" loading="lazy"></button></li>
+      <li class="g-wide"><button type="button" class="frame zoom" data-cap="Apresentação de fim de ano"><img src="img/fotos/apresentacao.webp" alt="Crianças se apresentando para as famílias" width="1344" height="752" loading="lazy"></button></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ESPAÇOS -->
+<section class="section rooms" aria-labelledby="rooms-title">
+  <div class="container">
+    <div class="sec-head sec-head-row">
+      <div>
+        <h2 id="rooms-title">Espaços para cada idade</h2>
+        <p>Salas próprias para cada turma, biblioteca, brinquedoteca, parquinho, quadra coberta e cozinha própria.</p>
+      </div>
+      <div class="scroller-nav">
+        <button type="button" class="nav-btn" data-dir="-1" aria-label="Ver espaços anteriores"><svg width="22" height="22" aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="nav-btn" data-dir="1" aria-label="Ver próximos espaços"><svg width="22" height="22" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="rooms-scroller" tabindex="0" aria-label="Espaços da escola">
+    <figure><div class="frame r-45"><img src="img/fotos/e-bercario.webp" alt="Berçário com berços e tapete macio" width="880" height="1168" loading="lazy"></div><figcaption>Berçário</figcaption></figure>
+    <figure><div class="frame r-45"><img src="img/fotos/e-sala.webp" alt="Sala de aula infantil clara com mesas baixas" width="880" height="1168" loading="lazy"></div><figcaption>Salas de aula</figcaption></figure>
+    <figure><div class="frame r-45"><img src="img/fotos/e-biblioteca.webp" alt="Cantinho de leitura com livros infantis" width="880" height="1168" loading="lazy"></div><figcaption>Biblioteca</figcaption></figure>
+    <figure><div class="frame r-45"><img src="img/fotos/e-brinquedoteca.webp" alt="Brinquedoteca com brinquedos de madeira" width="880" height="1168" loading="lazy"></div><figcaption>Brinquedoteca</figcaption></figure>
+    <figure><div class="frame r-45"><img src="img/fotos/e-parquinho.webp" alt="Parquinho com escorregador" width="880" height="1168" loading="lazy"></div><figcaption>Parquinho</figcaption></figure>
+    <figure><div class="frame r-45"><img src="img/fotos/e-quadra.webp" alt="Quadra coberta com bolas e cones" width="880" height="1168" loading="lazy"></div><figcaption>Quadra coberta</figcaption></figure>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section id="duvidas" class="section faq" aria-labelledby="faq-title">
+  <div class="container faq-grid">
+    <div class="faq-side">
+      <h2 id="faq-title">Perguntas das famílias</h2>
+      <p>Não achou a sua? A gente responde rapidinho no WhatsApp.</p>
+      <a class="btn btn-navy" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Cantinho%20do%20Mel." target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Perguntar</a>
+    </div>
+    <div class="acc">
+      <details open><summary>Com que idade meu filho pode começar?<i aria-hidden="true"></i></summary><div class="acc-body"><p>No berçário recebemos bebês a partir de 4 meses. Depois, a criança segue pelos níveis da Educação Infantil (Nível I a Nível IV), sempre com planejamento próprio para cada faixa etária.</p></div></details>
+      <details><summary>Qual é o horário da escola?<i aria-hidden="true"></i></summary><div class="acc-body"><p>De segunda a sexta, das 6h30 às 19h. Você escolhe entre meio período, semi-integral ou integral, com horários flexíveis para a sua rotina.</p></div></details>
+      <details><summary>Qual material didático vocês usam?<i aria-hidden="true"></i></summary><div class="acc-body"><p>A Educação Infantil usa o Sistema de Ensino Positivo, da Editora Positivo. Somos escola conveniada. O berçário tem planejamentos próprios para cada idade.</p></div></details>
+      <details><summary>Como funciona a alimentação?<i aria-hidden="true"></i></summary><div class="acc-body"><p>As refeições são feitas em cozinha própria, com alimentos frescos. O cardápio é da nutricionista Aline Fregozzi e respeita a orientação do pediatra da criança. Restrições e alergias são combinadas com a família.</p></div></details>
+      <details><summary>Como acompanho o dia do meu filho?<i aria-hidden="true"></i></summary><div class="acc-body"><p>Pela agenda digital Kid Note, no celular: recados, rotina e comunicados da escola chegam direto para a família.</p></div></details>
+      <details><summary>A escola é segura?<i aria-hidden="true"></i></summary><div class="acc-body"><p>Sim. A escola tem sistema de segurança com câmeras e alarme e uma vaga exclusiva de embarque e desembarque escolar na porta. Os bebês são supervisionados de perto pela coordenação.</p></div></details>
+      <details><summary>Como faço a matrícula e quanto custa?<i aria-hidden="true"></i></summary><div class="acc-body"><p>As matrículas estão abertas. Os valores dependem do período e da turma: monte a matrícula logo abaixo e a gente responde no WhatsApp, ou ligue para (11) 2677-8022.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- MATRÍCULA -->
+<section id="matricula" class="section enroll-sec" aria-labelledby="enroll-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="enroll-title">Monte a matrícula</h2>
+      <p>Escolha a idade e o período. Mostramos a turma indicada e abrimos o WhatsApp com a mensagem pronta.</p>
+    </div>
     <form class="enroll" id="enroll" action="https://wa.me/5511948714027" method="get" target="_blank">
       <div class="enroll-picks">
         <fieldset class="pick">
@@ -428,34 +363,36 @@
           <input type="text" id="kid" name="crianca" autocomplete="off" maxlength="40" placeholder="Ex.: Helena">
         </label>
       </div>
-
       <div class="ticket" aria-live="polite">
+        <p class="ticket-small">Turma indicada</p>
         <p class="ticket-class" id="ticket-class">Berçário II</p>
-        <p class="ticket-meta" id="ticket-meta">Turma indicada para 1 ano, período integral</p>
+        <p class="ticket-meta" id="ticket-meta">1 ano · integral</p>
         <p class="ticket-msg" id="ticket-msg">Olá! Vim pelo site do Cantinho do Mel. Tenho uma criança de 1 ano (turma Berçário II), período integral. Pode me passar os valores e um horário para visita?</p>
-        <button class="btn btn-wa btn-lg" type="submit"><svg width="22" height="22" aria-hidden="true"><use href="#i-wa"/></svg>Enviar no WhatsApp</button>
+        <button class="btn btn-wa btn-lg" type="submit"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Enviar no WhatsApp</button>
         <input type="hidden" name="text" id="enroll-text" value="Olá! Gostaria de informações sobre matrícula no Cantinho do Mel.">
       </div>
     </form>
+  </div>
+</section>
 
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Venha nos visitar</h3>
-        <p>Temos uma equipe pronta para receber o seu bem mais precioso.</p>
-        <dl>
-          <div><dt>Endereço</dt><dd>Rua Colúmbia, 438<br>Parque das Nações, Santo André, SP<br>CEP 09241-000</dd></div>
-          <div><dt>Telefone</dt><dd><a href="tel:+551126778022">(11) 2677-8022</a></dd></div>
-          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5511948714027" target="_blank" rel="noopener">(11) 94871-4027</a></dd></div>
-          <div><dt>Celular</dt><dd><a href="tel:+5511969317414">(11) 96931-7414</a></dd></div>
-          <div><dt>E-mail</dt><dd><a href="mailto:contato@escolacantinhodomel.com.br">contato@escolacantinhodomel.com.br</a></dd></div>
-          <div><dt>Horário</dt><dd>Segunda a sexta, 6h30 às 19h</dd></div>
-          <div><dt>Redes</dt><dd><a href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/escolacantinhodomel/" target="_blank" rel="noopener">Facebook</a></dd></div>
-        </dl>
-      </div>
-      <div class="map">
-        <iframe title="Mapa: Escola Cantinho do Mel, Rua Colúmbia, 438, Santo André" src="https://www.google.com/maps?q=Escola+Cantinho+do+Mel,+Rua+Col%C3%BAmbia,+438,+Parque+das+Na%C3%A7%C3%B5es,+Santo+Andr%C3%A9+-+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Rua+Col%C3%BAmbia%2C+438%2C+Parque+das+Na%C3%A7%C3%B5es%2C+Santo+Andr%C3%A9+-+SP" target="_blank" rel="noopener">Abrir rota no Google Maps <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
+<!-- CONTATO -->
+<section id="contato" class="section contact" aria-labelledby="contact-title">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2 id="contact-title">Venha nos visitar</h2>
+      <p>Temos uma equipe pronta para receber o seu bem mais precioso.</p>
+      <dl>
+        <div><dt>Endereço</dt><dd>Rua Colúmbia, 438 · Parque das Nações<br>Santo André, SP · CEP 09241-000</dd></div>
+        <div><dt>Horário</dt><dd>Segunda a sexta, 6h30 às 19h</dd></div>
+        <div><dt>Telefone</dt><dd><a href="tel:+551126778022">(11) 2677-8022</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5511948714027" target="_blank" rel="noopener">(11) 94871-4027</a></dd></div>
+        <div><dt>Celular</dt><dd><a href="tel:+5511969317414">(11) 96931-7414</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contato@escolacantinhodomel.com.br">contato@escolacantinhodomel.com.br</a></dd></div>
+      </dl>
+      <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Rua+Col%C3%BAmbia%2C+438%2C+Parque+das+Na%C3%A7%C3%B5es%2C+Santo+Andr%C3%A9+-+SP" target="_blank" rel="noopener">Abrir rota no Google Maps <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="map">
+      <iframe title="Mapa: Escola Cantinho do Mel, Rua Colúmbia, 438, Santo André" src="https://www.google.com/maps?q=Escola+Cantinho+do+Mel,+Rua+Col%C3%BAmbia,+438,+Parque+das+Na%C3%A7%C3%B5es,+Santo+Andr%C3%A9+-+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -464,29 +401,36 @@
 
 <footer class="footer">
   <svg class="drip drip-foot" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 0H1440V14C1418 14 1414 44 1398 44S1380 14 1352 14 1322 22 1306 22 1290 14 1262 14 1238 52 1218 52 1196 14 1168 14 1140 28 1124 28 1106 14 1078 14 1056 40 1040 40 1022 14 994 14 968 24 952 24 936 14 908 14 884 56 862 56 840 14 812 14 790 30 774 30 758 14 730 14 706 46 688 46 670 14 642 14 618 22 602 22 586 14 558 14 532 50 512 50 492 14 464 14 440 32 424 32 408 14 380 14 356 42 338 42 320 14 292 14 268 24 252 24 236 14 208 14 182 54 162 54 142 14 114 14 92 30 76 30 60 14 32 14 16 38 0 38Z"/></svg>
-  <div class="wrap foot-inner">
-    <div class="foot-top">
-      <img class="foot-logo" src="img/logo.webp" alt="Cantinho do Mel" width="1200" height="250" loading="lazy">
-      <p>Rua Colúmbia, 438<br>Parque das Nações, Santo André</p>
-      <p>Segunda a sexta<br>6h30 às 19h</p>
-      <a class="foot-up" href="#topo">Voltar ao topo</a>
+  <div class="container">
+    <div class="foot-cta">
+      <h2>Venha conhecer a escola pessoalmente</h2>
+      <a class="btn btn-honey btn-lg" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Cantinho%20do%20Mel." target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Agendar visita</a>
     </div>
-    <div class="foot-call">
-      <p class="foot-ask">Ficou alguma dúvida? Chame a gente.</p>
-      <a class="foot-phone" href="https://wa.me/5511948714027" target="_blank" rel="noopener"><span data-fit>(11) 94871-4027</span></a>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="img/logo.webp" alt="Cantinho do Mel" width="1200" height="250" loading="lazy">
+        <p>Educação infantil e berçário em Santo André, desde 1992.</p>
+      </div>
+      <div><h3>Endereço</h3><p>Rua Colúmbia, 438<br>Parque das Nações<br>Santo André, SP</p></div>
+      <div><h3>Contato</h3><p><a href="tel:+551126778022">(11) 2677-8022</a><br><a href="https://wa.me/5511948714027" target="_blank" rel="noopener">(11) 94871-4027</a><br><a href="mailto:contato@escolacantinhodomel.com.br">E-mail</a></p></div>
+      <div><h3>Redes</h3><p><a href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/escolacantinhodomel/" target="_blank" rel="noopener">Facebook</a></p></div>
     </div>
     <div class="foot-meta">
-      <p><a href="https://www.instagram.com/escola_cantinho_do_mel/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/escolacantinhodomel/" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:contato@escolacantinhodomel.com.br">E-mail</a> · <a href="tel:+551126778022">(11) 2677-8022</a></p>
-      <p>© Escola Cantinho do Mel</p>
-      <p>Santo André, SP · desde 1992</p>
+      <p>© Escola Cantinho do Mel · Fotos de atividades ilustrativas</p>
+      <a href="#topo">Voltar ao topo</a>
     </div>
   </div>
 </footer>
 
 <a class="wa-fab" href="https://wa.me/5511948714027?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20do%20Mel." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
   <svg width="28" height="28" aria-hidden="true"><use href="#i-wa"/></svg>
-  <span class="wa-label">WhatsApp</span>
 </a>
+
+<dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+  <img src="" alt="">
+  <p class="lb-cap"></p>
+  <button type="button" class="lb-close" aria-label="Fechar">×</button>
+</dialog>
 
 <script src="main.js" defer></script>
 </body>
