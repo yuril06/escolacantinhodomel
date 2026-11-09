@@ -1,0 +1,369 @@
+- generic [ref=f11e1]:
+  - link "Pular para o conteúdo" [ref=f11e2] [cursor=pointer]:
+    - /url: "#conteudo"
+  - banner [ref=f11e3]:
+    - generic [ref=f11e4]:
+      - link "Cantinho do Mel, início" [ref=f11e5] [cursor=pointer]:
+        - /url: "#topo"
+        - img "Cantinho do Mel, Educação Infantil e Berçário" [ref=f11e6]
+      - button "Fechar" [expanded] [active] [ref=f11e336] [cursor=pointer]
+      - navigation "Principal" [ref=f11e337]:
+        - link "A escola" [ref=f11e338] [cursor=pointer]:
+          - /url: "#escola"
+        - link "Cursos" [ref=f11e339] [cursor=pointer]:
+          - /url: "#cursos"
+        - link "Aulas extras" [ref=f11e340] [cursor=pointer]:
+          - /url: "#extras"
+        - link "Dúvidas" [ref=f11e341] [cursor=pointer]:
+          - /url: "#duvidas"
+        - link "Contato" [ref=f11e342] [cursor=pointer]:
+          - /url: "#contato"
+        - link "Agendar visita" [ref=f11e343] [cursor=pointer]:
+          - /url: https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Cantinho%20do%20Mel.
+  - main [ref=f11e10]:
+    - region [ref=f11e11]:
+      - generic [ref=f11e13]:
+        - paragraph [ref=f11e14]:
+          - text: Educação infantil e berçário em Santo André desde 1992. Bebês a partir de 4 meses, das 6h30 às 19h.
+          - strong [ref=f11e15]: Matrículas abertas.
+        - link "Falar no WhatsApp" [ref=f11e16] [cursor=pointer]:
+          - /url: https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20matr%C3%ADculas%20no%20Cantinho%20do%20Mel.
+      - heading "Cantinho do Mel · Escola de Educação Infantil e Berçário" [level=1] [ref=f11e18]:
+        - text: Cantinho do Mel
+        - generic [ref=f11e19]: · Escola de Educação Infantil e Berçário
+      - generic [ref=f11e20]:
+        - paragraph [ref=f11e21]: Rua Colúmbia, 438 · Parque das Nações · Santo André
+        - paragraph [ref=f11e22]: Segunda a sexta · 6h30 às 19h
+      - figure [ref=f11e23]:
+        - 'img "Fachada da escola na Rua Colúmbia, 438: faixa amarela de mel escorrendo, letras azuis Cantinho do Mel e a abelha gigante no telhado" [ref=f11e24]'
+    - region [ref=f11e25]:
+      - generic [ref=f11e26]:
+        - generic [ref=f11e27]:
+          - heading "Desde 1992" [level=2] [ref=f11e28]
+          - paragraph [ref=f11e29]: A Escola Cantinho do Mel atende crianças a partir de 4 meses, em um ambiente aconchegante, seguro e estimulador. O berçário tem planejamento próprio para cada faixa etária, e a Educação Infantil usa o Sistema de Ensino Positivo.
+          - link "Agendar uma visita" [ref=f11e30] [cursor=pointer]:
+            - /url: https://wa.me/5511948714027?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Cantinho%20do%20Mel.
+        - generic [ref=f11e31]:
+          - figure "Uma escola de bairro Parque das Nações Em atividade desde 1992, com um amplo espaço e instalações pensadas só para a educação infantil." [ref=f11e32]:
+            - img "Aluna sorrindo com o uniforme verde da escola" [ref=f11e33]
+            - generic [ref=f11e34]:
+              - strong [ref=f11e35]: Uma escola de bairro
+              - generic [ref=f11e36]: Parque das Nações
+              - text: Em atividade desde 1992, com um amplo espaço e instalações pensadas só para a educação infantil.
+          - figure "Equipe com afeto Profissionais qualificados Uma equipe qualificada, com muito profissionalismo e carinho, que acompanha cada aluno de forma humana e sensível." [ref=f11e37]:
+            - img "Crianças fantasiadas no carnaval da escola" [ref=f11e38]
+            - generic [ref=f11e39]:
+              - strong [ref=f11e40]: Equipe com afeto
+              - generic [ref=f11e41]: Profissionais qualificados
+              - text: Uma equipe qualificada, com muito profissionalismo e carinho, que acompanha cada aluno de forma humana e sensível.
+          - 'figure "Família por perto Datas e eventos Pense bem onde seu filho vai passar grande parte da infância: aqui ele aprende valores e vive experiências essenciais." [ref=f11e42]':
+            - img "Alunos e famílias reunidos no Dia dos Pais" [ref=f11e43]
+            - generic [ref=f11e44]:
+              - strong [ref=f11e45]: Família por perto
+              - generic [ref=f11e46]: Datas e eventos
+              - text: "Pense bem onde seu filho vai passar grande parte da infância: aqui ele aprende valores e vive experiências essenciais."
+          - figure "Aprender fazendo Sistema de Ensino Positivo Na Educação Infantil o aluno aprende com atividades práticas, programadas à medida que os conteúdos avançam." [ref=f11e47]:
+            - img "Aluna concentrada na atividade de empilhar copos" [ref=f11e48]
+            - generic [ref=f11e49]:
+              - strong [ref=f11e50]: Aprender fazendo
+              - generic [ref=f11e51]: Sistema de Ensino Positivo
+              - text: Na Educação Infantil o aluno aprende com atividades práticas, programadas à medida que os conteúdos avançam.
+          - figure "Horários flexíveis 6h30 às 19h Um ambiente seguro e bem assessorado, que atende às necessidades dos pais com horários flexíveis." [ref=f11e52]:
+            - img "Pais sentados com os filhos em roda durante um evento" [ref=f11e53]
+            - generic [ref=f11e54]:
+              - strong [ref=f11e55]: Horários flexíveis
+              - generic [ref=f11e56]: 6h30 às 19h
+              - text: Um ambiente seguro e bem assessorado, que atende às necessidades dos pais com horários flexíveis.
+    - region [ref=f11e57]:
+      - heading "Nossos cursos" [level=2] [ref=f11e58]
+      - generic [ref=f11e59]:
+        - article [ref=f11e60]:
+          - generic [ref=f11e61]:
+            - heading "Berçário" [level=3] [ref=f11e62]
+            - generic [ref=f11e63]:
+              - paragraph [ref=f11e64]: Cuidado e educação num ambiente tranquilo, que transmite confiança, afeto e aprendizagens que fazem sentido para os bebês. Cada bebê é acompanhado individualmente por profissionais qualificados, com supervisão direta da coordenação.
+              - paragraph [ref=f11e65]:
+                - strong [ref=f11e66]: "Turmas:"
+                - text: Berçário I e Berçário II, a partir de 4 meses.
+          - img "Bebê sorrindo deitado numa almofada verde no berçário" [ref=f11e67]
+        - article [ref=f11e68]:
+          - generic [ref=f11e69]:
+            - heading "Educação Infantil" [level=3] [ref=f11e70]
+            - generic [ref=f11e71]:
+              - paragraph [ref=f11e72]: Uma base sólida para o crescimento saudável. Exploramos atividades que desenvolvem a criança física, social e emocionalmente, e estimulamos a linguagem com histórias, dramatização e brincadeiras, respeitando o jeito de cada um.
+              - paragraph [ref=f11e73]:
+                - strong [ref=f11e74]: "Turmas:"
+                - text: Nível I, Nível II, Nível III e Nível IV, com o Sistema de Ensino Positivo.
+          - img "Alunos de uniforme sentados em roda no pátio" [ref=f11e75]
+        - article [ref=f11e76]:
+          - generic [ref=f11e77]:
+            - heading "Alimentação" [level=3] [ref=f11e78]
+            - generic [ref=f11e79]:
+              - paragraph [ref=f11e80]: Tudo é preparado em cozinha própria, com alimentos fresquinhos e refeições equilibradas. A equipe recebe treinamento periódico de higiene, conservação e manipulação dos alimentos.
+              - paragraph [ref=f11e81]:
+                - strong [ref=f11e82]: "Cardápio:"
+                - text: feito pela nutricionista Aline Fregozzi, seguindo a orientação do pediatra de cada criança. E tem aula de nutrição para os pequenos.
+          - img "Crianças com chapéu de cozinheiro numa aula de culinária" [ref=f11e83]
+        - article [ref=f11e84]:
+          - generic [ref=f11e85]:
+            - heading "Proposta pedagógica" [level=3] [ref=f11e86]
+            - generic [ref=f11e87]:
+              - paragraph [ref=f11e88]: "Formação integral: capacidades motoras, afetivas, sociais e cognitivas. Partimos da realidade de cada aluno e, com estímulos e desafios, ele age sobre o mundo, entende o que fez e constrói o próprio conhecimento."
+              - paragraph [ref=f11e89]:
+                - strong [ref=f11e90]: "Na prática:"
+                - text: aprendizagem dinâmica, global e significativa, todos os dias.
+          - img "Alunos em fila no pátio coberto da escola" [ref=f11e91]
+    - region [ref=f11e92]:
+      - generic [ref=f11e93]:
+        - heading "Um dia inteiro com a gente" [level=2] [ref=f11e94]
+        - paragraph [ref=f11e95]: Meio período, semi-integral ou integral. A escola funciona de segunda a sexta, com horários flexíveis para a rotina de cada família, e o período integral inclui todas as refeições.
+      - generic [ref=f11e96]:
+        - generic [ref=f11e97]:
+          - paragraph [ref=f11e98]: 6h30
+          - paragraph [ref=f11e99]: O portão abre
+        - generic [ref=f11e100]:
+          - paragraph [ref=f11e101]: 19h
+          - paragraph [ref=f11e102]: Último horário de saída
+    - region [ref=f11e103]:
+      - generic [ref=f11e104]:
+        - heading "Extras" [level=2] [ref=f11e105]
+        - paragraph [ref=f11e106]: Valorizar a criatividade e oferecer estímulos diferentes ajuda a criança a desenvolver várias habilidades. Por isso o Cantinho do Mel tem sete aulas especiais, dentro da escola.
+        - generic [ref=f11e107]:
+          - group [ref=f11e108]:
+            - generic "Ballet +" [ref=f11e109] [cursor=pointer]
+            - generic [ref=f11e110]:
+              - paragraph [ref=f11e111]: Dançar é divertido e faz bem ao corpo e às emoções. Melhora a coordenação motora, traz disciplina e esforço, e favorece a criatividade, a musicalidade e o trabalho em grupo.
+              - img "Alunas de ballet em roda com as pernas esticadas" [ref=f11e112]
+          - group [ref=f11e113]:
+            - generic "Educação física +" [ref=f11e114] [cursor=pointer]
+          - group [ref=f11e115]:
+            - generic "Taekwondo +" [ref=f11e116] [cursor=pointer]
+          - group [ref=f11e117]:
+            - generic "Musicalização +" [ref=f11e118] [cursor=pointer]
+          - group [ref=f11e119]:
+            - generic "Futebol +" [ref=f11e120] [cursor=pointer]
+          - group [ref=f11e121]:
+            - generic "Inglês +" [ref=f11e122] [cursor=pointer]
+          - group [ref=f11e123]:
+            - generic "Artes +" [ref=f11e124] [cursor=pointer]
+    - region [ref=f11e125]:
+      - generic [ref=f11e126]:
+        - paragraph [ref=f11e127]:
+          - generic [ref=f11e128]: Conhecimento, afeto
+          - generic [ref=f11e129]: e um ambiente
+          - generic [ref=f11e130]: aconchegante para
+          - generic [ref=f11e131]: formar cidadãos
+          - generic [ref=f11e132]: conscientes.
+        - generic [ref=f11e133]:
+          - img "Pinturas das crianças com tinta colorida na parede" [ref=f11e134]
+          - img "Menina pulando dentro dos bambolês na quadra" [ref=f11e135]
+        - generic [ref=f11e136]:
+          - heading "Missão, visão e valores" [level=2] [ref=f11e137]
+          - paragraph [ref=f11e138]: "Nossa visão é ser referência em berçário e educação infantil. Nossos valores: cooperação, transparência, respeito, comprometimento, inovação e formação dos alunos."
+    - region [ref=f11e139]:
+      - generic [ref=f11e140]:
+        - generic [ref=f11e141]:
+          - heading "Aconteceu na escola" [level=2] [ref=f11e142]
+          - link "Mais no Instagram" [ref=f11e143] [cursor=pointer]:
+            - /url: https://www.instagram.com/escola_cantinho_do_mel/
+        - figure "Atividades" [ref=f11e144]:
+          - img "Criança pisando numa caixa sensorial com algodão" [ref=f11e145]
+        - generic [ref=f11e147]:
+          - paragraph [ref=f11e148]: "1992"
+          - paragraph [ref=f11e149]: o ano em que abrimos
+        - figure "Ballet" [ref=f11e150]:
+          - img "Alunas de ballet alongando em roda" [ref=f11e151]
+        - figure "Nossas salas" [ref=f11e153]:
+          - img "Sala colorida com mesas baixas e brinquedos" [ref=f11e154]
+        - generic [ref=f11e156]:
+          - paragraph [ref=f11e157]: 4m
+          - paragraph [ref=f11e158]: idade mínima no berçário
+        - generic [ref=f11e159]:
+          - paragraph [ref=f11e160]: "438"
+          - paragraph [ref=f11e161]: Rua Colúmbia
+        - figure "Taekwondo" [ref=f11e162]:
+          - img "Alunos de taekwondo em posição de luta" [ref=f11e163]
+        - generic [ref=f11e165]:
+          - paragraph [ref=f11e166]: "7"
+          - paragraph [ref=f11e167]: aulas extras
+        - figure "Hora do lanche" [ref=f11e168]:
+          - img "Crianças à mesa experimentando frutas" [ref=f11e169]
+        - generic [ref=f11e171]:
+          - paragraph [ref=f11e172]: 12h30
+          - paragraph [ref=f11e173]: de portas abertas por dia
+        - figure "Musicalização" [ref=f11e174]:
+          - img "Bebê tocando instrumentos na musicalização" [ref=f11e175]
+    - region [ref=f11e177]:
+      - generic [ref=f11e178]:
+        - heading "Quem caminha com a gente" [level=2] [ref=f11e179]
+        - img "Aula de musicalização com violão em roda" [ref=f11e180]
+        - paragraph [ref=f11e181]: Positivo, sistema de ensino · Kid Note, agenda digital · CCAA, inglês · N'Atividade, esporte e nutrição · Aline Fregozzi, nutricionista
+        - list "Logos dos parceiros" [ref=f11e182]:
+          - listitem [ref=f11e183]:
+            - img "Sistema de Ensino Positivo" [ref=f11e184]
+          - listitem [ref=f11e185]:
+            - img "Kid Note" [ref=f11e186]
+          - listitem [ref=f11e187]:
+            - img "CCAA" [ref=f11e188]
+          - listitem [ref=f11e189]:
+            - img "N'Atividade Esporte e Nutrição" [ref=f11e190]
+    - region [ref=f11e191]:
+      - heading "Perguntas das famílias" [level=2] [ref=f11e193]
+      - generic [ref=f11e195]:
+        - heading "Com que idade meu filho pode começar?" [level=3] [ref=f11e196]
+        - paragraph [ref=f11e197]: No berçário recebemos bebês a partir de 4 meses. Depois, a criança segue pelos níveis da Educação Infantil (Nível I a Nível IV), sempre com planejamento próprio para cada faixa etária.
+      - generic [ref=f11e199]:
+        - heading "Qual é o horário da escola?" [level=3] [ref=f11e200]
+        - paragraph [ref=f11e201]: De segunda a sexta, das 6h30 às 19h. Você escolhe entre meio período, semi-integral ou integral, com horários flexíveis para a sua rotina.
+      - generic [ref=f11e203]:
+        - heading "Qual material didático vocês usam?" [level=3] [ref=f11e204]
+        - paragraph [ref=f11e205]: A Educação Infantil usa o Sistema de Ensino Positivo, da Editora Positivo. Somos escola conveniada. O berçário tem planejamentos próprios para cada idade.
+      - generic [ref=f11e207]:
+        - heading "Como funciona a alimentação?" [level=3] [ref=f11e208]
+        - paragraph [ref=f11e209]: As refeições são feitas em cozinha própria, com alimentos frescos. O cardápio é da nutricionista Aline Fregozzi e respeita a orientação do pediatra da criança. Restrições e alergias são combinadas com a família.
+      - generic [ref=f11e211]:
+        - heading "Como é a estrutura da escola?" [level=3] [ref=f11e212]
+        - paragraph [ref=f11e213]: Salas próprias para Berçário I, Berçário II e cada nível da Educação Infantil, além de biblioteca, brinquedoteca, parquinho, quadra coberta e cozinha própria. Venha conhecer pessoalmente.
+      - generic [ref=f11e215]:
+        - heading "Como acompanho o dia do meu filho?" [level=3] [ref=f11e216]
+        - paragraph [ref=f11e217]: "Pela agenda digital Kid Note, no celular: recados, rotina e comunicados da escola chegam direto para a família."
+      - generic [ref=f11e219]:
+        - heading "A escola é segura?" [level=3] [ref=f11e220]
+        - paragraph [ref=f11e221]: Sim. A escola tem sistema de segurança com câmeras e alarme e uma vaga exclusiva de embarque e desembarque escolar na porta. Os bebês são supervisionados de perto pela coordenação.
+      - generic [ref=f11e223]:
+        - heading "Quais aulas extras estão incluídas?" [level=3] [ref=f11e224]
+        - paragraph [ref=f11e225]: Ballet, educação física, taekwondo, musicalização, futebol, inglês e artes, todas dentro da escola. Pergunte no WhatsApp quais estão incluídas no período que você escolher.
+      - generic [ref=f11e227]:
+        - heading "Como faço a matrícula e quanto custa?" [level=3] [ref=f11e228]
+        - paragraph [ref=f11e229]: As matrículas estão abertas. Os valores dependem do período e da turma, então o melhor caminho é chamar no WhatsApp (11) 94871-4027 ou agendar uma visita para conhecer a escola pessoalmente.
+    - region [ref=f11e230]:
+      - generic "Fotos dos ambientes da escola" [ref=f11e231]:
+        - button "Pausar fotos" [ref=f11e232] [cursor=pointer]
+        - generic [ref=f11e233]:
+          - figure [ref=f11e234]:
+            - img "Berçário I" [ref=f11e235]
+          - figure [ref=f11e236]:
+            - img "Berçário II" [ref=f11e237]
+          - figure [ref=f11e238]:
+            - img "Sala do Nível I" [ref=f11e239]
+          - figure [ref=f11e240]:
+            - img "Sala do Nível IV" [ref=f11e241]
+          - figure [ref=f11e242]:
+            - img "Biblioteca" [ref=f11e243]
+          - figure [ref=f11e244]:
+            - img "Brinquedoteca" [ref=f11e245]
+          - figure [ref=f11e246]:
+            - img "Parquinho" [ref=f11e247]
+          - figure [ref=f11e248]:
+            - img "Espaço do berçário com piso colorido" [ref=f11e249]
+          - figure [ref=f11e250]:
+            - img "Bebês brincando no berçário" [ref=f11e251]
+          - figure [ref=f11e252]:
+            - img "Alunos da educação infantil" [ref=f11e253]
+          - figure [aria-hidden] [ref=f11e254]
+          - figure [aria-hidden] [ref=f11e255]
+          - figure [aria-hidden] [ref=f11e256]
+          - figure [aria-hidden] [ref=f11e257]
+          - figure [aria-hidden] [ref=f11e258]
+          - figure [aria-hidden] [ref=f11e259]
+          - figure [aria-hidden] [ref=f11e260]
+          - figure [aria-hidden] [ref=f11e261]
+          - figure [aria-hidden] [ref=f11e262]
+          - figure [aria-hidden] [ref=f11e263]
+      - generic [ref=f11e264]:
+        - generic [ref=f11e265]:
+          - heading "Monte a matrícula" [level=2] [ref=f11e266]
+          - paragraph [ref=f11e267]: Escolha a idade da criança e o período. A gente mostra a turma indicada e abre o WhatsApp com a mensagem pronta, é só enviar.
+        - generic [ref=f11e268]:
+          - generic [ref=f11e269]:
+            - generic [ref=f11e270]: Idade da criança
+            - combobox "Idade da criança" [ref=f11e271] [cursor=pointer]:
+              - option "4 a 11 meses"
+              - option "1 ano" [selected]
+              - option "2 anos"
+              - option "3 anos"
+              - option "4 anos"
+              - option "5 anos"
+          - generic [ref=f11e272]:
+            - generic [ref=f11e273]: Período
+            - combobox "Período" [ref=f11e274] [cursor=pointer]:
+              - option "Meio período"
+              - option "Semi-integral"
+              - option "Integral" [selected]
+          - button "Chamar no WhatsApp" [ref=f11e275] [cursor=pointer]
+        - paragraph [ref=f11e276]:
+          - text: "Turma indicada:"
+          - strong [ref=f11e277]: Berçário II
+          - text: ", integral."
+        - generic [ref=f11e278]:
+          - generic [ref=f11e279]:
+            - heading "Venha nos visitar" [level=3] [ref=f11e280]
+            - paragraph [ref=f11e281]: Temos uma equipe pronta para receber o seu bem mais precioso.
+            - generic [ref=f11e282]:
+              - generic [ref=f11e283]:
+                - term [ref=f11e284]: Endereço
+                - definition [ref=f11e285]: Rua Colúmbia, 438Parque das Nações, Santo André, SPCEP 09241-000
+              - generic [ref=f11e286]:
+                - term [ref=f11e287]: Telefone
+                - definition [ref=f11e288]:
+                  - link "(11) 2677-8022" [ref=f11e289] [cursor=pointer]:
+                    - /url: tel:+551126778022
+              - generic [ref=f11e290]:
+                - term [ref=f11e291]: WhatsApp
+                - definition [ref=f11e292]:
+                  - link "(11) 94871-4027" [ref=f11e293] [cursor=pointer]:
+                    - /url: https://wa.me/5511948714027
+              - generic [ref=f11e294]:
+                - term [ref=f11e295]: Celular
+                - definition [ref=f11e296]:
+                  - link "(11) 96931-7414" [ref=f11e297] [cursor=pointer]:
+                    - /url: tel:+5511969317414
+              - generic [ref=f11e298]:
+                - term [ref=f11e299]: E-mail
+                - definition [ref=f11e300]:
+                  - link "contato@escolacantinhodomel.com.br" [ref=f11e301] [cursor=pointer]:
+                    - /url: mailto:contato@escolacantinhodomel.com.br
+              - generic [ref=f11e302]:
+                - term [ref=f11e303]: Horário
+                - definition [ref=f11e304]: Segunda a sexta, 6h30 às 19h
+              - generic [ref=f11e305]:
+                - term [ref=f11e306]: Redes
+                - definition [ref=f11e307]:
+                  - link "Instagram" [ref=f11e308] [cursor=pointer]:
+                    - /url: https://www.instagram.com/escola_cantinho_do_mel/
+                  - text: ·
+                  - link "Facebook" [ref=f11e309] [cursor=pointer]:
+                    - /url: https://www.facebook.com/escolacantinhodomel/
+          - generic [ref=f11e310]:
+            - iframe [ref=f11e311]
+            - link "Abrir rota no Google Maps" [ref=f11e312] [cursor=pointer]:
+              - /url: https://www.google.com/maps/search/?api=1&query=Rua+Col%C3%BAmbia%2C+438%2C+Parque+das+Na%C3%A7%C3%B5es%2C+Santo+Andr%C3%A9+-+SP
+  - contentinfo [ref=f11e313]:
+    - generic [ref=f11e316]:
+      - generic [ref=f11e317]:
+        - paragraph [ref=f11e318]: Escola Cantinho do MelEducação Infantil e Berçário
+        - paragraph [ref=f11e319]: Rua Colúmbia, 438Parque das Nações, Santo André
+        - paragraph [ref=f11e320]: Segunda a sexta6h30 às 19h
+        - link "Voltar ao topo" [ref=f11e321] [cursor=pointer]:
+          - /url: "#topo"
+      - generic [ref=f11e322]:
+        - paragraph [ref=f11e323]: Ficou alguma dúvida? Chame a gente.
+        - link "(11) 94871-4027" [ref=f11e324] [cursor=pointer]:
+          - /url: https://wa.me/5511948714027
+      - generic [ref=f11e325]:
+        - paragraph [ref=f11e326]:
+          - link "Instagram" [ref=f11e327] [cursor=pointer]:
+            - /url: https://www.instagram.com/escola_cantinho_do_mel/
+          - text: ·
+          - link "Facebook" [ref=f11e328] [cursor=pointer]:
+            - /url: https://www.facebook.com/escolacantinhodomel/
+          - text: ·
+          - link "E-mail" [ref=f11e329] [cursor=pointer]:
+            - /url: mailto:contato@escolacantinhodomel.com.br
+          - text: ·
+          - link "(11) 2677-8022" [ref=f11e330] [cursor=pointer]:
+            - /url: tel:+551126778022
+        - paragraph [ref=f11e331]: © Escola Cantinho do Mel. Todos os direitos reservados.
+        - paragraph [ref=f11e332]: Santo André, SP · desde 1992
+  - link "Conversar no WhatsApp" [ref=f11e333] [cursor=pointer]:
+    - /url: https://wa.me/5511948714027?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20do%20Mel.
