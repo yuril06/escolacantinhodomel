@@ -766,3 +766,11 @@ a.info:hover { transform: translateX(6px) rotate(-1deg); }
 .collage--solo .p1 img { object-position: 30% 50%; }
 .collage--solo .mascot { left: auto; right: -2%; bottom: -4%; width: clamp(110px, 13vw, 180px); }
 .collage--solo .badge, .pagehero .collage--solo .badge { left: -2%; top: auto; bottom: 2%; right: auto; }
+
+/* abelhas temáticas das aulas extras */
+.art img.art__mascot { position: absolute; left: 0; right: 0; bottom: 3%; margin: 0 auto; height: 92%; width: auto; max-width: 92%; object-fit: contain; animation: bob 3.4s ease-in-out infinite; filter: drop-shadow(0 6px 0 rgba(29,42,77,.15)); }
+.art--bubble img.art__mascot { left: 4%; right: auto; margin: 0; }
+.art--bubble .art__bubble { right: 8%; top: 14%; }
+.extra:nth-child(odd) .art img.art__mascot { animation-delay: -1.2s; }
+.solo .art img.art__mascot { height: 88%; bottom: 5%; }
+.solo .art--bubble img.art__mascot { left: 6%; }
