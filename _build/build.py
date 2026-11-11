@@ -343,8 +343,8 @@ def partners():
 def ctaband():
     return f'''<section class="section" aria-label="Agendar visita"><div class="wrap">
   <div class="cta-band cta-band--plain" data-reveal>
-    <div><h2 style="font-size:clamp(1.7rem,1.2rem + 1.6vw,2.6rem)">Que tal conhecer a escola pessoalmente?</h2><p>Agende uma visita para ver as salas, o berçário e conhecer a equipe.</p></div>
-    <a class="btn btn--zap" href="{zap()}" target="_blank" rel="noopener">{ICON["zap"]} Agendar visita</a></div>
+    <div><h2 style="font-size:clamp(1.7rem,1.2rem + 1.6vw,2.6rem)">Que tal conhecer a escola pessoalmente?</h2><p>Agende uma visita para ver as salas, o berçário e conhecer a equipe. Respondemos pelo WhatsApp de segunda a sexta.</p></div>
+    <div class="cta-band__btns"><a class="btn btn--zap" href="{zap()}" target="_blank" rel="noopener">{ICON["zap"]} Agendar pelo WhatsApp</a><a class="btn btn--white" href="contato.html#agendar">Preencher formulário {ICON["arrow"]}</a></div></div>
 </div></section>'''
 
 COMPONENTS = {"planner": planner, "visit": visit, "where": where, "partners": partners, "ctaband": ctaband,

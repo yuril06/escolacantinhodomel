@@ -9,9 +9,9 @@
         <p class="lead">Do berçário ao Nível 4, para crianças de 4 meses a 6 anos. Meio período, semi integral ou integral, como for melhor para a sua família.</p>
         <div class="ctas"><a class="btn btn--sun" href="#monte-o-dia">{{puzzle}} Descobrir a turma do meu filho</a></div>
       </div>
-      <aside class="info-card" aria-label="Turmas por idade">
-        <h2>Turmas por idade</h2>
-        <ul><li><span class="info-card__i">{{baby}}</span><span><b>Berçário</b>4 meses a 2 anos</span></li><li><span class="info-card__i">{{star}}</span><span><b>Nível 1</b>2 a 3 anos</span></li><li><span class="info-card__i">{{star}}</span><span><b>Nível 2</b>3 a 4 anos</span></li><li><span class="info-card__i">{{star}}</span><span><b>Nível 3</b>4 a 5 anos</span></li><li><span class="info-card__i">{{star}}</span><span><b>Nível 4</b>5 a 6 anos</span></li></ul>
+      <aside class="info-card" id="periodos" aria-label="Horários e períodos">
+        <h2>Horários e períodos</h2>
+        <ul><li><span class="info-card__i">{{clock}}</span><span><b>06h30 às 18h45</b>Segunda a sexta-feira</span></li><li><span class="info-card__i">{{star}}</span><span><b>Meio período</b>5 horas por dia</span></li><li><span class="info-card__i">{{star}}</span><span><b>Semi integral</b>8 horas por dia</span></li><li><span class="info-card__i">{{star}}</span><span><b>Integral</b>12 horas por dia</span></li><li><span class="info-card__i">{{cal}}</span><span><b>Horário combinado na matrícula</b>De acordo com a rotina da família</span></li></ul>
       </aside>
     </div>
   </div>
@@ -63,19 +63,8 @@
   </div>
 </section>
 
-{{wave:white:sun}}
-<section class="section bg-sun" id="periodos" aria-labelledby="periodos-title" style="padding-bottom:clamp(48px,6vw,80px)">
-  <div class="wrap">
-    <div class="head" data-reveal><span class="tag tag--white">{{clock}} Segunda a sexta, 06h30 às 18h45</span><h2 id="periodos-title">Três períodos para escolher</h2><p>Escolha quantas horas seu filho fica com a gente. O horário de cada criança é combinado na matrícula.</p></div>
-    <div class="periods" data-stagger>
-      <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Cinco horas por dia.</p></div>
-      <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
-      <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Doze horas por dia, para a rotina de trabalho longa.</p></div>
-    </div>
-  </div>
-</section>
-{{drip:sun:white}}
+
 
 {{planner}}
 
-{{visit}}
+{{ctaband}}

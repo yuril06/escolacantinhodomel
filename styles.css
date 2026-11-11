@@ -795,3 +795,10 @@ a.info:hover { transform: translateX(6px) rotate(-1deg); }
 @media (max-width: 900px) { .info-card { margin: 4px 0 0; width: 100%; } }
 .cta-band--plain { grid-template-columns: 1fr auto; }
 @media (max-width: 760px) { .cta-band--plain { grid-template-columns: 1fr; } }
+
+.cta-band__btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+@media (max-width: 760px) { .cta-band__btns { justify-content: stretch; } .cta-band__btns .btn { width: 100%; } }
+.info-card li > a { display: contents; text-decoration: none; color: inherit; }
+.info-card li:has(> a) { cursor: pointer; transition: transform 200ms var(--ease); }
+.info-card li:has(> a):hover { transform: translateX(6px); }
+.info-card li:has(> a):hover b { color: var(--orange); }
