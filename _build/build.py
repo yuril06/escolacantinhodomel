@@ -12,7 +12,7 @@ ESCOLA = {
     "zap": "(11) 94871-4027",
     "zap_num": "5511948714027",
     "email": "contato@escolacantinhodomel.com.br",
-    "rua": "Rua Colúmbia, 438",
+    "rua": "Rua Colúmbia, 458",
     "bairro": "Parque das Nações",
     "cidade": "Santo André, SP",
     "cep": "09241-000",
@@ -311,7 +311,7 @@ def visit(above="white"):
 {wave("green", "white")}'''
 
 def where():
-    q = urllib.parse.quote("Escola Cantinho do Mel, Rua Colúmbia, 438, Parque das Nações, Santo André - SP")
+    q = urllib.parse.quote("Escola Cantinho do Mel, Rua Colúmbia, Parque das Nações, Santo André - SP")
     return f'''<section class="section" id="como-chegar" aria-labelledby="where-title">
   <div class="wrap">
     <div class="head" data-reveal><span class="tag tag--sky">{ICON["pin"]} Parque das Nações</span><h2 id="where-title">Como chegar</h2>{SQUIGGLE}<p>Procure o muro pintado com sol, grama, flores e a abelha gigante no telhado.</p></div>
