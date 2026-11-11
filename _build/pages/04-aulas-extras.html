@@ -1,127 +1,135 @@
 <!-- {"file": "aulas-extras.html", "nav": "extras", "title": "Aulas extras | Escola Cantinho do Mel, Santo André", "desc": "Inglês, futebol, judô, musicalização, ballet e aula nutricional dentro da escola, para crianças do berçário e da educação infantil."} -->
-<section class="pagehead" aria-labelledby="page-title">
-  <div class="pagehead__grid">
-    <div class="pagehead__card" style="--field: var(--honey)">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="pagehead__body">
-        <h1 id="page-title">Aulas extras</h1>
+<section class="sky" aria-labelledby="page-title">
+  {{clouds}}
+  {{sun}}
+  <div class="wrap pagehero">
+    <div class="pagehero__grid">
+      <div class="pagehero__text">
+        <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Aulas extras</span></nav>
+        <h1 id="page-title">Aulas <span class="mark">extras</span></h1>
         <p class="lead">Atividades dentro da escola para a criança se movimentar, se expressar e descobrir do que gosta.</p>
-        <nav class="extras-jump" aria-label="Aulas">
+        <nav class="chips" aria-label="Aulas">
           <a href="#ingles">Inglês</a><a href="#futebol">Futebol</a><a href="#judo">Judô</a><a href="#musicalizacao">Musicalização</a><a href="#ballet">Ballet</a><a href="#nutricional">Aula nutricional</a>
         </nav>
       </div>
-    </div>
-    <div class="pagehead__photo">
-      <img src="img/fotos/ballet-roda.webp" alt="Alunas de ballet alongando em roda com a professora" width="1130" height="848" fetchpriority="high">
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="ingles" aria-labelledby="ingles-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="ingles-title">Inglês</h2>
-      <ul class="chapter__facts"><li>Em parceria com o CCAA</li><li>Escuta e fala</li><li>Novas culturas</li></ul>
-      <p>A educação infantil é a fase em que a criança mais desenvolve as suas potencialidades. O inglês é uma das línguas mais faladas do mundo e abre portas no futuro.</p>
-      <p>Quanto mais cedo a criança tem contato com outro idioma, mais natural fica aprender. Nas aulas, ela canta, brinca e repete palavras do dia a dia em inglês.</p>
-    </div>
-    <div class="split__media" data-reveal>
-      <div class="drawn"><img src="img/desenhos/ingles.svg" alt="Desenho de dois balões de fala: Hello e Olá" width="400" height="462" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="chapter" id="futebol" aria-labelledby="futebol-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="futebol-title">Futebol</h2>
-      <ul class="chapter__facts"><li>Coordenação motora</li><li>Trabalho em equipe</li><li>Regras e convivência</li></ul>
-      <p>O movimento tem papel essencial na educação infantil. No futebol, a criança desenvolve habilidades motoras como caminhar, correr e saltar, e habilidades de manipulação, como chutar e arremessar a bola.</p>
-      <p>E aprende a jogar junto: esperar a vez, comemorar o gol do colega e respeitar as regras do jogo.</p>
-    </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/futebol.webp" alt="Aula de futebol na quadra da escola" width="800" height="533" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/movimento.webp" alt="Menina pulando entre bambolês na quadra" width="768" height="1024" loading="lazy"></div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/ballet-roda.webp" alt="Alunas de ballet alongando em roda com a professora" width="1130" height="848" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/musica-p.webp" alt="Professor tocando violão em roda com as crianças" width="720" height="450"></figure>
+        <div class="badge" aria-hidden="true"><b>6</b><span>atividades</span></div>
       </div>
     </div>
   </div>
+  {{hills}}
 </section>
 
-<section class="chapter" id="judo" aria-labelledby="judo-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="judo-title">Judô</h2>
-      <ul class="chapter__facts"><li>Equilíbrio</li><li>Disciplina</li><li>Respeito ao colega</li></ul>
-      <p>No judô, a criança conhece o próprio corpo e ganha equilíbrio, força e coordenação. Aprende a cair com segurança, a esperar a vez e a cumprimentar o colega antes e depois de cada atividade.</p>
-      <p>Ao dominar os movimentos, ganha autoestima e confiança, com valores como respeito, disciplina e companheirismo.</p>
+<section class="section" id="ingles" aria-labelledby="ingles-title">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1 solo" style="background:#a6e0ff"><img src="img/desenhos/ingles.svg" alt="Desenho de balões de fala: Hello e Olá" width="400" height="462" loading="lazy" style="object-fit:contain;padding:8%"></figure>
+      <span class="sticker">{{chat}} Hello!</span>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="drawn"><img src="img/desenhos/judo.svg" alt="Desenho de um quimono de judô com faixa amarrada" width="400" height="462" loading="lazy"></div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--sky">{{chat}} Inglês</span>
+      <h2 id="ingles-title">Inglês desde pequenininho</h2>
+      <ul class="pills"><li>Parceria com o CCAA</li><li>Escuta e fala</li><li>Novas culturas</li></ul>
+      <p>A educação infantil é a fase em que a criança mais desenvolve suas potencialidades. O inglês é uma das línguas mais faladas do mundo e abre portas no futuro.</p>
+      <p>Quanto mais cedo a criança tem contato com outro idioma, mais natural fica aprender. Nas aulas ela canta, brinca e repete palavras do dia a dia em inglês.</p>
     </div>
   </div>
 </section>
 
-<section class="chapter" id="musicalizacao" aria-labelledby="musica-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="musica-title">Musicalização</h2>
-      <ul class="chapter__facts"><li>Ritmo</li><li>Voz e escuta</li><li>Instrumentos</li></ul>
+{{wave:white:grass}}
+<section class="section bg-grass" id="futebol" aria-labelledby="futebol-title">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/futebol.webp" alt="Aula de futebol na quadra da escola" width="800" height="533" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/movimento.webp" alt="Menina pulando entre bambolês na quadra" width="768" height="1024" loading="lazy"></figure>
+      <span class="sticker">{{ball}} Gol!</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--white">{{ball}} Futebol</span>
+      <h2 id="futebol-title">Correr, chutar e jogar junto</h2>
+      <ul class="pills"><li>Coordenação motora</li><li>Trabalho em equipe</li><li>Regras e convivência</li></ul>
+      <p>O movimento tem papel essencial na educação infantil. No futebol a criança desenvolve habilidades como caminhar, correr e saltar, e também chutar e arremessar a bola.</p>
+      <p>E aprende a jogar junto: esperar a vez, comemorar o gol do colega e respeitar as regras do jogo.</p>
+    </div>
+  </div>
+</section>
+{{wave:grass:white}}
+
+<section class="section" id="judo" aria-labelledby="judo-title">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1 solo" style="background:#ffc999"><img src="img/desenhos/judo.svg" alt="Desenho de um quimono de judô com faixa amarrada" width="400" height="462" loading="lazy" style="object-fit:contain;padding:8%"></figure>
+      <span class="sticker">{{belt}} Equilíbrio</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag" style="background:#ffc999">{{belt}} Judô</span>
+      <h2 id="judo-title">Força, respeito e equilíbrio</h2>
+      <ul class="pills"><li>Equilíbrio</li><li>Disciplina</li><li>Respeito ao colega</li></ul>
+      <p>No judô a criança conhece o próprio corpo e ganha equilíbrio, força e coordenação. Aprende a cair com segurança, a esperar a vez e a cumprimentar o colega antes e depois de cada atividade.</p>
+      <p>Ao dominar os movimentos, ganha autoestima e confiança, com valores como respeito, disciplina e companheirismo.</p>
+    </div>
+  </div>
+</section>
+
+{{wave:white:pink}}
+<section class="section bg-pink" id="musicalizacao" aria-labelledby="musica-title">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/musica.webp" alt="Professor tocando violão em roda com os bebês" width="795" height="498" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/junina-3.webp" alt="Criança com chapéu e violinha de brinquedo" width="630" height="1400" loading="lazy" style="object-position:50% 25%"></figure>
+      <span class="sticker">{{music}} Lá-lá-lá</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--white">{{music}} Musicalização</span>
+      <h2 id="musica-title">Música para sentir e expressar</h2>
+      <ul class="pills"><li>Ritmo</li><li>Voz e escuta</li><li>Instrumentos</li></ul>
       <p>A iniciação musical na educação infantil estimula áreas do cérebro que ajudam no desenvolvimento de outras linguagens e de habilidades motoras e intelectuais.</p>
       <p>Cantando e tocando, a criança também aprende a expressar o que sente.</p>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/musica.webp" alt="Professor tocando violão em roda com os bebês" width="795" height="498" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/junina-3.webp" alt="Criança com chapéu e violinha de brinquedo" width="630" height="1400" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
+{{wave:pink:white}}
 
-<section class="chapter" id="ballet" aria-labelledby="ballet-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="ballet-title">Ballet</h2>
-      <ul class="chapter__facts"><li>Postura</li><li>Musicalidade</li><li>Criatividade</li></ul>
+<section class="section" id="ballet" aria-labelledby="ballet-title">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/ballet-sorriso.webp" alt="Aluna de ballet sorrindo" width="1130" height="848" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/ballet-roda-p.webp" alt="Alongamento em roda na aula de ballet" width="720" height="540" loading="lazy"></figure>
+      <span class="sticker">{{sparkle}} Pliê!</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--pink">{{sparkle}} Ballet</span>
+      <h2 id="ballet-title">Dançar faz bem por dentro e por fora</h2>
+      <ul class="pills"><li>Postura</li><li>Musicalidade</li><li>Criatividade</li></ul>
       <p>Dançar é divertido e faz bem para o corpo e para as emoções. O ballet melhora a coordenação motora e ajuda a criança a ser mais disciplinada e dedicada.</p>
       <p>Também favorece a criatividade, a musicalidade e o trabalho em grupo.</p>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/ballet-sorriso.webp" alt="Aluna de ballet sorrindo, deitada no tapete" width="1130" height="848" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/ballet-roda-p.webp" alt="Alongamento em roda na aula de ballet" width="720" height="540" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="chapter" id="nutricional" aria-labelledby="nutri-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="nutri-title">Aula nutricional</h2>
-      <ul class="chapter__facts"><li>Com a nutricionista</li><li>Experiências com alimentos</li><li>Hábitos saudáveis</li></ul>
+{{wave:white:sun}}
+<section class="section bg-sun" id="nutricional" aria-labelledby="nutri-title">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/frutas-investigando.webp" alt="Bebê com a plaquinha Investigando cores, sabor e textura das frutas" width="1400" height="630" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/morangos.webp" alt="Bebê ao lado de um escorredor com morangos" width="1050" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{apple}} Hummm!</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--white">{{apple}} Aula nutricional</span>
+      <h2 id="nutri-title">Descobrindo os alimentos</h2>
+      <ul class="pills"><li>Com a nutricionista</li><li>Experiências</li><li>Hábitos saudáveis</li></ul>
       <p>As aulas de nutrição são dadas pela nutricionista da escola. As crianças tocam, cheiram e provam os alimentos, acompanham as transformações que acontecem com eles e trocam ideias sobre o que faz bem.</p>
-      <p>Assim, constroem desde cedo uma relação boa com a comida.</p>
-      <a class="link" href="alimentacao.html">Ver como funciona a alimentação</a>
-    </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/frutas-investigando.webp" alt="Bebê com a plaquinha Investigando cores, sabor e textura das frutas" width="1400" height="630" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/morangos.webp" alt="Bebê sentado ao lado de um escorredor com morangos" width="1050" height="1400" loading="lazy"></div>
-      </div>
+      <p><a class="btn btn--white" href="alimentacao.html">Ver como é a alimentação {{arrow}}</a></p>
     </div>
   </div>
 </section>
+{{drip:sun:white}}
 
-<section class="section" aria-labelledby="extras-cta">
-  <div class="wrap">
-    <div class="planner cta-row" data-reveal>
-      <div>
-        <h2 id="extras-cta">Quer saber dias e valores?</h2>
-        <p class="planner__intro">Cada aula tem sua turma e seu horário. Fale com a secretaria pelo WhatsApp.</p>
-      </div>
-      <a class="btn btn--zap" href="https://wa.me/5511948714027?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20os%20dias%20e%20valores%20das%20aulas%20extras." target="_blank" rel="noopener">{{zap}} Perguntar no WhatsApp</a>
-    </div>
-  </div>
-</section>
+<section class="section" aria-label="Dias e valores"><div class="wrap">
+  <div class="cta-band" data-reveal><img src="img/abelha.webp" alt="" width="388" height="446" loading="lazy">
+    <div><h2 style="font-size:clamp(1.7rem,1.2rem + 1.6vw,2.6rem)">Quer saber dias e valores?</h2><p>Cada aula tem sua turma e seu horário. Fale com a secretaria pelo WhatsApp.</p></div>
+    <a class="btn btn--zap" href="https://wa.me/5511948714027?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20os%20dias%20e%20valores%20das%20aulas%20extras." target="_blank" rel="noopener">{{zap}} Perguntar no WhatsApp</a></div>
+</div></section>

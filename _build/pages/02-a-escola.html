@@ -1,133 +1,127 @@
 <!-- {"file": "a-escola.html", "nav": "escola", "title": "A escola | Escola Cantinho do Mel, Santo André", "desc": "Desde 1992 em Santo André: quem somos, proposta pedagógica, missão, visão e valores, estrutura, equipe e parceiros da Escola Cantinho do Mel."} -->
-<section class="pagehead" aria-labelledby="page-title">
-  <div class="pagehead__grid">
-    <div class="pagehead__card" style="--field: var(--leaf)">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="pagehead__body">
-        <h1 id="page-title">Um cantinho desde 1992</h1>
+<section class="sky" aria-labelledby="page-title">
+  {{clouds}}
+  {{sun}}
+  <div class="wrap pagehero">
+    <div class="pagehero__grid">
+      <div class="pagehero__text">
+        <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>A escola</span></nav>
+        <h1 id="page-title">Um cantinho cheio de <span class="mark">carinho</span></h1>
         <p class="lead">Espaço amplo, equipe qualificada e um jeito humano e carinhoso de acompanhar cada criança, do berçário ao Nível 4.</p>
-        <a class="btn btn--ink" href="{{zapurl}}" target="_blank" rel="noopener" data-zap>{{zap}} Agendar visita</a>
+        <div class="ctas"><a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a><a class="btn btn--white" href="#estrutura">Ver a estrutura {{arrow}}</a></div>
+      </div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/roda-tapete.webp" alt="Professor brincando com os bebês sobre o tapete colorido" width="1400" height="788" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/equipe-p.webp" alt="Professoras da escola" width="540" height="720"></figure>
+        <div class="badge" aria-hidden="true"><b>1992</b><span>nossa história</span></div>
       </div>
     </div>
-    <div class="pagehead__photo">
-      <img src="img/fotos/roda-tapete.webp" alt="Professor brincando com os bebês sobre o tapete colorido" width="1400" height="788" fetchpriority="high" style="object-position: 40% 50%">
-    </div>
   </div>
+  {{hills}}
 </section>
 
 <section class="section" aria-labelledby="quem-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="quem-title">Quem somos</h2>
-      <p>Em atividade desde 1992, a Escola Cantinho do Mel oferece um espaço amplo e instalações pensadas para a educação infantil, com uma equipe qualificada que trabalha com profissionalismo e afeto.</p>
-      <p>Atendemos crianças a partir de 4 meses. O berçário tem planejamento próprio, adequado a cada faixa de idade. A educação infantil usa o Sistema de Ensino Positivo, da Editora Positivo: a criança aprende por meio de atividades práticas, programadas à medida que os conteúdos avançam.</p>
-      <p>Com competência e seriedade, acompanhamos os alunos de forma humana, carinhosa e sensível. É assim que nascem uma socialização saudável, o equilíbrio emocional e um dia a dia prazeroso e produtivo.</p>
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/menina-uniforme.webp" alt="Aluna sorrindo com o uniforme da escola" width="647" height="1400" loading="lazy" style="object-position:50% 30%"></figure>
+      <figure class="photo s2"><img src="img/fotos/refeitorio.webp" alt="Crianças sentadas à mesa do refeitório" width="647" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{heart}} Desde 1992</span>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/menina-uniforme.webp" alt="Aluna sorrindo com o uniforme da escola" width="647" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/refeitorio.webp" alt="Crianças sentadas à mesa do refeitório" width="647" height="1400" loading="lazy"></div>
-      </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--sky">{{home}} Quem somos</span>
+      <h2 id="quem-title">Uma escola feita com amor</h2>
+      <p>Em atividade desde 1992, a Escola Cantinho do Mel oferece um espaço amplo e instalações pensadas para a educação infantil, com uma equipe qualificada que trabalha com profissionalismo e afeto.</p>
+      <p>Atendemos crianças a partir de 4 meses. O berçário tem planejamento próprio, adequado a cada faixa de idade. A educação infantil usa o Sistema de Ensino Positivo: a criança aprende com atividades práticas, programadas à medida que os conteúdos avançam.</p>
+      <p>Acompanhamos os alunos de forma humana, carinhosa e sensível. É assim que nascem uma socialização saudável, o equilíbrio emocional e um dia a dia gostoso e produtivo.</p>
     </div>
   </div>
 </section>
 
-<section class="statement" aria-label="Para as famílias">
-  <div class="wrap" data-reveal>
-    <p>Pense bem antes de escolher <span class="thumb"><img src="img/fotos/mandioca-menino-p.webp" alt="" width="540" height="720" loading="lazy"></span> onde seu filho vai passar boa parte da infância, aprender valores <span class="thumb"><img src="img/fotos/carnaval-p.webp" alt="" width="540" height="720" loading="lazy"></span> e viver o que leva para a vida.</p>
+{{wave:white:pink}}
+<section class="section bg-pink" aria-label="Para as famílias">
+  <div class="wrap" style="max-width:980px">
+    <div class="cta-band" style="background:#fff" data-reveal>
+      <img src="img/abelha.webp" alt="" width="388" height="446" loading="lazy">
+      <div><h2 style="font-size:clamp(1.5rem,1.1rem + 1.4vw,2.3rem)">Pense bem antes de escolher</h2><p>É aqui que seu filho vai passar boa parte da infância, aprender valores importantes e viver experiências para a vida toda. Por isso, venha conhecer de perto.</p></div>
+      <a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a>
+    </div>
   </div>
 </section>
+{{wave:pink:white}}
 
 <section class="section" aria-labelledby="proposta-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="proposta-title">Proposta pedagógica</h2>
-      <p>Nossa proposta busca a formação integral da criança: o desenvolvimento motor, afetivo, social e cognitivo, lado a lado.</p>
-      <p>A aprendizagem é dinâmica, global e significativa. Parte da realidade de cada aluno e de estímulos e desafios que o ajudam a construir o próprio conhecimento.</p>
-      <ul class="hexlist">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/farinha-1.webp" alt="Bebê explorando farinha com as mãos e os pés" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/pintura-chao.webp" alt="Crianças pintando no chão da sala" width="788" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{sparkle}} Aprender brincando</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--grass">{{book}} Proposta pedagógica</span>
+      <h2 id="proposta-title">A criança no centro de tudo</h2>
+      <p>Nossa proposta busca a formação integral da criança: o desenvolvimento motor, afetivo, social e cognitivo, lado a lado. A aprendizagem é dinâmica e significativa, parte da realidade de cada aluno e de desafios que o ajudam a construir o próprio conhecimento.</p>
+      <ul class="checks">
         <li>Sistema de Ensino Positivo na educação infantil</li>
         <li>Planejamento próprio no berçário, por faixa de idade</li>
         <li>Vivências com os sentidos: texturas, sabores, cores e sons</li>
         <li>Histórias, dramatização e brincadeiras para a linguagem oral</li>
       </ul>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/farinha-1.webp" alt="Bebê explorando farinha com as mãos e os pés" width="1050" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/pintura-chao.webp" alt="Crianças pintando no chão da sala" width="788" height="1400" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="mvv-title">
+{{wave:white:sun}}
+<section class="section bg-sun" aria-labelledby="mvv-title" style="padding-bottom:clamp(48px,6vw,80px)">
   <div class="wrap">
-    <div class="mvv__head" data-reveal>
-      <h2 id="mvv-title">O que nos move</h2>
-      <p>Missão, visão e valores que guiam o trabalho da escola desde o primeiro dia.</p>
-    </div>
-    <div class="mvv" data-reveal>
-      <article><h3>Missão</h3><p>Levar conhecimento ao aluno para formar um cidadão consciente, em um ambiente aconchegante e estimulante que promove o desenvolvimento integral da criança.</p></article>
-      <article><h3>Visão</h3><p>Ser referência em qualidade de atendimento no berçário e na educação infantil, com excelência na prestação de serviços educacionais.</p></article>
-      <article><h3>Valores</h3><p>Cooperação, transparência, respeito, comprometimento, inovação e a formação dos alunos.</p></article>
+    <div class="head" data-reveal><span class="tag tag--white">{{star}} O que nos move</span><h2 id="mvv-title">Missão, visão e valores</h2></div>
+    <div class="mvv" data-stagger>
+      <article class="card" style="--c:#fff;--ic:var(--orange)"><div class="card__icon">{{heart}}</div><h3>Missão</h3><p>Levar conhecimento ao aluno para formar um cidadão consciente, em um ambiente aconchegante e estimulante que promove o desenvolvimento integral da criança.</p></article>
+      <article class="card" style="--c:#fff;--ic:var(--sky-deep)"><div class="card__icon">{{star}}</div><h3>Visão</h3><p>Ser referência em qualidade de atendimento no berçário e na educação infantil, com excelência nos serviços educacionais.</p></article>
+      <article class="card" style="--c:#fff;--ic:var(--grass-deep)"><div class="card__icon">{{users}}</div><h3>Valores</h3><p>Cooperação, transparência, respeito, comprometimento, inovação e a formação dos alunos.</p></article>
     </div>
   </div>
 </section>
+{{drip:sun:white}}
 
-<div class="band" aria-hidden="true"></div>
-
-<section class="section" aria-labelledby="estrutura-title">
+<section class="section" id="estrutura" aria-labelledby="estrutura-title">
   <div class="wrap">
-    <div class="rooms__head" data-reveal>
-      <h2 id="estrutura-title">Nossa estrutura</h2>
-      <p>Ambientes pensados para cada idade, que favorecem a liberdade de expressão, hábitos saudáveis e a descoberta do mundo.</p>
-    </div>
-    <div class="rooms" data-reveal>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/bercario-espelho-p.webp" alt="Bebês no berçário, em frente ao espelho" width="720" height="540" loading="lazy"></div><figcaption><b>Berçário</b><span>Espelho, almofadas e brinquedos macios</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/soneca-p.webp" alt="Colchonetes da hora do sono" width="540" height="720" loading="lazy"></div><figcaption><b>Hora do sono</b><span>Colchonetes individuais</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/cadeiroes-p.webp" alt="Cadeirões para a alimentação dos bebês" width="720" height="540" loading="lazy"></div><figcaption><b>Cadeirões</b><span>Refeições dos bebês</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/refeitorio-p.webp" alt="Mesas do refeitório" width="332" height="720" loading="lazy"></div><figcaption><b>Refeitório</b><span>Mesas na altura das crianças</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/mandioca-menino-p.webp" alt="Área de brinquedos com gramado sintético" width="540" height="720" loading="lazy"></div><figcaption><b>Área de brincar</b><span>Gramado e brinquedos de montar</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/bandeira-p.webp" alt="Crianças sentadas no tapete emborrachado da sala" width="720" height="324" loading="lazy"></div><figcaption><b>Sala de atividades</b><span>Piso emborrachado e colorido</span></figcaption></figure>
-      <figure class="room"><div class="hexpic"><img src="img/fotos/mostra-2-p.webp" alt="Exposição dos trabalhos das crianças" width="540" height="720" loading="lazy"></div><figcaption><b>Mostras</b><span>Trabalhos expostos para as famílias</span></figcaption></figure>
+    <div class="head" data-reveal><span class="tag tag--pink">{{home}} Nossa estrutura</span><h2 id="estrutura-title">Espaços pensados para cada idade</h2>{{squiggle}}<p>Ambientes que favorecem a liberdade de expressão, hábitos saudáveis e a descoberta do mundo.</p></div>
+    <div class="rooms" data-stagger>
+      <figure class="room"><div class="frame"><img src="img/fotos/bercario-espelho-p.webp" alt="Bebês no berçário, em frente ao espelho" width="720" height="540" loading="lazy"></div><figcaption><b>Berçário</b><span>Espelho, almofadas e brinquedos macios</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/soneca-p.webp" alt="Colchonetes da hora do sono" width="540" height="720" loading="lazy"></div><figcaption><b>Hora do sono</b><span>Colchonetes individuais</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/cadeiroes-p.webp" alt="Cadeirões para a alimentação dos bebês" width="720" height="540" loading="lazy"></div><figcaption><b>Cadeirões</b><span>Refeições dos bebês</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/refeitorio-p.webp" alt="Mesas do refeitório" width="332" height="720" loading="lazy"></div><figcaption><b>Refeitório</b><span>Mesas na altura das crianças</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/mandioca-menino-p.webp" alt="Área de brinquedos com gramado sintético" width="540" height="720" loading="lazy"></div><figcaption><b>Área de brincar</b><span>Gramado e brinquedos de montar</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/quebra-cabeca-p.webp" alt="Bebê brincando no tapete emborrachado" width="332" height="720" loading="lazy"></div><figcaption><b>Pisos macios</b><span>Tapetes emborrachados e coloridos</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/bandeira-p.webp" alt="Crianças na sala de atividades" width="720" height="324" loading="lazy"></div><figcaption><b>Sala de atividades</b><span>Espaço para brincar em grupo</span></figcaption></figure>
+      <figure class="room"><div class="frame"><img src="img/fotos/mostra-2-p.webp" alt="Exposição dos trabalhos das crianças" width="540" height="720" loading="lazy"></div><figcaption><b>Mostras</b><span>Trabalhos expostos para as famílias</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="section team" aria-labelledby="equipe-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="equipe-title">Nossa equipe</h2>
-      <p>Os bebês e as crianças são acompanhados por profissionais qualificados, com supervisão direta da coordenação da escola, que garante atenção integral e tranquilidade para as famílias.</p>
-      <ul class="hexlist">
+{{wave:white:grass}}
+<section class="section bg-grass" aria-labelledby="equipe-title">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/equipe.webp" alt="Professoras da escola" width="1050" height="1400" loading="lazy" style="object-position:50% 25%"></figure>
+      <figure class="photo s2"><img src="img/fotos/formacao.webp" alt="Encontro de formação da equipe" width="1400" height="647" loading="lazy"></figure>
+      <span class="sticker">{{shield}} Primeiros socorros</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--white">{{users}} Nossa equipe</span>
+      <h2 id="equipe-title">Gente preparada e carinhosa</h2>
+      <p>Bebês e crianças são acompanhados por profissionais qualificados, com supervisão direta da coordenação da escola, que garante atenção integral e tranquilidade para as famílias.</p>
+      <ul class="checks">
         <li>Profissionais qualificados em educação infantil</li>
         <li>Curso de primeiros socorros</li>
         <li>Encontros de formação para toda a equipe</li>
         <li>Coordenação presente no dia a dia</li>
       </ul>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/equipe.webp" alt="Professoras da escola" width="1050" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/formacao-p.webp" alt="Encontro de formação da equipe" width="720" height="332" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
+{{wave:grass:white}}
 
-<section class="section partners" aria-labelledby="par-title" style="margin-top: 0">
-  <div class="wrap partners__grid">
-    <div class="partners__head" data-reveal>
-      <h2 id="par-title">Nossos parceiros</h2>
-      <p>No ensino, no inglês, na comunicação com as famílias e na nutrição, a escola conta com quem é referência.</p>
-    </div>
-    <ul class="partners__list" data-reveal>
-      <li class="partner"><img src="img/marcas/positivo.webp" alt="Sistema de Ensino Positivo" width="900" height="440" loading="lazy"><b>Positivo</b><span>Sistema de ensino</span></li>
-      <li class="partner"><img src="img/marcas/ccaa.webp" alt="CCAA" width="900" height="664" loading="lazy"><b>CCAA</b><span>Inglês</span></li>
-      <li class="partner"><img src="img/marcas/kidnote.webp" alt="Kid Note" width="900" height="763" loading="lazy"><b>Kid Note</b><span>Agenda digital escolar</span></li>
-      <li class="partner"><img src="img/marcas/natividade.webp" alt="N'Atividade Esporte e Nutrição" width="900" height="692" loading="lazy"><b>N'Atividade</b><span>Esporte e nutrição</span></li>
-    </ul>
-  </div>
-</section>
+{{partners}}
 
-{{coupon}}
+{{visit}}

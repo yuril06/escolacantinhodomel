@@ -1,58 +1,79 @@
 <!-- {"file": "alimentacao.html", "nav": "alimentacao", "title": "Alimentação | Escola Cantinho do Mel, Santo André", "desc": "Cozinha própria, alimentos frescos e cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança."} -->
-<section class="pagehead" aria-labelledby="page-title">
-  <div class="pagehead__grid">
-    <div class="pagehead__card" style="--field: var(--leaf)">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="pagehead__body">
-        <h1 id="page-title">Comida feita aqui</h1>
+<section class="sky" aria-labelledby="page-title">
+  {{clouds}}
+  {{sun}}
+  <div class="wrap pagehero">
+    <div class="pagehero__grid">
+      <div class="pagehero__text">
+        <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Alimentação</span></nav>
+        <h1 id="page-title">Comida <span class="mark">feita aqui</span></h1>
         <p class="lead">Cozinha própria, alimentos sempre fresquinhos e um cardápio de nutricionista, que respeita a orientação do pediatra de cada criança.</p>
-        <a class="btn btn--ink" href="{{zapurl}}" target="_blank" rel="noopener" data-zap>{{zap}} Agendar visita</a>
+        <div class="ctas"><a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a></div>
+      </div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/frutas-turma.webp" alt="Bebês do berçário investigando frutas" width="1400" height="630" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/morangos-p.webp" alt="Bebê com morangos frescos" width="540" height="720"></figure>
+        <div class="badge" aria-hidden="true"><b>{{apple}}</b><span>tudo fresquinho</span></div>
       </div>
     </div>
-    <div class="pagehead__photo">
-      <img src="img/fotos/frutas-turma.webp" alt="Bebês do berçário investigando frutas" width="1400" height="630" fetchpriority="high">
-    </div>
   </div>
+  {{hills}}
 </section>
 
 <section class="section" aria-labelledby="cozinha-title">
-  <div class="wrap kitchen">
-    <div class="kitchen__text" data-reveal>
-      <h2 id="cozinha-title">Da nossa cozinha</h2>
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/mandioca-bebe2.webp" alt="Bebê com um prato de abacaxi e mandioca" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/cadeiroes.webp" alt="Cadeirões dos bebês" width="1400" height="1050" loading="lazy"></figure>
+      <span class="sticker">{{pot}} Cozinha própria</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--grass">{{pot}} Da nossa cozinha</span>
+      <h2 id="cozinha-title">Feito com cuidado, todo dia</h2>
       <p>Todas as preparações são feitas na cozinha própria da escola, com alimentos frescos e nutritivos, para refeições sempre equilibradas.</p>
       <p>As funcionárias da cozinha recebem treinamentos periódicos e de reciclagem, que garantem segurança e qualidade em cada etapa:</p>
-      <ul class="hexlist">
+      <ul class="checks">
         <li>Higienização dos alimentos e do ambiente</li>
         <li>Conservação correta de cada ingrediente</li>
         <li>Manipulação segura no preparo</li>
       </ul>
     </div>
-    <div class="kitchen__pics" data-reveal>
-      <div class="hexpic"><img src="img/fotos/morangos-p.webp" alt="Morangos frescos em um escorredor" width="540" height="720" loading="lazy"></div>
-      <div class="hexpic"><img src="img/fotos/mandioca-bebe2-p.webp" alt="Bebê com um prato de abacaxi e mandioca" width="540" height="720" loading="lazy"></div>
-      <div class="hexpic"><img src="img/fotos/refeitorio-p.webp" alt="Crianças à mesa do refeitório" width="332" height="720" loading="lazy"></div>
-      <div class="hexpic"><img src="img/fotos/cadeiroes-p.webp" alt="Cadeirões dos bebês" width="720" height="540" loading="lazy"></div>
-      <div class="hexpic"><img src="img/fotos/frutas-investigando-p.webp" alt="Frutas cortadas para a investigação dos bebês" width="720" height="324" loading="lazy"></div>
-    </div>
   </div>
 </section>
 
-<section class="section nutri" aria-labelledby="nutri-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="nutri-title">Cardápio de nutricionista</h2>
+{{wave:white:grass}}
+<section class="section bg-grass" aria-labelledby="nutri-title">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/mandioca-dupla.webp" alt="Bebês descobrindo a mandioca" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/piquenique.webp" alt="Roda de frutas e sucos com a turma" width="1400" height="647" loading="lazy"></figure>
+      <span class="sticker">{{heart}} Nutricionista</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--white">{{apple}} Cardápio de nutricionista</span>
+      <h2 id="nutri-title">Pensado por quem entende</h2>
       <p class="quote">O cardápio é elaborado pela nutricionista Aline Fregozzi, sempre de acordo com a orientação do pediatra da criança.</p>
-      <p style="margin-top:28px">A nutricionista também dá as aulas de nutrição: os alunos acompanham as transformações dos alimentos, trocam ideias e experiências e constroem, juntos, o que sabem sobre alimentação saudável.</p>
-      <a class="link" href="aulas-extras.html#nutricional">Conhecer a aula nutricional</a>
-      <p class="partner-inline"><img src="img/marcas/natividade.webp" alt="" width="900" height="692" loading="lazy"><span>Na nutrição, a escola tem a parceria da <b>N'Atividade</b>, de esporte e nutrição.</span></p>
+      <p>A nutricionista também dá as aulas de nutrição: os alunos acompanham as transformações dos alimentos, trocam ideias e constroem, juntos, o que sabem sobre alimentação saudável.</p>
+      <div class="partner-inline"><img src="img/marcas/natividade.webp" alt="" width="900" height="692" loading="lazy"><span>Na nutrição, a escola tem a parceria da <b>N'Atividade</b>, de esporte e nutrição.</span></div>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/mandioca-dupla.webp" alt="Bebês descobrindo a mandioca" width="1050" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/piquenique-p.webp" alt="Roda de frutas e sucos com a turma" width="720" height="332" loading="lazy"></div>
-      </div>
+  </div>
+</section>
+{{wave:grass:white}}
+
+<section class="section" aria-labelledby="mesa-title">
+  <div class="wrap">
+    <div class="head" data-reveal><span class="tag tag--pink">{{camera}} Clique para ampliar</span><h2 id="mesa-title">Hora de experimentar</h2>{{squiggle}}<p>Na escola, comer também é descobrir: cores, cheiros, texturas e sabores.</p></div>
+    <div class="wall" data-gallery data-reveal>
+      <button class="polaroid" type="button" data-full="img/fotos/frutas-investigando.webp"><img src="img/fotos/frutas-investigando-p.webp" alt="Bebê investigando frutas" width="720" height="324" loading="lazy"><span>Cores e sabores das frutas</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/mandioca-bebe.webp"><img src="img/fotos/mandioca-bebe-p.webp" alt="Bebê conhecendo a mandioca" width="540" height="720" loading="lazy"><span>Conhecendo a mandioca</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/morangos.webp"><img src="img/fotos/morangos-p.webp" alt="Bebê com morangos" width="540" height="720" loading="lazy"><span>Hora dos morangos</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/refeitorio.webp"><img src="img/fotos/refeitorio-p.webp" alt="Crianças à mesa do refeitório" width="332" height="720" loading="lazy"><span>No refeitório</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/frutas-turma.webp"><img src="img/fotos/frutas-turma-p.webp" alt="Bebês com frutas" width="720" height="324" loading="lazy"><span>Investigando as frutas</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/mandioca-menino.webp"><img src="img/fotos/mandioca-menino-p.webp" alt="Menino com a mandioca" width="540" height="720" loading="lazy"><span>Da terra para a mesa</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/piquenique.webp"><img src="img/fotos/piquenique-p.webp" alt="Turma em roda com frutas e sucos" width="720" height="332" loading="lazy"><span>Lanche colorido em roda</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/mandioca-dupla.webp"><img src="img/fotos/mandioca-dupla-p.webp" alt="Bebês com mandioca" width="540" height="720" loading="lazy"><span>Mãos na massa</span></button>
     </div>
   </div>
 </section>
 
-{{coupon}}
+{{visit}}

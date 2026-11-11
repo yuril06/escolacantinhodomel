@@ -30,7 +30,7 @@
   }
 
   /* entradas: título, texto e foto sobem em sequência, uma vez */
-  const reveal = $$('[data-reveal]');
+  const reveal = $$('[data-reveal], [data-stagger]');
   if ('IntersectionObserver' in window && !reduce.matches) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
@@ -63,7 +63,7 @@
     const say = $('[data-say]', root);
     const times = $('[data-times]', root);
     const go = $('[data-planner-go]', root);
-    const cells = $$('.comb__cell', root);
+    const cells = $$('.bubble', root);
     const radios = $$('input[name="periodo"]', root);
 
     const update = () => {
@@ -94,60 +94,37 @@
     update();
   });
 
-  /* ---------- índice com prévia (aulas extras) ---------- */
-  $$('.index__body').forEach((root) => {
-    const frame = $('.index__frame', root);
-    if (!frame) return;
-    const pic = $('img', frame);
-    const fine = matchMedia('(hover: hover) and (pointer: fine) and (min-width: 900px)');
-    let warmed = false;
-    const show = (row) => {
-      if (!fine.matches) return;
-      if (!warmed) { warmed = true; $$('[data-preview]', root).forEach((a) => { new Image().src = a.dataset.preview; }); }
-      pic.src = row.dataset.preview;
-      const y = row.offsetTop + row.offsetHeight / 2 - frame.offsetHeight / 2;
-      const max = root.offsetHeight - frame.offsetHeight;
-      const opening = !frame.classList.contains('is-open');
-      if (opening) frame.style.transitionProperty = 'scale, opacity';
-      frame.style.transform = `translateY(${Math.min(max, Math.max(0, y))}px)`;
-      if (opening) { frame.getBoundingClientRect(); frame.style.transitionProperty = ''; }
-      frame.classList.add('is-open');
+  /* ---------- galeria com foto ampliada ---------- */
+  const lb = $('[data-lightbox]');
+  if (lb) {
+    const lbImg = $('img', lb), lbCap = $('figcaption', lb);
+    let items = [], at = 0, last = null;
+    const show = (n) => {
+      at = (n + items.length) % items.length;
+      const it = items[at];
+      lbImg.src = it.dataset.full; lbImg.alt = $('img', it).alt; lbCap.textContent = $('span', it).textContent;
+      lbImg.style.animation = 'none'; void lbImg.offsetWidth; lbImg.style.animation = '';
     };
-    $$('.index__row', root).forEach((row) => {
-      row.addEventListener('pointerenter', () => show(row));
-      row.addEventListener('focus', () => show(row));
+    const open = (list, n) => { items = list; last = document.activeElement; show(n); lb.classList.add('is-open'); document.body.style.overflow = 'hidden'; $('.lb-close', lb).focus(); };
+    const close = () => { lb.classList.remove('is-open'); document.body.style.overflow = ''; if (last) last.focus(); };
+    $$('[data-gallery]').forEach((g) => {
+      const list = $$('[data-full]', g);
+      list.forEach((b, n) => b.addEventListener('click', () => open(list, n)));
     });
-    root.addEventListener('pointerleave', () => frame.classList.remove('is-open'));
-    root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget)) frame.classList.remove('is-open'); });
-  });
-
-  /* ---------- momentos: uma moldura, as fotos trocam ---------- */
-  $$('[data-moments]').forEach((root) => {
-    const imgs = $$('.moments__frame img', root);
-    const btns = $$('.moments__list button', root);
-    const cap = $('[data-cap-out]', root);
-    const frame = $('.moments__frame', root);
-    let i = 0, timer = null, visible = false;
-    const set = (n) => {
-      i = (n + imgs.length) % imgs.length;
-      imgs.forEach((im, k) => {
-        im.classList.toggle('is-on', k === i);
-        if (k === i && im.loading === 'lazy') im.loading = 'eager';
-      });
-      btns.forEach((b, k) => b.setAttribute('aria-current', String(k === i)));
-      cap.textContent = imgs[i].dataset.cap;
-    };
-    const play = () => { stop(); if (!reduce.matches && visible) timer = setInterval(() => set(i + 1), 3200); };
-    const stop = () => { clearInterval(timer); timer = null; };
-    btns.forEach((b) => b.addEventListener('click', () => { set(+b.dataset.i); play(); }));
-    frame.addEventListener('click', () => { set(i + 1); play(); });
-    frame.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); set(i + 1); play(); } });
-    root.addEventListener('pointerenter', stop);
-    root.addEventListener('pointerleave', play);
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? play() : stop(); }, { threshold: 0.3 }).observe(frame);
-    }
-  });
+    $('.lb-close', lb).addEventListener('click', close);
+    $('.lb-prev', lb).addEventListener('click', () => show(at - 1));
+    $('.lb-next', lb).addEventListener('click', () => show(at + 1));
+    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+    addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(at - 1);
+      if (e.key === 'ArrowRight') show(at + 1);
+    });
+    let x0 = null;
+    lb.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(at + (dx < 0 ? 1 : -1)); x0 = null; });
+  }
 
   /* ---------- formulários que viram mensagem de WhatsApp ---------- */
   const params = new URLSearchParams(location.search);

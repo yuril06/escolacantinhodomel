@@ -1,158 +1,165 @@
 <!-- {"file": "index.html", "nav": "inicio", "title": "Escola Cantinho do Mel | Berçário e educação infantil em Santo André", "desc": "Berçário e educação infantil para crianças de 4 meses a 6 anos no Parque das Nações, Santo André. Desde 1992. Meio período, semi integral e integral, das 06h30 às 18h45."} -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero__grid">
-    <div class="hero__card">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="hero__body">
-        <h1 id="hero-title">Berçário e educação infantil</h1>
-        <p class="lead">Desde 1992 cuidando de crianças de 4 meses a 6 anos, no Parque das Nações, em Santo André. De segunda a sexta, das 06h30 às 18h45.</p>
-        <a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener" data-zap>{{zap}} Agendar visita pelo WhatsApp</a>
-        <div class="hero__links">
-          <a class="link" href="#monte-o-dia">Descobrir a turma</a>
-          <a class="link" href="turmas.html#periodos">Ver os períodos</a>
-          <a class="link" href="#como-chegar">Como chegar</a>
+<section class="sky" aria-labelledby="hero-title">
+  {{clouds}}
+  {{sun}}
+  {{flybees}}
+  <div class="wrap hero">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="tag tag--white">{{heart}} Berçário e Educação Infantil</span>
+        <h1 id="hero-title">Um cantinho <span class="mark">doce</span> para crescer feliz</h1>
+        <p class="lead">Desde 1992 cuidando de crianças de 4 meses a 6 anos com confiança, acolhimento, segurança e muito aprendizado, no Parque das Nações, em Santo André.</p>
+        <div class="ctas">
+          <a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita pelo WhatsApp</a>
+          <a class="btn btn--white" href="#turmas">Conhecer as turmas {{arrow}}</a>
         </div>
+        <ul class="facts">
+          <li><span>{{baby}}</span>4 meses a 6 anos</li>
+          <li><span>{{clock}}</span>06h30 às 18h45</li>
+          <li><span>{{star}}</span>Sistema Positivo</li>
+        </ul>
+      </div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/fachada.webp" alt="Fachada colorida da Escola Cantinho do Mel, com a abelha mascote no telhado" width="1400" height="1050" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/carnaval-p.webp" alt="Turma fantasiada no carnaval da escola" width="540" height="720"></figure>
+        <figure class="photo p3"><img src="img/fotos/menina-uniforme-p.webp" alt="Aluna sorrindo com o uniforme da escola" width="332" height="720"></figure>
+        <div class="badge" aria-hidden="true"><b>34</b><span>anos de<br>carinho</span></div>
+        <img class="mascot" src="img/abelha.webp" alt="" width="388" height="446">
       </div>
     </div>
-    <div class="hero__photo">
-      <img src="img/fotos/fachada.webp" alt="Fachada da Escola Cantinho do Mel, com muro pintado de sol, grama e árvore e a abelha mascote no telhado" width="1400" height="1050" fetchpriority="high">
-      <div class="hero__badge" aria-hidden="true"><b>34</b><span>anos de<br>cantinho</span></div>
+  </div>
+  {{hills}}
+</section>
+
+<section class="section" aria-labelledby="why-title" style="padding-top: clamp(40px, 5vw, 72px)">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="tag tag--pink">{{star}} Nosso diferencial</span>
+      <h2 id="why-title">Por que as famílias confiam no Cantinho</h2>
+      {{squiggle}}
+    </div>
+    <div class="why" data-stagger>
+      <article class="card c-sun"><div class="card__icon">{{heart}}</div><h3>Confiança</h3><p>Mais de 30 anos de história, sempre com as portas abertas para as famílias.</p></article>
+      <article class="card c-pink"><div class="card__icon">{{users}}</div><h3>Acolhimento</h3><p>Cada criança é conhecida pelo nome e acompanhada de perto, com muito afeto.</p></article>
+      <article class="card c-sky"><div class="card__icon">{{shield}}</div><h3>Segurança</h3><p>Equipe com curso de primeiros socorros e espaços pensados para cada idade.</p></article>
+      <article class="card c-grass"><div class="card__icon">{{book}}</div><h3>Qualidade pedagógica</h3><p>Sistema de Ensino Positivo e planejamento próprio para o berçário.</p></article>
     </div>
   </div>
 </section>
 
-<section class="statement" aria-label="Quem somos em uma frase">
-  <div class="wrap" data-reveal>
-    <p>Bebês de 4 meses <span class="thumb"><img src="img/fotos/mandioca-bebe-p.webp" alt="" width="540" height="720" loading="lazy"></span> a crianças de 6 anos <span class="thumb"><img src="img/fotos/menina-uniforme-p.webp" alt="" width="332" height="720" loading="lazy"></span> aprendem brincando <span class="thumb"><img src="img/fotos/argila-p.webp" alt="" width="332" height="720" loading="lazy"></span> e comem comida feita aqui <span class="thumb"><img src="img/fotos/morangos-p.webp" alt="" width="540" height="720" loading="lazy"></span>, com quem conhece cada um pelo nome.</p>
+<section class="section" aria-labelledby="sobre-title" style="padding-top: 0">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/roda-tapete.webp" alt="Professor brincando com os bebês no tapete colorido" width="1400" height="788" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/mandioca-dupla.webp" alt="Bebês descobrindo a mandioca" width="1050" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{heart}} Aprender brincando</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--sky">{{home}} Desde 1992</span>
+      <h2 id="sobre-title">Amor e dedicação em cada detalhe</h2>
+      <p>O Nosso Cantinho une o amor e a dedicação para favorecer o desenvolvimento integral das crianças. Atendemos as necessidades motoras, cognitivas, afetivas e emocionais de cada uma, em um espaço amplo e alegre.</p>
+      <ul class="checks">
+        <li>Profissionais qualificados e coordenação presente</li>
+        <li>Vivências com os sentidos: frutas, farinha, argila e música</li>
+        <li>Cozinha própria com cardápio de nutricionista</li>
+        <li>Agenda digital Kid Note para acompanhar o dia</li>
+      </ul>
+      <p style="margin-top:26px"><a class="btn btn--sun" href="a-escola.html">Conhecer a escola {{arrow}}</a></p>
+    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="dif-title">
-  <div class="wrap specimens">
-    <div class="specimens__head" data-reveal>
-      <h2 id="dif-title">Nossos diferenciais</h2>
-      <p>Confiança, acolhimento, segurança e qualidade no trabalho pedagógico. É isso que a gente faz todo dia.</p>
-      <a class="link" href="a-escola.html">Conhecer a escola</a>
+{{wave:white:sun}}
+<section class="section bg-sun" id="turmas" aria-labelledby="turmas-title" style="padding-bottom: clamp(56px, 6vw, 80px)">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="tag tag--white">{{baby}} De 4 meses a 6 anos</span>
+      <h2 id="turmas-title">Uma turma para cada fase</h2>
+      <p>Do berçário ao Nível 4, cada turma tem atividades pensadas para o momento da criança.</p>
     </div>
-    <div class="specimens__grid" data-reveal>
-      <figure class="tile t-honey">
-        <div class="tile__box"><div class="hexpic"><img src="img/fotos/mostra-1-p.webp" alt="Famílias visitando a exposição de trabalhos das crianças" width="540" height="720" loading="lazy"></div></div>
-        <figcaption><b>Confiança</b><span>Em atividade desde 1992, com as famílias dentro da escola.</span></figcaption>
-      </figure>
-      <figure class="tile tile--wide t-leaf">
-        <div class="tile__box"><div class="hexpic"><img src="img/fotos/frutas-investigando-p.webp" alt="Bebê investigando cores, sabor e textura das frutas" width="720" height="324" loading="lazy"></div></div>
-        <figcaption><b>Qualidade pedagógica</b><span>Sistema de Ensino Positivo na educação infantil e planejamento próprio no berçário.</span></figcaption>
-      </figure>
-      <figure class="tile t-sky">
-        <div class="tile__box"><div class="hexpic"><img src="img/fotos/bercario-espelho-p.webp" alt="Bebês brincando no berçário, em frente ao espelho" width="720" height="540" loading="lazy"></div></div>
-        <figcaption><b>Acolhimento</b><span>Cada bebê é atendido individualmente, com a coordenação por perto.</span></figcaption>
-      </figure>
-      <figure class="tile t-leaf">
-        <div class="tile__box"><div class="hexpic"><img src="img/fotos/quebra-cabeca-p.webp" alt="Bebê brincando sobre o tapete emborrachado" width="332" height="720" loading="lazy"></div></div>
-        <figcaption><b>Segurança</b><span>Equipe com curso de primeiros socorros e espaços pensados para cada idade.</span></figcaption>
-      </figure>
-      <figure class="tile t-honey">
-        <div class="tile__box"><div class="hexpic"><img src="img/fotos/equipe-p.webp" alt="Professoras da Escola Cantinho do Mel" width="540" height="720" loading="lazy"></div></div>
-        <figcaption><b>Profissionais qualificados</b><span>Professoras preparadas, com formação ao longo do ano.</span></figcaption>
-      </figure>
-      <figure class="tile tile--wide t-sky">
-        <div class="tile__box"><img class="logo-on-tile" src="img/marcas/positivo.webp" alt="Sistema de Ensino Positivo, escola conveniada" width="900" height="440" loading="lazy"></div>
-        <figcaption><b>Escola conveniada Positivo</b><span>Material e metodologia da Editora Positivo.</span></figcaption>
-      </figure>
+    <ul class="classes" data-stagger>
+      <li class="class"><div class="class__pic"><img src="img/fotos/mandioca-bebe-p.webp" alt="" width="540" height="720" loading="lazy"></div><h3>Berçário</h3><span class="class__age">4 meses a 2 anos</span><p>Cuidado individual e planejamento próprio.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/junina-1-p.webp" alt="" width="324" height="720" loading="lazy"></div><h3>Nível 1</h3><span class="class__age">2 a 3 anos</span><p>Primeiras rotinas em grupo, fala e movimento.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/argila-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 2</h3><span class="class__age">3 a 4 anos</span><p>Histórias, dramatização e brincadeiras.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/pintura-chao-p.webp" alt="" width="405" height="720" loading="lazy"></div><h3>Nível 3</h3><span class="class__age">4 a 5 anos</span><p>Material Positivo e descobertas do mundo.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/menina-uniforme-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 4</h3><span class="class__age">5 a 6 anos</span><p>Preparação tranquila para a próxima etapa.</p></li>
+    </ul>
+    <div class="periods" style="margin-top:56px" data-stagger>
+      <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Cinco horas por dia.</p></div>
+      <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
+      <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Doze horas por dia.</p></div>
     </div>
   </div>
 </section>
+{{drip:sun:white}}
 
 {{planner}}
 
 <section class="section" aria-labelledby="extras-title">
-  <div class="wrap index">
-    <div class="index__head" data-reveal>
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="tag tag--grass">{{sparkle}} Para descobrir talentos</span>
       <h2 id="extras-title">Aulas extras</h2>
-      <p>Seis atividades oferecidas dentro da escola, para a criança descobrir do que gosta.</p>
-      <a class="btn btn--honey index__more" href="aulas-extras.html">Ver todas as aulas {{arrow}}</a>
+      {{squiggle}}
+      <p>Atividades dentro da escola para a criança se movimentar, se expressar e descobrir do que gosta.</p>
     </div>
-    <div class="index__body">
-      <ul class="index__list" data-reveal>
-        <li><a class="index__row" href="aulas-extras.html#ingles" data-preview="img/desenhos/ingles.svg"><img class="index__thumb" src="img/desenhos/ingles.svg" alt="" width="400" height="462" loading="lazy"><span class="index__name">Inglês</span><span class="index__what">com o CCAA</span></a></li>
-        <li><a class="index__row" href="aulas-extras.html#futebol" data-preview="img/fotos/futebol.webp"><img class="index__thumb" src="img/fotos/futebol-p.webp" alt="" width="720" height="480" loading="lazy"><span class="index__name">Futebol</span><span class="index__what">correr, chutar, jogar junto</span></a></li>
-        <li><a class="index__row" href="aulas-extras.html#judo" data-preview="img/desenhos/judo.svg"><img class="index__thumb" src="img/desenhos/judo.svg" alt="" width="400" height="462" loading="lazy"><span class="index__name">Judô</span><span class="index__what">equilíbrio e respeito</span></a></li>
-        <li><a class="index__row" href="aulas-extras.html#musicalizacao" data-preview="img/fotos/musica.webp"><img class="index__thumb" src="img/fotos/musica-p.webp" alt="" width="720" height="450" loading="lazy"><span class="index__name">Musicalização</span><span class="index__what">ritmo, voz e instrumentos</span></a></li>
-        <li><a class="index__row" href="aulas-extras.html#ballet" data-preview="img/fotos/ballet-sorriso.webp"><img class="index__thumb" src="img/fotos/ballet-sorriso-p.webp" alt="" width="720" height="540" loading="lazy"><span class="index__name">Ballet</span><span class="index__what">coordenação e expressão</span></a></li>
-        <li><a class="index__row" href="aulas-extras.html#nutricional" data-preview="img/fotos/frutas-investigando.webp"><img class="index__thumb" src="img/fotos/frutas-investigando-p.webp" alt="" width="720" height="324" loading="lazy"><span class="index__name">Aula nutricional</span><span class="index__what">com a nutricionista</span></a></li>
-      </ul>
-      <div class="index__frame is-open" aria-hidden="true"><img alt="" src="img/desenhos/ingles.svg"></div>
+    <div class="extras" data-stagger>
+      <a class="extra" href="aulas-extras.html#ingles"><div class="extra__media"><img src="img/desenhos/ingles.svg" alt="" width="400" height="462" loading="lazy" style="object-fit:contain;padding-top:4%"></div><div class="extra__body"><span class="extra__icon">{{chat}}</span><h3>Inglês</h3><p>Em parceria com o CCAA, com músicas e brincadeiras.</p></div></a>
+      <a class="extra" href="aulas-extras.html#futebol"><div class="extra__media"><img src="img/fotos/futebol-p.webp" alt="" width="720" height="480" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{ball}}</span><h3>Futebol</h3><p>Correr, chutar, jogar junto e respeitar as regras.</p></div></a>
+      <a class="extra" href="aulas-extras.html#judo"><div class="extra__media"><img src="img/desenhos/judo.svg" alt="" width="400" height="462" loading="lazy" style="object-fit:contain;padding-top:4%"></div><div class="extra__body"><span class="extra__icon">{{belt}}</span><h3>Judô</h3><p>Equilíbrio, disciplina e respeito ao colega.</p></div></a>
+      <a class="extra" href="aulas-extras.html#musicalizacao"><div class="extra__media"><img src="img/fotos/musica-p.webp" alt="" width="720" height="450" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{music}}</span><h3>Musicalização</h3><p>Ritmo, voz e instrumentos para se expressar.</p></div></a>
+      <a class="extra" href="aulas-extras.html#ballet"><div class="extra__media"><img src="img/fotos/ballet-roda-p.webp" alt="" width="720" height="540" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{sparkle}}</span><h3>Ballet</h3><p>Coordenação, postura e muita criatividade.</p></div></a>
+      <a class="extra" href="aulas-extras.html#nutricional"><div class="extra__media"><img src="img/fotos/frutas-investigando-p.webp" alt="" width="720" height="324" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{apple}}</span><h3>Aula nutricional</h3><p>Com a nutricionista, descobrindo os alimentos.</p></div></a>
     </div>
   </div>
 </section>
 
-<div class="band" aria-hidden="true"></div>
-
-<section class="section" aria-labelledby="mom-title">
-  <div class="wrap moments" data-moments>
-    <div data-reveal>
+{{wave:white:grass}}
+<section class="section bg-grass" aria-labelledby="mom-title">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="tag tag--white">{{camera}} Clique para ampliar</span>
       <h2 id="mom-title">Aconteceu no Cantinho</h2>
-      <p class="lead" style="margin-top:20px;max-width:30ch">Vivências de verdade, da semana da mandioca à festa junina.</p>
-      <ul class="moments__list">
-        <li><button type="button" data-i="0" aria-current="true">Conhecendo a mandioca</button></li>
-        <li><button type="button" data-i="1">Cores e sabores das frutas</button></li>
-        <li><button type="button" data-i="2">Exploração com farinha</button></li>
-        <li><button type="button" data-i="3">Pintura com argila</button></li>
-        <li><button type="button" data-i="4">Festa junina</button></li>
-        <li><button type="button" data-i="5">Carnaval</button></li>
-        <li><button type="button" data-i="6">Mostra para as famílias</button></li>
-      </ul>
+      {{squiggle}}
+      <p>Vivências de verdade: da semana da mandioca ao arraiá, do carnaval à mostra para as famílias.</p>
     </div>
-    <div class="moments__stage" data-reveal>
-      <div class="moments__frame" role="img" aria-label="Fotos de atividades na escola" tabindex="0">
-        <img class="is-on" src="img/fotos/mandioca-dupla.webp" alt="" width="1050" height="1400" data-cap="Bebês do berçário descobrindo a mandioca: casca, folha e sabor.">
-        <img src="img/fotos/frutas-turma.webp" alt="" width="1400" height="630" loading="lazy" data-cap="Investigando cores, sabor e textura das frutas.">
-        <img src="img/fotos/farinha-2.webp" alt="" width="1050" height="1400" loading="lazy" data-cap="Exploração sensorial com farinha no berçário.">
-        <img src="img/fotos/argila.webp" alt="" width="647" height="1400" loading="lazy" data-cap="Pintura com argila: o pincel, a mão e a textura.">
-        <img src="img/fotos/junina-2.webp" alt="" width="630" height="1400" loading="lazy" data-cap="Arraiá do Cantinho, com viola e chapéu de palha.">
-        <img src="img/fotos/carnaval.webp" alt="" width="1050" height="1400" loading="lazy" data-cap="Carnaval com fantasia de super-herói e de princesa.">
-        <img src="img/fotos/mostra-2.webp" alt="" width="1050" height="1400" loading="lazy" data-cap="Famílias visitam a mostra de trabalhos das crianças.">
-      </div>
-      <p class="moments__cap" aria-live="polite" data-cap-out>Bebês do berçário descobrindo a mandioca: casca, folha e sabor.</p>
+    <div class="wall" data-gallery data-reveal>
+      <button class="polaroid" type="button" data-full="img/fotos/mandioca-bebe.webp"><img src="img/fotos/mandioca-bebe-p.webp" alt="Bebê conhecendo a mandioca" width="540" height="720" loading="lazy"><span>Conhecendo a mandioca</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/carnaval.webp"><img src="img/fotos/carnaval-p.webp" alt="Turma fantasiada no carnaval" width="540" height="720" loading="lazy"><span>Carnaval de super-heróis</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/frutas-investigando.webp"><img src="img/fotos/frutas-investigando-p.webp" alt="Bebê investigando cores, sabor e textura das frutas" width="720" height="324" loading="lazy"><span>Cores e sabores das frutas</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/junina-2.webp"><img src="img/fotos/junina-2-p.webp" alt="Criança com chapéu e viola na festa junina" width="324" height="720" loading="lazy"><span>Arraiá do Cantinho</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/farinha-2.webp"><img src="img/fotos/farinha-2-p.webp" alt="Bebê sorrindo na exploração com farinha" width="540" height="720" loading="lazy"><span>Exploração com farinha</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/argila.webp"><img src="img/fotos/argila-p.webp" alt="Menina pintando com argila" width="332" height="720" loading="lazy"><span>Pintura com argila</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/piquenique.webp"><img src="img/fotos/piquenique-p.webp" alt="Turma em roda com frutas e sucos" width="720" height="332" loading="lazy"><span>Lanche colorido em roda</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/morangos.webp"><img src="img/fotos/morangos-p.webp" alt="Bebê com morangos" width="540" height="720" loading="lazy"><span>Hora dos morangos</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/mostra-1.webp"><img src="img/fotos/mostra-1-p.webp" alt="Famílias visitando a mostra de trabalhos" width="540" height="720" loading="lazy"><span>Mostra para as famílias</span></button>
+      <button class="polaroid" type="button" data-full="img/fotos/bandeira.webp"><img src="img/fotos/bandeira-p.webp" alt="Crianças sentadas em volta da bandeira de Santo André" width="720" height="324" loading="lazy"><span>Conhecendo a bandeira da cidade</span></button>
     </div>
   </div>
 </section>
+{{wave:grass:white}}
 
-<section class="section partners" aria-labelledby="par-title">
-  <div class="wrap partners__grid">
-    <div class="partners__head" data-reveal>
-      <h2 id="par-title">Nossos parceiros</h2>
-      <p>Empresas que caminham com a escola no ensino, no inglês, na comunicação com as famílias e na nutrição.</p>
-    </div>
-    <ul class="partners__list" data-reveal>
-      <li class="partner"><img src="img/marcas/positivo.webp" alt="Sistema de Ensino Positivo" width="900" height="440" loading="lazy"><b>Positivo</b><span>Sistema de ensino</span></li>
-      <li class="partner"><img src="img/marcas/ccaa.webp" alt="CCAA" width="900" height="664" loading="lazy"><b>CCAA</b><span>Inglês</span></li>
-      <li class="partner"><img src="img/marcas/kidnote.webp" alt="Kid Note" width="900" height="763" loading="lazy"><b>Kid Note</b><span>Agenda digital escolar</span></li>
-      <li class="partner"><img src="img/marcas/natividade.webp" alt="N'Atividade Esporte e Nutrição" width="900" height="692" loading="lazy"><b>N'Atividade</b><span>Esporte e nutrição</span></li>
-    </ul>
-  </div>
-</section>
+{{partners}}
 
-<section class="section" aria-labelledby="faq-title">
-  <div class="wrap faq">
-    <div class="faq__head" data-reveal>
+{{wave:white:sky}}
+<section class="section bg-sky" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <span class="tag tag--white">{{chat}} Tire suas dúvidas</span>
       <h2 id="faq-title">Perguntas das famílias</h2>
-      <p>Não achou sua dúvida? Chame no WhatsApp que a gente responde.</p>
-      <a class="link" href="{{zapurl}}" target="_blank" rel="noopener" data-zap>Perguntar no WhatsApp</a>
+      {{squiggle}}
     </div>
-    <div class="faq__list" data-reveal>
-      <details class="qa" name="faq" open><summary>A partir de que idade vocês atendem?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>De 4 meses a 6 anos. O berçário recebe bebês de 4 meses a 2 anos, e a educação infantil vai do Nível 1 (2 a 3 anos) ao Nível 4 (5 a 6 anos).</p></div></details>
-      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>São três: meio período (5 horas), semi integral (8 horas) e integral (12 horas). A escola funciona de segunda a sexta, das 06h30 às 18h45, e o horário de cada criança é combinado na matrícula.</p></div></details>
-      <details class="qa" name="faq"><summary>Como é a alimentação?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Tudo é preparado na cozinha própria da escola, com cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança.</p><p><a class="link" href="alimentacao.html">Ver como funciona a alimentação</a></p></div></details>
-      <details class="qa" name="faq"><summary>Qual é o material pedagógico?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>A educação infantil usa o Sistema de Ensino Positivo, da Editora Positivo. O berçário tem planejamento próprio, feito para cada faixa de idade.</p></div></details>
-      <details class="qa" name="faq"><summary>Como eu acompanho o dia do meu filho?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>A escola usa o Kid Note, uma agenda digital escolar. E a equipe está sempre disponível pelo telefone e pelo WhatsApp.</p></div></details>
-      <details class="qa" name="faq"><summary>Quais aulas extras existem?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Inglês, futebol, judô, musicalização, ballet e aula nutricional. Consulte dias, turmas e valores com a secretaria.</p></div></details>
-      <details class="qa" name="faq"><summary>A equipe sabe agir numa emergência?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Sim. A equipe tem curso de primeiros socorros.</p></div></details>
-      <details class="qa" name="faq"><summary>Posso conhecer a escola antes de matricular?<span class="plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Pode e deve. Agende uma visita pelo WhatsApp ou pelo formulário abaixo, e venha ver as salas, o berçário e conhecer a equipe.</p></div></details>
+    <div class="faq" data-stagger>
+      <details class="qa" name="faq" open><summary>A partir de que idade vocês atendem?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>De 4 meses a 6 anos. O berçário recebe bebês de 4 meses a 2 anos, e a educação infantil vai do Nível 1 (2 a 3 anos) ao Nível 4 (5 a 6 anos).</p></div></details>
+      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Meio período (5 horas), semi integral (8 horas) e integral (12 horas). A escola funciona de segunda a sexta, das 06h30 às 18h45, e o horário de cada criança é combinado na matrícula.</p></div></details>
+      <details class="qa" name="faq"><summary>Como é a alimentação?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Tudo é feito na cozinha própria da escola, com cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança.</p></div></details>
+      <details class="qa" name="faq"><summary>Qual é o material pedagógico?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>A educação infantil usa o Sistema de Ensino Positivo. O berçário tem planejamento próprio, feito para cada faixa de idade.</p></div></details>
+      <details class="qa" name="faq"><summary>Como acompanho o dia do meu filho?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Pelo Kid Note, a agenda digital escolar. E a equipe está sempre disponível pelo telefone e pelo WhatsApp.</p></div></details>
+      <details class="qa" name="faq"><summary>A equipe sabe agir numa emergência?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Sim. A equipe tem curso de primeiros socorros.</p></div></details>
+      <details class="qa" name="faq"><summary>Posso conhecer a escola antes de matricular?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Pode e deve! Agende uma visita pelo WhatsApp ou pelo formulário logo abaixo.</p></div></details>
     </div>
   </div>
 </section>
+{{visit:sky}}
 
-{{coupon}}
-
-{{visit}}
+{{where}}

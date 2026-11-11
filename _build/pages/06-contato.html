@@ -1,82 +1,36 @@
 <!-- {"file": "contato.html", "nav": "contato", "title": "Contato e matrícula | Escola Cantinho do Mel, Santo André", "desc": "Agende uma visita pelo WhatsApp (11) 94871-4027 ou ligue (11) 2677-8022. Rua Colúmbia, 438, Parque das Nações, Santo André. Segunda a sexta, das 06h30 às 18h45."} -->
-<section class="pagehead" aria-labelledby="page-title">
-  <div class="pagehead__grid">
-    <div class="pagehead__card" style="--field: var(--honey)">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="pagehead__body">
-        <h1 id="page-title">Venha conhecer a escola</h1>
+<section class="sky" aria-labelledby="page-title">
+  {{clouds}}
+  {{sun}}
+  <div class="wrap pagehero">
+    <div class="pagehero__grid">
+      <div class="pagehero__text">
+        <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Contato</span></nav>
+        <h1 id="page-title">Venha <span class="mark">conhecer</span> a escola</h1>
         <p class="lead">Temos uma equipe pronta para receber o seu bem mais precioso. Agende uma visita, conheça as salas e tire suas dúvidas.</p>
-        <a class="btn btn--ink" href="#agendar">Agendar visita {{arrow}}</a>
+        <div class="ctas"><a class="btn btn--zap" href="#agendar">{{cal}} Agendar visita</a><a class="btn btn--white" href="#como-chegar">{{pin}} Como chegar</a></div>
+      </div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/fachada.webp" alt="Fachada colorida da escola" width="1400" height="1050" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/mostra-1-p.webp" alt="Famílias visitando a escola" width="540" height="720"></figure>
+        <div class="badge" aria-hidden="true"><b>438</b><span>Rua Colúmbia</span></div>
       </div>
     </div>
-    <div class="pagehead__photo">
-      <img src="img/fotos/mostra-1.webp" alt="Famílias visitando a mostra de trabalhos das crianças" width="1050" height="1400" fetchpriority="high">
-    </div>
   </div>
+  {{hills}}
 </section>
 
 <section class="section" aria-labelledby="canais-title">
   <div class="wrap">
-    <div class="rooms__head" data-reveal>
-      <h2 id="canais-title">Fale com a gente</h2>
-      <p>De segunda a sexta, das 06h30 às 18h45. Escolha o jeito mais fácil para você.</p>
+    <div class="head" data-reveal><span class="tag tag--pink">{{heart}} Seg a sex, 06h30 às 18h45</span><h2 id="canais-title">Fale com a gente</h2>{{squiggle}}<p>Escolha o jeito mais fácil para você.</p></div>
+    <div class="channels" data-stagger>
+      <a class="channel" href="{{zapurl}}" target="_blank" rel="noopener"><span class="channel__i">{{zap}}</span><b>(11) 94871-4027</b><span>WhatsApp: resposta rápida e agendamento de visitas.</span></a>
+      <a class="channel" href="tel:+551126778022"><span class="channel__i">{{tel}}</span><b>(11) 2677-8022</b><span>Telefone fixo da secretaria.</span></a>
+      <a class="channel channel--mail" href="mailto:contato@escolacantinhodomel.com.br"><span class="channel__i">{{mail}}</span><b>contato@escolacantinhodomel.com.br</b><span>Para documentos e assuntos com mais detalhes.</span></a>
     </div>
-    <div class="channels" data-reveal>
-      <a class="channel channel--zap" href="{{zapurl}}" target="_blank" rel="noopener" data-zap>
-        <span class="channel__text"><b>(11) 94871-4027</b><span>WhatsApp. O jeito mais rápido de falar com a secretaria e agendar a visita.</span><span class="btn btn--zap">{{zap}} Abrir conversa</span></span>
-        <span class="hexpic channel__pic"><img src="img/fotos/fachada-p.webp" alt="" width="720" height="540" loading="lazy"></span>
-      </a>
-      <a class="channel channel--tel" href="tel:+551126778022"><b>(11) 2677-8022</b><span>Telefone fixo da secretaria</span></a>
-      <a class="channel channel--mail" href="mailto:contato@escolacantinhodomel.com.br"><b>contato@escolacantinhodomel.com.br</b><span>E-mail, para documentos e assuntos com mais detalhes</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="agendar" aria-labelledby="form-title">
-  <div class="wrap form-page">
-    <div class="form-page__aside" data-reveal>
-      <h2 id="form-title">Agende sua visita</h2>
-      <p class="lead">Conte um pouco sobre a sua família. A mensagem sai pronta no WhatsApp da escola.</p>
-      <ol class="steps">
-        <li>Preencha o seu nome e o da criança</li>
-        <li>Diga a turma e o período de interesse</li>
-        <li>Envie pelo WhatsApp e combine o dia da visita</li>
-      </ol>
-      <div class="pair form-page__pics">
-        <div class="hexpic"><img src="img/fotos/menina-uniforme-p.webp" alt="Aluna com o uniforme da escola" width="332" height="720" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/bercario-espelho-p.webp" alt="Bebês brincando no berçário" width="720" height="540" loading="lazy"></div>
-      </div>
-    </div>
-    <form class="form-card" data-zap-form novalidate data-reveal>
-      <div class="fields-2">
-        <div class="field"><label for="f-resp">Seu nome</label><input id="f-resp" name="responsavel" autocomplete="name" required placeholder="Como podemos te chamar?"></div>
-        <div class="field"><label for="f-tel">Seu telefone</label><input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000"></div>
-      </div>
-      <div class="fields-2">
-        <div class="field"><label for="f-crianca">Nome da criança</label><input id="f-crianca" name="crianca" required placeholder="Nome do pequeno"></div>
-        <div class="field"><label for="f-nasc">Data de nascimento</label><input id="f-nasc" name="nascimento" type="date"></div>
-      </div>
-      <p class="field--hint" data-age-hint aria-live="polite">Pela data de nascimento, a gente sugere a turma.</p>
-      <div class="fields-2">
-        <div class="field"><label for="f-turma">Turma de interesse</label><select id="f-turma" name="turma" required>
-          <option value="">Escolha a turma</option><option>Berçário (4 meses a 2 anos)</option><option>Nível 1 (2 a 3 anos)</option><option>Nível 2 (3 a 4 anos)</option><option>Nível 3 (4 a 5 anos)</option><option>Nível 4 (5 a 6 anos)</option>
-        </select></div>
-        <div class="field"><label for="f-periodo">Período</label><select id="f-periodo" name="periodo">
-          <option value="">Escolha o período</option><option>Meio período (5 horas)</option><option>Semi integral (8 horas)</option><option>Integral (12 horas)</option><option>Ainda não sei</option>
-        </select></div>
-      </div>
-      <div class="fields-2">
-        <div class="field"><label for="f-chegada">Horário de chegada pretendido</label><input id="f-chegada" name="chegada" placeholder="Ex.: 07h30"></div>
-        <div class="field"><label for="f-dia">Melhor horário para a visita</label><select id="f-dia" name="dia">
-          <option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option>
-        </select></div>
-      </div>
-      <div class="field"><label for="f-msg">Quer contar mais alguma coisa?</label><textarea id="f-msg" name="mensagem" placeholder="Dúvidas, necessidades da criança, quando pretende começar..."></textarea></div>
-      <p class="form-error" role="alert" data-error></p>
-      <button class="btn btn--zap btn--full" type="submit">{{zap}} Enviar pelo WhatsApp</button>
-      <p class="field--hint">Nada é enviado sem você ver. O WhatsApp abre com a mensagem pronta para conferir.</p>
-    </form>
   </div>
 </section>
 
 {{visit}}
+
+{{where}}

@@ -1,103 +1,93 @@
 <!-- {"file": "turmas.html", "nav": "turmas", "title": "Turmas e períodos | Escola Cantinho do Mel, Santo André", "desc": "Berçário (4 meses a 2 anos) e educação infantil do Nível 1 ao Nível 4 (até 6 anos). Meio período de 5 horas, semi integral de 8 horas e integral de 12 horas."} -->
-<section class="pagehead" aria-labelledby="page-title">
-  <div class="pagehead__grid">
-    <div class="pagehead__card" style="--field: var(--sky)">
-      <div class="combs" aria-hidden="true"></div>
-      <div class="pagehead__body">
-        <h1 id="page-title">Turmas e períodos</h1>
+<section class="sky" aria-labelledby="page-title">
+  {{clouds}}
+  {{sun}}
+  <div class="wrap pagehero">
+    <div class="pagehero__grid">
+      <div class="pagehero__text">
+        <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Turmas</span></nav>
+        <h1 id="page-title">Turmas e <span class="mark">períodos</span></h1>
         <p class="lead">Do berçário ao Nível 4, para crianças de 4 meses a 6 anos. Meio período, semi integral ou integral, como for melhor para a sua família.</p>
-        <a class="btn btn--ink" href="#monte-o-dia">Descobrir a turma do meu filho {{arrow}}</a>
+        <div class="ctas"><a class="btn btn--sun" href="#monte-o-dia">{{puzzle}} Descobrir a turma do meu filho</a></div>
+      </div>
+      <div class="collage">
+        <figure class="photo p1"><img src="img/fotos/piquenique.webp" alt="Turma do berçário em roda, com frutas e sucos" width="1400" height="647" fetchpriority="high"></figure>
+        <figure class="photo p2"><img src="img/fotos/carnaval-p.webp" alt="Turma fantasiada no carnaval" width="540" height="720"></figure>
+        <div class="badge" aria-hidden="true"><b>5</b><span>turmas</span></div>
       </div>
     </div>
-    <div class="pagehead__photo">
-      <img src="img/fotos/piquenique.webp" alt="Turma do berçário sentada em roda, com frutas e copinhos de suco" width="1400" height="647" fetchpriority="high">
-    </div>
   </div>
+  {{hills}}
 </section>
 
 <section class="section" aria-labelledby="turmas-title">
   <div class="wrap">
-    <div class="rooms__head" data-reveal>
-      <h2 id="turmas-title">Cinco turmas</h2>
-      <p>Cada turma reúne crianças da mesma faixa de idade, com atividades pensadas para o momento de cada uma.</p>
-    </div>
-    <ul class="classes" data-reveal>
-      <li class="class"><div class="class__hex"><b>Berçário</b><span>4 meses a 2 anos</span></div><p>Cuidado individual e planejamento próprio.</p></li>
-      <li class="class"><div class="class__hex"><b>Nível 1</b><span>2 a 3 anos</span></div><p>Primeiras rotinas em grupo, fala e movimento.</p></li>
-      <li class="class"><div class="class__hex"><b>Nível 2</b><span>3 a 4 anos</span></div><p>Histórias, dramatização e brincadeiras.</p></li>
-      <li class="class"><div class="class__hex"><b>Nível 3</b><span>4 a 5 anos</span></div><p>Material Positivo e descobertas do mundo.</p></li>
-      <li class="class"><div class="class__hex"><b>Nível 4</b><span>5 a 6 anos</span></div><p>Preparação tranquila para a próxima etapa.</p></li>
+    <div class="head" data-reveal><span class="tag tag--pink">{{baby}} De 4 meses a 6 anos</span><h2 id="turmas-title">Uma turma para cada fase</h2>{{squiggle}}<p>Cada turma reúne crianças da mesma faixa de idade, com atividades pensadas para o momento de cada uma.</p></div>
+    <ul class="classes" data-stagger>
+      <li class="class"><div class="class__pic"><img src="img/fotos/mandioca-bebe-p.webp" alt="" width="540" height="720" loading="lazy"></div><h3>Berçário</h3><span class="class__age">4 meses a 2 anos</span><p>Cuidado individual, vivências sensoriais e planejamento próprio.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/junina-1-p.webp" alt="" width="324" height="720" loading="lazy"></div><h3>Nível 1</h3><span class="class__age">2 a 3 anos</span><p>Primeiras rotinas em grupo, fala, música e movimento.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/argila-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 2</h3><span class="class__age">3 a 4 anos</span><p>Histórias, dramatização, artes e brincadeiras.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/pintura-chao-p.webp" alt="" width="405" height="720" loading="lazy"></div><h3>Nível 3</h3><span class="class__age">4 a 5 anos</span><p>Material Positivo e muitas descobertas do mundo.</p></li>
+      <li class="class"><div class="class__pic"><img src="img/fotos/menina-uniforme-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 4</h3><span class="class__age">5 a 6 anos</span><p>Preparação tranquila e confiante para a próxima etapa.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="bercario" aria-labelledby="bercario-title">
-  <div class="wrap split">
-    <div class="split__text" data-reveal>
-      <h2 id="bercario-title">Berçário</h2>
-      <p>Nosso berçário une cuidado e educação, em um ambiente tranquilo que transmite confiança, afeto e aprendizagens que fazem sentido para os bebês.</p>
-      <p>Entendemos que cada bebê é único, e que o desenvolvimento depende da qualidade da relação com os materiais, os objetos e os adultos ao redor. Por isso os bebês são acompanhados individualmente por profissionais qualificados, com supervisão direta da coordenação.</p>
-      <ul class="hexlist">
-        <li>De 4 meses a 2 anos</li>
+<section class="section" id="bercario" aria-labelledby="bercario-title" style="padding-top:0">
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/mandioca-bebe.webp" alt="Bebê ao lado da plaquinha Conhecendo a mandioca" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/farinha-2.webp" alt="Bebê sorrindo na exploração com farinha" width="1050" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{baby}} 4 meses a 2 anos</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag">{{heart}} Berçário</span>
+      <h2 id="bercario-title">Cuidado e educação desde o comecinho</h2>
+      <p>Nosso berçário une cuidado e educação em um ambiente tranquilo, que transmite confiança, afeto e aprendizagens que fazem sentido para os bebês.</p>
+      <p>Cada bebê é único, e o desenvolvimento depende da qualidade da relação com os materiais, os objetos e os adultos ao redor. Por isso os bebês são acompanhados individualmente por profissionais qualificados, com supervisão direta da coordenação.</p>
+      <ul class="checks">
         <li>Planejamento próprio para cada faixa de idade</li>
-        <li>Vivências sensoriais com frutas, farinha, folhas e texturas</li>
+        <li>Vivências com frutas, farinha, folhas e texturas</li>
         <li>Atenção integral, para a tranquilidade da família</li>
       </ul>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/mandioca-bebe.webp" alt="Bebê sentado ao lado da plaquinha Conhecendo a mandioca" width="1050" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/farinha-2.webp" alt="Bebê sorrindo durante a exploração com farinha" width="1050" height="1400" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="section" id="infantil" aria-labelledby="infantil-title">
-  <div class="wrap split split--flip">
-    <div class="split__text" data-reveal>
-      <h2 id="infantil-title">Educação infantil</h2>
-      <p>Oferecemos uma educação de base para o crescimento saudável do aluno. Nossa metodologia, somada à experiência da escola, ajuda cada criança a se desenvolver e a chegar às novas etapas com tranquilidade e confiança.</p>
-      <p>Exploramos atividades que desenvolvem a criança física, social e emocionalmente, e estimulamos a linguagem oral com histórias, dramatização e brincadeiras, sempre respeitando o jeito de cada um.</p>
-      <ul class="hexlist">
-        <li>Do Nível 1 ao Nível 4, de 2 a 6 anos</li>
-        <li>Sistema de Ensino Positivo, da Editora Positivo</li>
+<section class="section" id="infantil" aria-labelledby="infantil-title" style="padding-top:0">
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1"><img src="img/fotos/carnaval.webp" alt="Turma fantasiada no carnaval" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s2"><img src="img/fotos/argila.webp" alt="Menina pintando com argila" width="647" height="1400" loading="lazy"></figure>
+      <span class="sticker">{{star}} Nível 1 ao 4</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag tag--sky">{{book}} Educação infantil</span>
+      <h2 id="infantil-title">Base forte para crescer com confiança</h2>
+      <p>Oferecemos uma educação de base para o crescimento saudável do aluno. Nossa metodologia, somada à experiência da escola, ajuda cada criança a se desenvolver e a chegar às novas etapas com tranquilidade.</p>
+      <p>Exploramos atividades que desenvolvem a criança física, social e emocionalmente, e estimulamos a linguagem oral com histórias, dramatização e brincadeiras, respeitando o jeito de cada um.</p>
+      <ul class="checks">
+        <li>Sistema de Ensino Positivo</li>
         <li>Datas comemorativas, mostras e festas com as famílias</li>
+        <li>Aulas extras dentro da escola</li>
       </ul>
     </div>
-    <div class="split__media" data-reveal>
-      <div class="pair">
-        <div class="hexpic"><img src="img/fotos/carnaval.webp" alt="Turma fantasiada na festa de carnaval" width="1050" height="1400" loading="lazy"></div>
-        <div class="hexpic"><img src="img/fotos/argila.webp" alt="Menina pintando com argila" width="647" height="1400" loading="lazy"></div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="section" id="periodos" aria-labelledby="periodos-title">
-  <div class="wrap grow">
-    <div class="grow__head" data-reveal>
-      <h2 id="periodos-title">Três períodos</h2>
-      <p>A escola abre às 06h30 e fecha às 18h45, de segunda a sexta. Escolha quantas horas seu filho fica com a gente.</p>
-    </div>
-    <div class="grow__item" data-reveal>
-      <div class="grow__tile"><span class="grow__hours">5<small>h</small></span><span class="grow__cells" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
-      <h3>Meio período</h3>
-      <p>Cinco horas por dia, no horário combinado na matrícula.</p>
-    </div>
-    <div class="grow__item" data-reveal>
-      <div class="grow__tile"><span class="grow__hours">8<small>h</small></span><span class="grow__cells" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-      <h3>Semi integral</h3>
-      <p>Oito horas por dia, para quem precisa de um pouco mais de tempo.</p>
-    </div>
-    <div class="grow__item" data-reveal>
-      <div class="grow__tile"><span class="grow__hours">12<small>h</small></span><span class="grow__cells" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-      <h3>Integral</h3>
-      <p>Doze horas por dia, para a família que tem uma rotina de trabalho longa.</p>
+{{wave:white:sun}}
+<section class="section bg-sun" id="periodos" aria-labelledby="periodos-title" style="padding-bottom:clamp(48px,6vw,80px)">
+  <div class="wrap">
+    <div class="head" data-reveal><span class="tag tag--white">{{clock}} Segunda a sexta, 06h30 às 18h45</span><h2 id="periodos-title">Três períodos para escolher</h2><p>Escolha quantas horas seu filho fica com a gente. O horário de cada criança é combinado na matrícula.</p></div>
+    <div class="periods" data-stagger>
+      <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Cinco horas por dia.</p></div>
+      <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
+      <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Doze horas por dia, para a rotina de trabalho longa.</p></div>
     </div>
   </div>
 </section>
+{{drip:sun:white}}
 
 {{planner}}
 
-{{coupon}}
+{{visit}}
