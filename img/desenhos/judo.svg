@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 462" role="img" aria-label="Quimono de judô com faixa amarrada">
-  <polygon points="200,60 250,60 330,110 360,210 310,228 290,170 290,400 110,400 110,170 90,228 40,210 70,110 150,60" fill="#ffffff"/>
-  <polygon points="150,60 200,170 250,60 232,60 200,132 168,60" fill="#e9e1d6"/>
-  <polygon points="200,170 160,400 110,400 110,300" fill="#f3eee7"/>
-  <rect x="110" y="262" width="180" height="34" fill="#ffc52e"/>
-  <polygon points="186,270 214,270 236,360 214,366 200,300 186,366 164,360" fill="#f2a91a"/>
-  <rect x="184" y="258" width="32" height="42" fill="#e8670f"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Quimono de judô com faixa"><path d="M78 30h44l42 26 18 60-28 10-12-38v108H58V88l-12 38-28-10 18-60Z" fill="#fff" stroke="#1d2a4d" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M78 30l22 58 22-58" fill="#e9eef7" stroke="#1d2a4d" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M100 88l-20 108" fill="none" stroke="#1d2a4d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="56" y="128" width="88" height="20" rx="4" fill="#ffd43b" stroke="#1d2a4d" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M92 146l-12 38 14 2 8-30 8 30 14-2-12-38" fill="#ffb703" stroke="#1d2a4d" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="88" y="122" width="24" height="32" rx="6" fill="#ff7a1a" stroke="#1d2a4d" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg>

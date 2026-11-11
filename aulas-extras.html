@@ -56,10 +56,11 @@
           <a href="#ingles">Inglês</a><a href="#futebol">Futebol</a><a href="#judo">Judô</a><a href="#musicalizacao">Musicalização</a><a href="#ballet">Ballet</a><a href="#nutricional">Aula nutricional</a>
         </nav>
       </div>
-      <div class="collage">
-        <figure class="photo p1"><img src="img/fotos/ballet-roda.webp" alt="Alunas de ballet alongando em roda com a professora" width="1130" height="848" fetchpriority="high"></figure>
-        <figure class="photo p2"><img src="img/fotos/musica-p.webp" alt="Professor tocando violão em roda com as crianças" width="720" height="450"></figure>
-        <div class="badge" aria-hidden="true"><b>6</b><span>atividades</span></div>
+      <div class="scene" aria-hidden="true">
+        <div class="scene__blob"></div><img class="scene__obj o1" src="img/desenhos/bola.svg" alt="" width="200" height="200"><img class="scene__obj o2" src="img/desenhos/musica.svg" alt="" width="200" height="200"><img class="scene__obj o3" src="img/desenhos/ballet.svg" alt="" width="200" height="200">
+        <img class="scene__bee" src="img/abelha.webp" alt="" width="388" height="446">
+        <span class="scene__bubble">Vamos brincar?</span>
+        <div class="badge"><b>6</b><span>atividades</span></div><span class="sticker scene__st s1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8Z"/></svg> Ballet</span><span class="sticker scene__st s2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 7 4 3-1.5 5h-5L8 10Z"/><path d="M12 2v5M16 10l5-1M14.5 15l3 4.5M9.5 15l-3 4.5M8 10 3 9"/></svg> Futebol</span>
       </div>
     </div>
   </div>
@@ -84,13 +85,16 @@
 
 <div style="background:#ffffff" aria-hidden="true"><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 36C240 0 480 70 720 36S1200 2 1440 36V70H0Z" fill="#ebf8e3"/></svg></div>
 <section class="section bg-grass" id="futebol" aria-labelledby="futebol-title">
-  <div class="wrap banner" data-reveal>
-    <figure class="banner__photo" style="--sh: var(--sun)"><img src="img/fotos/futebol.webp" alt="Aula de futebol na quadra da escola" width="800" height="533" loading="lazy"></figure>
-    <div class="banner__card">
-      <span class="tag tag--grass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 7 4 3-1.5 5h-5L8 10Z"/><path d="M12 2v5M16 10l5-1M14.5 15l3 4.5M9.5 15l-3 4.5M8 10 3 9"/></svg> Futebol</span>
+  <div class="wrap story story--flip">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1 solo" style="background:#b7ec96"><div class="art" role="img" aria-label="Ilustração: Futebol"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__obj" src="img/desenhos/bola.svg" alt="" width="200" height="200" loading="lazy"></div></figure>
+      <span class="sticker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 7 4 3-1.5 5h-5L8 10Z"/><path d="M12 2v5M16 10l5-1M14.5 15l3 4.5M9.5 15l-3 4.5M8 10 3 9"/></svg> Gol!</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 7 4 3-1.5 5h-5L8 10Z"/><path d="M12 2v5M16 10l5-1M14.5 15l3 4.5M9.5 15l-3 4.5M8 10 3 9"/></svg> Futebol</span>
       <h2 id="futebol-title">Correr, chutar e jogar junto</h2>
       <ul class="pills"><li>Coordenação motora</li><li>Trabalho em equipe</li><li>Regras e convivência</li></ul>
-      <p>No futebol a criança desenvolve habilidades como correr, saltar, chutar e arremessar. E aprende a jogar junto: esperar a vez, comemorar o gol do colega e respeitar as regras.</p>
+      <p>O movimento tem papel essencial na educação infantil. No futebol a criança desenvolve habilidades como correr, saltar, chutar e arremessar a bola.</p><p>E aprende a jogar junto: esperar a vez, comemorar o gol do colega e respeitar as regras do jogo.</p>
     </div>
   </div>
 </section>
@@ -99,7 +103,7 @@
 <section class="section" id="judo" aria-labelledby="judo-title">
   <div class="wrap story">
     <div class="story__media" data-reveal>
-      <figure class="photo s1 solo" style="background:#ffc999"><div class="art" role="img" aria-label="A abelha mascote ao lado de um quimono de judô"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__kimono" src="img/desenhos/judo.svg" alt="" width="400" height="462" loading="lazy"></div></figure>
+      <figure class="photo s1 solo" style="background:#ffc999"><div class="art" role="img" aria-label="A abelha mascote ao lado de um quimono de judô"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__obj" src="img/desenhos/judo.svg" alt="" width="200" height="200" loading="lazy"></div></figure>
       <span class="sticker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9h20v4H2Z"/><path d="m10 13-3 8M14 13l3 8"/><rect x="9.5" y="7.5" width="5" height="7" rx="1"/></svg> Equilíbrio</span>
     </div>
     <div class="story__text" data-reveal>
@@ -116,29 +120,30 @@
 <section class="section bg-pink" id="musicalizacao" aria-labelledby="musica-title">
   <div class="wrap story story--flip">
     <div class="story__media" data-reveal>
-      <figure class="photo s1"><img src="img/fotos/musica.webp" alt="Professor tocando violão em roda com os bebês" width="795" height="498" loading="lazy"></figure>
-      <figure class="photo s2"><img src="img/fotos/junina-3.webp" alt="Criança com chapéu e violinha de brinquedo" width="630" height="1400" loading="lazy" style="object-position:50% 25%"></figure>
+      <figure class="photo s1 solo" style="background:#d9c8ff"><div class="art" role="img" aria-label="Ilustração: Musicalização"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__obj" src="img/desenhos/musica.svg" alt="" width="200" height="200" loading="lazy"></div></figure>
       <span class="sticker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Lá-lá-lá</span>
     </div>
     <div class="story__text" data-reveal>
-      <span class="tag tag--white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Musicalização</span>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Musicalização</span>
       <h2 id="musica-title">Música para sentir e expressar</h2>
       <ul class="pills"><li>Ritmo</li><li>Voz e escuta</li><li>Instrumentos</li></ul>
-      <p>A iniciação musical na educação infantil estimula áreas do cérebro que ajudam no desenvolvimento de outras linguagens e de habilidades motoras e intelectuais.</p>
-      <p>Cantando e tocando, a criança também aprende a expressar o que sente.</p>
+      <p>A iniciação musical na educação infantil estimula áreas do cérebro que ajudam no desenvolvimento de outras linguagens e de habilidades motoras e intelectuais.</p><p>Cantando e tocando, a criança também aprende a expressar o que sente.</p>
     </div>
   </div>
 </section>
 <div style="background:#ffe6ee" aria-hidden="true"><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 36C240 0 480 70 720 36S1200 2 1440 36V70H0Z" fill="#ffffff"/></svg></div>
 
 <section class="section" id="ballet" aria-labelledby="ballet-title">
-  <div class="wrap banner banner--right" data-reveal>
-    <figure class="banner__photo" style="--sh: var(--pink)"><img src="img/fotos/ballet-roda.webp" alt="Alunas de ballet alongando em roda" width="1130" height="848" loading="lazy"></figure>
-    <div class="banner__card">
-      <span class="tag tag--pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8Z"/></svg> Ballet</span>
+  <div class="wrap story">
+    <div class="story__media" data-reveal>
+      <figure class="photo s1 solo" style="background:#ffb3c9"><div class="art" role="img" aria-label="Ilustração: Ballet"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__obj" src="img/desenhos/ballet.svg" alt="" width="200" height="200" loading="lazy"></div></figure>
+      <span class="sticker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8Z"/></svg> Pliê!</span>
+    </div>
+    <div class="story__text" data-reveal>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8Z"/></svg> Ballet</span>
       <h2 id="ballet-title">Dançar faz bem por dentro e por fora</h2>
       <ul class="pills"><li>Postura</li><li>Musicalidade</li><li>Criatividade</li></ul>
-      <p>Dançar é divertido e faz bem para o corpo e para as emoções. O ballet melhora a coordenação motora, ajuda a criança a ser mais disciplinada e favorece a criatividade e o trabalho em grupo.</p>
+      <p>Dançar é divertido e faz bem para o corpo e para as emoções. O ballet melhora a coordenação motora e ajuda a criança a ser mais disciplinada e dedicada.</p><p>Também favorece a criatividade, a musicalidade e o trabalho em grupo.</p>
     </div>
   </div>
 </section>
@@ -147,16 +152,14 @@
 <section class="section bg-sun" id="nutricional" aria-labelledby="nutri-title">
   <div class="wrap story story--flip">
     <div class="story__media" data-reveal>
-      <figure class="photo s1"><img src="img/fotos/frutas-investigando.webp" alt="Bebê com a plaquinha Investigando cores, sabor e textura das frutas" width="1400" height="630" loading="lazy"></figure>
-      <figure class="photo s2"><img src="img/fotos/morangos.webp" alt="Bebê ao lado de um escorredor com morangos" width="1050" height="1400" loading="lazy"></figure>
+      <figure class="photo s1 solo" style="background:#fff"><div class="art" role="img" aria-label="Ilustração: Aula nutricional"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__obj" src="img/desenhos/frutas.svg" alt="" width="200" height="200" loading="lazy"></div></figure>
       <span class="sticker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-1.5-1-3-1.4-4.5-1C4.6 6.7 3 9.4 3 12.6 3 17 6 22 9 22c1 0 1.8-.6 3-.6s2 .6 3 .6c3 0 6-5 6-9.4 0-3.2-1.6-5.9-4.5-6.6-1.5-.4-3 0-4.5 1Z"/><path d="M12 7c0-2 1-4 3-5"/></svg> Hummm!</span>
     </div>
     <div class="story__text" data-reveal>
-      <span class="tag tag--white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-1.5-1-3-1.4-4.5-1C4.6 6.7 3 9.4 3 12.6 3 17 6 22 9 22c1 0 1.8-.6 3-.6s2 .6 3 .6c3 0 6-5 6-9.4 0-3.2-1.6-5.9-4.5-6.6-1.5-.4-3 0-4.5 1Z"/><path d="M12 7c0-2 1-4 3-5"/></svg> Aula nutricional</span>
+      <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-1.5-1-3-1.4-4.5-1C4.6 6.7 3 9.4 3 12.6 3 17 6 22 9 22c1 0 1.8-.6 3-.6s2 .6 3 .6c3 0 6-5 6-9.4 0-3.2-1.6-5.9-4.5-6.6-1.5-.4-3 0-4.5 1Z"/><path d="M12 7c0-2 1-4 3-5"/></svg> Aula nutricional</span>
       <h2 id="nutri-title">Descobrindo os alimentos</h2>
       <ul class="pills"><li>Com a nutricionista</li><li>Experiências</li><li>Hábitos saudáveis</li></ul>
-      <p>As aulas de nutrição são dadas pela nutricionista da escola. As crianças tocam, cheiram e provam os alimentos, acompanham as transformações que acontecem com eles e trocam ideias sobre o que faz bem.</p>
-      <p><a class="btn btn--white" href="alimentacao.html">Ver como é a alimentação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      <p>As aulas de nutrição são dadas pela nutricionista da escola. As crianças tocam, cheiram e provam os alimentos, acompanham as transformações que acontecem com eles e trocam ideias sobre o que faz bem.</p><p><a class="btn btn--white" href="alimentacao.html">Ver como é a alimentação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
     </div>
   </div>
 </section>

@@ -736,3 +736,33 @@ a.info:hover { transform: translateX(6px) rotate(-1deg); }
 .solo .art img.art__kimono { width: 54%; height: 72%; right: 6%; top: 8%; }
 
 @media (max-width: 640px) { .flybee { display: none; } }
+
+/* ---------- cena do topo das páginas internas (sem foto) ---------- */
+.scene { position: relative; aspect-ratio: 1 / 0.82; width: min(100%, 560px); margin-left: auto; }
+.scene__blob { position: absolute; inset: 8% 6% 4% 10%; background: var(--sun); border: var(--line); border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%; box-shadow: 10px 12px 0 rgba(29,42,77,.18); animation: blob 9s ease-in-out infinite; }
+@keyframes blob { 50% { border-radius: 56% 44% 52% 48% / 44% 56% 46% 54%; } }
+.scene__bee { position: absolute; width: 44%; left: 28%; bottom: 6%; animation: bob 3.2s ease-in-out infinite; filter: drop-shadow(0 10px 0 rgba(29,42,77,.18)); }
+.scene__bubble { position: absolute; right: 0; top: 2%; max-width: 15ch; background: #fff; border: var(--line); border-radius: 26px; padding: 12px 20px; font: 700 clamp(1.15rem, .9rem + 1vw, 1.6rem)/1.15 var(--display); color: var(--ink); box-shadow: var(--pop-sm); transform: rotate(4deg); animation: wobble2 5s ease-in-out infinite; }
+.scene__bubble::after { content: ""; position: absolute; left: 26px; bottom: -14px; width: 22px; height: 22px; background: #fff; border-right: var(--line); border-bottom: var(--line); transform: rotate(45deg); }
+.scene .badge { left: 0; top: 6%; background: var(--pink); color: #fff; }
+.scene__st { position: absolute; }
+.scene__st.s1 { left: 2%; bottom: 14%; }
+.scene__st.s2 { right: 2%; bottom: 4%; animation-delay: -2s; }
+.scene__obj { position: absolute; width: 22%; animation: float 5s ease-in-out infinite; }
+.scene__obj.o1 { right: 6%; top: 30%; }
+.scene__obj.o2 { left: 8%; top: 36%; animation-delay: -1.6s; width: 18%; }
+.scene__obj.o3 { left: 22%; top: 4%; animation-delay: -3s; width: 16%; }
+@keyframes float { 50% { transform: translateY(-12px) rotate(6deg); } }
+@media (max-width: 900px) { .scene { margin: 10px auto 0; } }
+@media (max-width: 560px) { .scene__st { font-size: .85rem; padding: 8px 12px; } .scene .badge { width: 88px; } .scene__bubble { font-size: 1.05rem; } }
+
+/* desenho das atividades */
+.art img.art__obj { position: absolute; right: 7%; top: 10%; width: 50%; height: 78%; object-fit: contain; }
+.solo .art img.art__obj { width: 50%; height: 70%; right: 6%; top: 10%; }
+
+/* topo com uma foto só: a fachada */
+.collage--solo { aspect-ratio: 1 / 0.86; }
+.collage--solo .p1, .pagehero .collage--solo .p1 { left: 2%; top: 8%; width: 94%; height: 80%; transform: rotate(-2.5deg); }
+.collage--solo .p1 img { object-position: 30% 50%; }
+.collage--solo .mascot { left: auto; right: -2%; bottom: -4%; width: clamp(110px, 13vw, 180px); }
+.collage--solo .badge, .pagehero .collage--solo .badge { left: -2%; top: auto; bottom: 2%; right: auto; }
