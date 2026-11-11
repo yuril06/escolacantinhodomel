@@ -230,7 +230,6 @@ def planner():
   <div class="wrap">
     <div class="head" data-reveal><span class="tag tag--white">{ICON["puzzle"]} Experimente</span><h2 id="planner-title">Monte o dia do seu filho</h2>{SQUIGGLE}<p>Arraste até a idade, escolha o período e veja a turma e o horário de chegada e saída.</p></div>
     <div class="planner" data-planner data-reveal>
-      <img class="planner__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy">
       <div class="planner__grid">
         <div>
           <label class="planner__q" for="age" style="margin-top:0">Quantos anos tem seu filho?</label>
@@ -279,7 +278,6 @@ def visit(above="white"):
       <h2 id="visit-title">Venha conhecer o Cantinho!</h2>
       <p class="lead">Preencha rapidinho e a mensagem chega pronta no WhatsApp da escola. É só apertar enviar.</p>
       <ol class="visit__steps"><li>Conte quem é você e a criança</li><li>Escolha a turma e o período</li><li>Combine o dia da visita</li></ol>
-      <div class="visit__mascot"><img src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><span class="speech">Te espero aqui!</span></div>
     </div>
     <form class="form" data-zap-form novalidate data-reveal>
       <div class="row2">
@@ -344,7 +342,7 @@ def partners():
 
 def ctaband():
     return f'''<section class="section" aria-label="Agendar visita"><div class="wrap">
-  <div class="cta-band" data-reveal><img src="img/abelha.webp" alt="" width="388" height="446" loading="lazy">
+  <div class="cta-band cta-band--plain" data-reveal>
     <div><h2 style="font-size:clamp(1.7rem,1.2rem + 1.6vw,2.6rem)">Que tal conhecer a escola pessoalmente?</h2><p>Agende uma visita para ver as salas, o berçário e conhecer a equipe.</p></div>
     <a class="btn btn--zap" href="{zap()}" target="_blank" rel="noopener">{ICON["zap"]} Agendar visita</a></div>
 </div></section>'''

@@ -1,7 +1,6 @@
 <!-- {"file": "alimentacao.html", "nav": "alimentacao", "title": "Alimentação | Escola Cantinho do Mel, Santo André", "desc": "Cozinha própria, alimentos frescos e cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança."} -->
-<section class="sky" aria-labelledby="page-title">
+<section class="sky sky--calm" aria-labelledby="page-title">
   {{clouds}}
-  {{sun}}
   <div class="wrap pagehero">
     <div class="pagehero__grid">
       <div class="pagehero__text">
@@ -10,15 +9,13 @@
         <p class="lead">Cozinha própria, alimentos sempre fresquinhos e um cardápio de nutricionista, que respeita a orientação do pediatra de cada criança.</p>
         <div class="ctas"><a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a></div>
       </div>
-      <div class="scene" aria-hidden="true">
-        <div class="scene__blob"></div><img class="scene__obj o1" src="img/desenhos/frutas.svg" alt="" width="200" height="200">
-        <img class="scene__bee" src="img/abelhas/nutricional.webp" alt="" width="524" height="720">
-        <span class="scene__bubble">Hummm, que delícia!</span>
-        <div class="badge"><b>{{apple}}</b><span>tudo fresquinho</span></div><span class="sticker scene__st s1">{{pot}} Cozinha própria</span><span class="sticker scene__st s2">{{heart}} Nutricionista</span>
-      </div>
+      <aside class="info-card" aria-label="Como é a alimentação">
+        <h2>Como é a alimentação</h2>
+        <ul><li><span class="info-card__i">{{pot}}</span><span><b>Cozinha própria</b>Tudo preparado na escola</span></li><li><span class="info-card__i">{{heart}}</span><span><b>Nutricionista Aline Fregozzi</b>Elabora o cardápio</span></li><li><span class="info-card__i">{{first}}</span><span><b>Orientação do pediatra</b>Respeitada para cada criança</span></li><li><span class="info-card__i">{{shield}}</span><span><b>Equipe treinada</b>Higiene, conservação e preparo</span></li><li><span class="info-card__i">{{apple}}</span><span><b>Aulas de nutrição</b>As crianças descobrem os alimentos</span></li></ul>
+      </aside>
     </div>
   </div>
-  {{hills}}
+  {{wave:skyfull:white}}
 </section>
 
 <section class="section" aria-labelledby="cozinha-title">
@@ -44,7 +41,6 @@
     <div class="story__media" data-reveal>
       <figure class="photo s1"><img src="img/fotos/mandioca-dupla.webp" alt="Bebês descobrindo a mandioca" width="1050" height="1400" loading="lazy"></figure>
       <figure class="photo s2"><img src="img/fotos/piquenique.webp" alt="Roda de frutas e sucos com a turma" width="1400" height="647" loading="lazy"></figure>
-      <span class="sticker">{{heart}} Nutricionista</span>
     </div>
     <div class="story__text" data-reveal>
       <span class="tag tag--white">{{apple}} Cardápio de nutricionista</span>

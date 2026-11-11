@@ -1,7 +1,6 @@
 <!-- {"file": "a-escola.html", "nav": "escola", "title": "A escola | Escola Cantinho do Mel, Santo André", "desc": "Desde 1992 em Santo André: quem somos, proposta pedagógica, missão, visão e valores, estrutura, equipe e parceiros da Escola Cantinho do Mel."} -->
-<section class="sky" aria-labelledby="page-title">
+<section class="sky sky--calm" aria-labelledby="page-title">
   {{clouds}}
-  {{sun}}
   <div class="wrap pagehero">
     <div class="pagehero__grid">
       <div class="pagehero__text">
@@ -10,15 +9,13 @@
         <p class="lead">Espaço amplo, equipe qualificada e um jeito humano e carinhoso de acompanhar cada criança, do berçário ao Nível 4.</p>
         <div class="ctas"><a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a><a class="btn btn--white" href="#estrutura">Ver a estrutura {{arrow}}</a></div>
       </div>
-      <div class="scene" aria-hidden="true">
-        <div class="scene__blob"></div><img class="scene__obj o1" src="img/desenhos/frutas.svg" alt="" width="200" height="200">
-        <img class="scene__bee" src="img/abelha.webp" alt="" width="388" height="446">
-        <span class="scene__bubble">Bem-vindos ao Cantinho!</span>
-        <div class="badge"><b>1992</b><span>nossa história</span></div><span class="sticker scene__st s1">{{heart}} Afeto</span><span class="sticker scene__st s2">{{shield}} Segurança</span>
-      </div>
+      <aside class="info-card" aria-label="A escola em resumo">
+        <h2>A escola em resumo</h2>
+        <ul><li><span class="info-card__i">{{home}}</span><span><b>Desde 1992</b>Mais de 30 anos de educação infantil</span></li><li><span class="info-card__i">{{baby}}</span><span><b>4 meses a 6 anos</b>Berçário e Nível 1 ao 4</span></li><li><span class="info-card__i">{{book}}</span><span><b>Sistema de Ensino Positivo</b>Escola conveniada</span></li><li><span class="info-card__i">{{shield}}</span><span><b>Equipe preparada</b>Curso de primeiros socorros</span></li><li><span class="info-card__i">{{pin}}</span><span><b>Rua Colúmbia, 438</b>Parque das Nações, Santo André</span></li></ul>
+      </aside>
     </div>
   </div>
-  {{hills}}
+  {{wave:skyfull:white}}
 </section>
 
 <section class="section" aria-labelledby="quem-title">
@@ -26,7 +23,6 @@
     <div class="story__media" data-reveal>
       <figure class="photo s1"><img src="img/fotos/menina-uniforme.webp" alt="Aluna sorrindo com o uniforme da escola" width="647" height="1400" loading="lazy" style="object-position:50% 30%"></figure>
       <figure class="photo s2"><img src="img/fotos/refeitorio.webp" alt="Crianças sentadas à mesa do refeitório" width="647" height="1400" loading="lazy"></figure>
-      <span class="sticker">{{heart}} Desde 1992</span>
     </div>
     <div class="story__text" data-reveal>
       <span class="tag tag--sky">{{home}} Quem somos</span>
@@ -38,17 +34,7 @@
   </div>
 </section>
 
-{{wave:white:pink}}
-<section class="section bg-pink" aria-label="Para as famílias">
-  <div class="wrap" style="max-width:980px">
-    <div class="cta-band" style="background:#fff" data-reveal>
-      <img src="img/abelha.webp" alt="" width="388" height="446" loading="lazy">
-      <div><h2 style="font-size:clamp(1.5rem,1.1rem + 1.4vw,2.3rem)">Pense bem antes de escolher</h2><p>É aqui que seu filho vai passar boa parte da infância, aprender valores importantes e viver experiências para a vida toda. Por isso, venha conhecer de perto.</p></div>
-      <a class="btn btn--zap" href="{{zapurl}}" target="_blank" rel="noopener">{{zap}} Agendar visita</a>
-    </div>
-  </div>
-</section>
-{{wave:pink:white}}
+
 
 <section class="section" aria-labelledby="proposta-title">
   <div class="wrap">
@@ -102,7 +88,6 @@
     <div class="story__media" data-reveal>
       <figure class="photo s1"><img src="img/fotos/equipe.webp" alt="Professoras da escola" width="1050" height="1400" loading="lazy" style="object-position:50% 25%"></figure>
       <figure class="photo s2"><img src="img/fotos/formacao.webp" alt="Encontro de formação da equipe" width="1400" height="647" loading="lazy"></figure>
-      <span class="sticker">{{shield}} Primeiros socorros</span>
     </div>
     <div class="story__text" data-reveal>
       <span class="tag tag--white">{{users}} Nossa equipe</span>
