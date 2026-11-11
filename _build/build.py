@@ -292,11 +292,16 @@ def visit(above="white"):
         <div class="field"><label for="c-turma">Turma de interesse</label><select id="c-turma" name="turma" required>{opts_t}</select></div>
         <div class="field"><label for="c-periodo">Período</label><select id="c-periodo" name="periodo">{opts_p}</select></div>
       </div>
-      <div class="row2">
-        <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 07h30"></div>
-        <div class="field"><label for="c-dia">Melhor horário da visita</label><select id="c-dia" name="dia"><option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option></select></div>
-      </div>
-      <div class="field"><label for="c-msg">Quer contar mais alguma coisa?</label><textarea id="c-msg" name="mensagem" placeholder="Dúvidas, cuidados especiais, quando pretende começar..."></textarea></div>
+      <details class="more" data-more>
+        <summary>Adicionar mais detalhes <small>(opcional)</small></summary>
+        <div class="more__body">
+          <div class="row2">
+            <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 07h30"></div>
+            <div class="field"><label for="c-dia">Melhor horário da visita</label><select id="c-dia" name="dia"><option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option></select></div>
+          </div>
+          <div class="field"><label for="c-msg">Quer contar mais alguma coisa?</label><textarea id="c-msg" name="mensagem" placeholder="Dúvidas, cuidados especiais, quando pretende começar..."></textarea></div>
+        </div>
+      </details>
       <p class="form-error" role="alert" data-error></p>
       <button class="btn btn--zap btn--full" type="submit">{ICON["zap"]} Enviar pelo WhatsApp</button>
     </form>

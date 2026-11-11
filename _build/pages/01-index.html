@@ -77,14 +77,15 @@
       <h2 id="turmas-title">Uma turma para cada fase</h2>
       <p>Do berçário ao Nível 4, cada turma tem atividades pensadas para o momento da criança.</p>
     </div>
-    <ul class="classes" data-stagger>
+    <ul class="classes swipe" data-stagger>
       <li class="class"><div class="class__pic"><img src="img/fotos/mandioca-bebe-p.webp" alt="" width="540" height="720" loading="lazy"></div><h3>Berçário</h3><span class="class__age">4 meses a 2 anos</span><p>Cuidado individual e planejamento próprio.</p></li>
       <li class="class"><div class="class__pic"><img src="img/fotos/junina-1-p.webp" alt="" width="324" height="720" loading="lazy"></div><h3>Nível 1</h3><span class="class__age">2 a 3 anos</span><p>Primeiras rotinas em grupo, fala e movimento.</p></li>
       <li class="class"><div class="class__pic"><img src="img/fotos/argila-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 2</h3><span class="class__age">3 a 4 anos</span><p>Histórias, dramatização e brincadeiras.</p></li>
       <li class="class"><div class="class__pic"><img src="img/fotos/pintura-chao-p.webp" alt="" width="405" height="720" loading="lazy"></div><h3>Nível 3</h3><span class="class__age">4 a 5 anos</span><p>Material Positivo e descobertas do mundo.</p></li>
       <li class="class"><div class="class__pic"><img src="img/fotos/menina-uniforme-p.webp" alt="" width="332" height="720" loading="lazy"></div><h3>Nível 4</h3><span class="class__age">5 a 6 anos</span><p>Preparação tranquila para a próxima etapa.</p></li>
     </ul>
-    <div class="periods" style="margin-top:56px" data-stagger>
+    <p class="swipe-hint">Arraste para o lado {{arrow}}</p>
+    <div class="periods periods--compact" style="margin-top:40px" data-stagger>
       <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Cinco horas por dia.</p></div>
       <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
       <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Doze horas por dia.</p></div>
@@ -103,14 +104,15 @@
       {{squiggle}}
       <p>Atividades dentro da escola para a criança se movimentar, se expressar e descobrir do que gosta.</p>
     </div>
-    <div class="extras" data-stagger>
-      <a class="extra" href="aulas-extras.html#ingles"><div class="extra__media"><img src="img/desenhos/ingles.svg" alt="" width="400" height="462" loading="lazy" style="object-fit:contain;padding-top:4%"></div><div class="extra__body"><span class="extra__icon">{{chat}}</span><h3>Inglês</h3><p>Em parceria com o CCAA, com músicas e brincadeiras.</p></div></a>
+    <div class="extras swipe" data-stagger>
+      <a class="extra" href="aulas-extras.html#ingles"><div class="extra__media"><div class="art"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><span class="art__bubble">Hello!</span><span class="art__bubble art__bubble--2">Olá!</span></div></div><div class="extra__body"><span class="extra__icon">{{chat}}</span><h3>Inglês</h3><p>Em parceria com o CCAA, com músicas e brincadeiras.</p></div></a>
       <a class="extra" href="aulas-extras.html#futebol"><div class="extra__media"><img src="img/fotos/futebol-p.webp" alt="" width="720" height="480" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{ball}}</span><h3>Futebol</h3><p>Correr, chutar, jogar junto e respeitar as regras.</p></div></a>
-      <a class="extra" href="aulas-extras.html#judo"><div class="extra__media"><img src="img/desenhos/judo.svg" alt="" width="400" height="462" loading="lazy" style="object-fit:contain;padding-top:4%"></div><div class="extra__body"><span class="extra__icon">{{belt}}</span><h3>Judô</h3><p>Equilíbrio, disciplina e respeito ao colega.</p></div></a>
+      <a class="extra" href="aulas-extras.html#judo"><div class="extra__media"><div class="art"><img class="art__bee" src="img/abelha.webp" alt="" width="388" height="446" loading="lazy"><img class="art__kimono" src="img/desenhos/judo.svg" alt="" width="400" height="462" loading="lazy"></div></div><div class="extra__body"><span class="extra__icon">{{belt}}</span><h3>Judô</h3><p>Equilíbrio, disciplina e respeito ao colega.</p></div></a>
       <a class="extra" href="aulas-extras.html#musicalizacao"><div class="extra__media"><img src="img/fotos/musica-p.webp" alt="" width="720" height="450" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{music}}</span><h3>Musicalização</h3><p>Ritmo, voz e instrumentos para se expressar.</p></div></a>
       <a class="extra" href="aulas-extras.html#ballet"><div class="extra__media"><img src="img/fotos/ballet-roda-p.webp" alt="" width="720" height="540" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{sparkle}}</span><h3>Ballet</h3><p>Coordenação, postura e muita criatividade.</p></div></a>
       <a class="extra" href="aulas-extras.html#nutricional"><div class="extra__media"><img src="img/fotos/frutas-investigando-p.webp" alt="" width="720" height="324" loading="lazy"></div><div class="extra__body"><span class="extra__icon">{{apple}}</span><h3>Aula nutricional</h3><p>Com a nutricionista, descobrindo os alimentos.</p></div></a>
     </div>
+    <p class="swipe-hint">Arraste para o lado {{arrow}}</p>
   </div>
 </section>
 
@@ -123,7 +125,7 @@
       {{squiggle}}
       <p>Vivências de verdade: da semana da mandioca ao arraiá, do carnaval à mostra para as famílias.</p>
     </div>
-    <div class="wall" data-gallery data-reveal>
+    <div class="wall wall--short" data-gallery data-reveal>
       <button class="polaroid" type="button" data-full="img/fotos/mandioca-bebe.webp"><img src="img/fotos/mandioca-bebe-p.webp" alt="Bebê conhecendo a mandioca" width="540" height="720" loading="lazy"><span>Conhecendo a mandioca</span></button>
       <button class="polaroid" type="button" data-full="img/fotos/carnaval.webp"><img src="img/fotos/carnaval-p.webp" alt="Turma fantasiada no carnaval" width="540" height="720" loading="lazy"><span>Carnaval de super-heróis</span></button>
       <button class="polaroid" type="button" data-full="img/fotos/frutas-investigando.webp"><img src="img/fotos/frutas-investigando-p.webp" alt="Bebê investigando cores, sabor e textura das frutas" width="720" height="324" loading="lazy"><span>Cores e sabores das frutas</span></button>

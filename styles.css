@@ -628,3 +628,107 @@ a.info:hover { transform: translateX(6px) rotate(-1deg); }
 .story__media .solo { left: 8%; top: 4%; width: 84%; height: 90%; }
 .story--flip .story__media .solo { left: 8%; right: auto; }
 .badge svg { width: 46px; height: 46px; margin: 0 auto; }
+
+/* ---------- foto larga com cartão sobreposto ---------- */
+.banner { position: relative; padding-bottom: 64px; }
+.banner__photo { margin: 0; border: var(--line); border-radius: 36px; overflow: hidden; aspect-ratio: 21 / 9; box-shadow: 10px 12px 0 var(--sh, var(--sun)); }
+.banner__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
+.banner:hover .banner__photo img { transform: scale(1.04); }
+.banner__card { position: absolute; bottom: 0; left: 5%; width: min(560px, 90%); background: #fff; border: var(--line); border-radius: var(--radius); box-shadow: var(--pop); padding: clamp(22px, 3vw, 36px); }
+.banner--right .banner__card { left: auto; right: 5%; }
+.banner__card h2 { font-size: clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem); margin-bottom: 14px; }
+.banner__card p:last-child, .banner__card ul:last-child { margin-bottom: 0; }
+.banner__card .checks { margin-top: 14px; }
+@media (max-width: 760px) {
+  .banner { padding-bottom: 0; }
+  .banner__photo { aspect-ratio: 4 / 3; border-radius: 26px; }
+  .banner__card { position: relative; left: auto; right: auto; bottom: auto; width: auto; margin: -40px 10px 0; }
+  .banner--right .banner__card { right: auto; }
+}
+
+/* ---------- faixa de três fotos ---------- */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 8px; }
+.trio .photo { position: relative; aspect-ratio: 4 / 5; }
+.trio .photo:nth-child(1) { transform: rotate(-3deg); --sh: var(--sky); }
+.trio .photo:nth-child(2) { transform: rotate(2deg) translateY(18px); --sh: var(--pink); }
+.trio .photo:nth-child(3) { transform: rotate(-1.5deg); --sh: var(--grass); }
+.trio figcaption { position: absolute; left: 12px; bottom: 12px; background: #fff; border: 2.5px solid var(--ink); border-radius: 999px; padding: 6px 14px; font: 600 .95rem var(--display); color: var(--ink); }
+.points { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 56px; }
+.point { display: grid; gap: 10px; justify-items: start; padding: 22px; border-radius: var(--radius); border: var(--line); background: var(--c); box-shadow: var(--pop-sm); }
+.point .card__icon { width: 54px; height: 54px; margin: 0; border-radius: 18px; }
+.point .card__icon svg { width: 28px; height: 28px; }
+.point b { font: 700 1.15rem/1.25 var(--display); color: var(--ink); }
+.points .point:nth-child(1) { --c: var(--honey-soft); }
+.points .point:nth-child(2) { --c: var(--sky-soft); }
+.points .point:nth-child(3) { --c: var(--pink-soft); }
+.points .point:nth-child(4) { --c: var(--grass-soft); }
+@media (max-width: 900px) { .points { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .trio { gap: 10px; }
+  .trio .photo { border-radius: 16px; box-shadow: 4px 5px 0 var(--sh); }
+  .trio figcaption { display: none; }
+  .point { padding: 16px; }
+  .point b { font-size: 1rem; }
+}
+
+/* ---------- arte do cartão (abelha + balão) ---------- */
+.art { position: absolute; inset: 0; display: grid; place-items: center; }
+.art img.art__bee { position: absolute; width: 34%; left: 12%; bottom: -6%; height: auto; object-fit: contain; animation: bob 3.2s ease-in-out infinite; }
+.art__bubble { position: absolute; right: 10%; top: 14%; background: #fff; border: var(--line); border-radius: 22px; padding: 8px 18px; font: 700 clamp(1.4rem, 1rem + 1.4vw, 2.2rem)/1.1 var(--display); color: var(--ink); box-shadow: var(--pop-sm); transform: rotate(-5deg); }
+.art__bubble::after { content: ""; position: absolute; left: 18px; bottom: -13px; width: 20px; height: 20px; background: #fff; border-right: var(--line); border-bottom: var(--line); transform: rotate(45deg); }
+.art__bubble--2 { top: auto; bottom: 16%; right: 16%; background: var(--sun); font-size: clamp(1.1rem, .9rem + 1vw, 1.6rem); transform: rotate(4deg); }
+.art__bubble--2::after { background: var(--sun); }
+.art img.art__kimono { position: absolute; right: 8%; top: 8%; width: 46%; height: 84%; object-fit: contain; }
+
+/* ---------- celular: home mais curta ---------- */
+@media (max-width: 640px) {
+  .why { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .why .card { padding: 16px 14px; border-radius: 20px; }
+  .why .card__icon { width: 46px; height: 46px; border-radius: 14px; margin-bottom: 10px; }
+  .why .card__icon svg { width: 24px; height: 24px; }
+  .why .card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .why .card p { font-size: .88rem; line-height: 1.45; }
+
+  .swipe { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin-inline: calc(var(--pad) * -1); padding: 70px var(--pad) 22px; scrollbar-width: none; }
+  .swipe::-webkit-scrollbar { display: none; }
+  .swipe > * { flex: 0 0 74%; scroll-snap-align: center; }
+  .classes.swipe { margin-top: 0; }
+  .classes.swipe > li:first-child { width: auto; grid-column: auto; }
+  .extras.swipe { padding-top: 6px; }
+  .extras.swipe > * { flex-basis: 82%; }
+  .swipe-hint { display: flex; align-items: center; justify-content: center; gap: 8px; font: 600 .95rem var(--display); color: var(--ink); margin-top: 2px; }
+  .swipe-hint svg { width: 20px; height: 20px; animation: nudge 1.4s ease-in-out infinite; }
+
+  .periods--compact { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .periods--compact .period:nth-child(n) { padding: 14px 6px; border-radius: 18px; }
+  .periods--compact .period__h { font-size: 2.4rem; }
+  .periods--compact .period__bar { display: none; }
+  .periods--compact h3 { font-size: .95rem; margin: 6px 0 0; }
+  .periods--compact p { display: none; }
+
+  .wall--short .polaroid:nth-child(n+7) { display: none; }
+  .partners { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .partner { padding: 14px 10px; border-radius: 20px; }
+  .partner img { height: 56px; margin-bottom: 8px; }
+  .partner b { font-size: 1.05rem; }
+  .partner span { font-size: .85rem; }
+}
+@media (min-width: 641px) { .swipe-hint { display: none; } }
+@keyframes nudge { 50% { transform: translateX(6px); } }
+
+/* detalhes opcionais do formulário */
+.more { border: 2.5px dashed var(--ink); border-radius: 18px; background: var(--honey-soft); }
+.more summary { list-style: none; cursor: pointer; padding: 14px 18px; font: 600 1.05rem var(--display); color: var(--ink); display: flex; align-items: center; gap: 10px; }
+.more summary::-webkit-details-marker { display: none; }
+.more summary::before { content: "+"; width: 28px; height: 28px; flex: none; border-radius: 50%; border: 2.5px solid var(--ink); background: var(--sun); display: grid; place-items: center; font: 700 1.1rem/1 var(--display); transition: transform 300ms var(--ease); }
+.more[open] summary::before { transform: rotate(45deg); }
+.more summary small { font: 600 .9rem var(--body); color: var(--text); }
+.more__body { display: grid; gap: 14px; padding: 0 18px 18px; }
+
+/* arte maior dentro do quadro das páginas internas */
+.solo .art img.art__bee { width: 46%; left: 8%; bottom: 3%; }
+.solo .art__bubble { font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem); right: 10%; top: 14%; padding: 10px 24px; }
+.solo .art__bubble--2 { top: auto; bottom: 26%; right: 12%; font-size: clamp(1.4rem, 1rem + 1.4vw, 2.2rem); }
+.solo .art img.art__kimono { width: 54%; height: 72%; right: 6%; top: 8%; }
+
+@media (max-width: 640px) { .flybee { display: none; } }

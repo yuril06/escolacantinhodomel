@@ -137,7 +137,7 @@
     // vindo do "monte o dia": preenche turma, período e chegada
     if (params.has('turma') && turma) turma.value = TURMA_OPT[+params.get('turma')] || '';
     if (params.has('periodo') && periodo) periodo.value = PERIODO_OPT[params.get('periodo')] || '';
-    if (params.has('chegada') && form.elements.chegada) form.elements.chegada.value = params.get('chegada');
+    if (params.has('chegada') && form.elements.chegada) { form.elements.chegada.value = params.get('chegada'); const more = form.querySelector('[data-more]'); if (more) more.open = true; }
 
     // data de nascimento sugere a turma
     if (nasc && turma) {
