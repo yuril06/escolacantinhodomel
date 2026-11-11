@@ -222,7 +222,9 @@ def footer():
 TURMAS = [("Berçário", "4 meses a 2 anos"), ("Nível 1", "2 a 3 anos"), ("Nível 2", "3 a 4 anos"), ("Nível 3", "4 a 5 anos"), ("Nível 4", "5 a 6 anos")]
 
 def planner():
-    bubbles = "".join(f'<div class="bubble" data-turma="{i}"><b>{n}</b><span>{a}</span></div>' for i, (n, a) in enumerate(TURMAS))
+    curto = ["4m a 2 anos", "2 a 3 anos", "3 a 4 anos", "4 a 5 anos", "5 a 6 anos"]
+    meses = [12, 30, 42, 54, 66]
+    bubbles = "".join(f'<button type="button" class="bubble" data-turma="{i}" data-months="{meses[i]}" aria-pressed="false" aria-label="{n}, {a}"><b>{n}</b><span>{curto[i]}</span></button>' for i, (n, a) in enumerate(TURMAS))
     return f'''{wave("white", "sky")}
 <section class="section bg-sky" id="monte-o-dia" aria-labelledby="planner-title">
   <div class="wrap">
@@ -247,7 +249,8 @@ def planner():
           <div class="range__ends"><span>06h30</span><span>mais tarde</span></div>
         </div>
         <div>
-          <div class="bubbles" aria-hidden="true">{bubbles}</div>
+          <p class="bubbles__label">Ou toque na turma:</p>
+          <div class="bubbles" role="group" aria-label="Escolher turma">{bubbles}</div>
           <div class="planner__out">
             <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no semi integral.</p>
             <div class="day__bar" style="margin-top:16px"><div class="day__fill" data-fill></div></div>

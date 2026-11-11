@@ -84,13 +84,14 @@
       ageOut.textContent = ageText(months);
       age.setAttribute('aria-valuetext', ageText(months));
       entry.setAttribute('aria-valuetext', `chega às ${hhmm(from)}`);
-      cells.forEach((c, i) => c.classList.toggle('is-on', i === t));
+      cells.forEach((c, i) => { c.classList.toggle('is-on', i === t); c.setAttribute('aria-pressed', String(i === t)); });
       say.innerHTML = `Turma <b>${TURMAS[t]}</b>, no ${r.dataset.label.toLowerCase()}.`;
       times.innerHTML = `Chega às <b>${hhmm(from)}</b> e sai às <b>${hhmm(to)}</b>.`;
       const q = new URLSearchParams({ turma: String(t), periodo: String(hours), idade: ageText(months), chegada: hhmm(from) });
       go.href = `contato.html?${q}#agendar`;
     };
     [age, entry, ...radios].forEach((el) => el.addEventListener('input', update));
+    cells.forEach((c) => c.addEventListener('click', () => { age.value = c.dataset.months; update(); }));
     update();
   });
 
