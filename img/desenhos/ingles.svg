@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 462" role="img" aria-label="Balões de fala com Hello e Olá">
+  <rect width="400" height="462" fill="#bfe4f8"/>
+  <g fill="#2a1708"><polygon points="70,120 330,120 330,250 190,250 140,300 150,250 70,250"/></g>
+  <text x="200" y="208" text-anchor="middle" font-family="League Spartan, Arial Black, sans-serif" font-weight="700" font-size="74" fill="#ffc52e" letter-spacing="-3">Hello!</text>
+  <g fill="#ffc52e"><polygon points="120,280 330,280 330,380 290,380 300,420 250,380 120,380"/></g>
+  <text x="225" y="350" text-anchor="middle" font-family="League Spartan, Arial Black, sans-serif" font-weight="700" font-size="56" fill="#2a1708" letter-spacing="-2">Olá!</text>
+  <g fill="#e8670f"><polygon points="62,58 80,48 98,58 98,78 80,88 62,78"/><polygon points="320,50 334,42 348,50 348,66 334,74 320,66"/></g>
+</svg>
