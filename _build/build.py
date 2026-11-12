@@ -178,7 +178,7 @@ def header(active):
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <div class="topbar"><div class="wrap">
   <div class="topbar__l"><a href="{ESCOLA["fone_link"]}">{ICON["tel"]} {ESCOLA["fone"]}</a><a class="topbar__mail" href="mailto:{ESCOLA["email"]}">{ICON["mail"]} {ESCOLA["email"]}</a></div>
-  <div class="topbar__r"><span class="topbar__hours">Seg a sex, 06h30 às 18h45</span><div class="topbar__soc">{soc}</div></div>
+  <div class="topbar__r"><span class="topbar__hours">Seg a sex, 6:30 às 18:45</span><div class="topbar__soc">{soc}</div></div>
 </div></div>
 <header class="header" id="topo"><div class="wrap">
   <a class="logo" href="index.html" aria-label="Escola Cantinho do Mel, página inicial"><img src="img/marcas/logo.webp" alt="Cantinho do Mel, Educação Infantil e Berçário" width="900" height="300"></a>
@@ -209,7 +209,7 @@ def footer():
         <li><a href="turmas.html#periodos">Períodos</a></li><li><a href="turmas.html#monte-o-dia">Monte o dia</a></li></ul></div>
       <div><h2>Visite a gente</h2>
         <p><a href="{ESCOLA["maps"]}" target="_blank" rel="noopener">{ESCOLA["rua"]}<br>{ESCOLA["bairro"]}, {ESCOLA["cidade"]}<br>CEP {ESCOLA["cep"]}</a></p>
-        <p>Segunda a sexta, das 06h30 às 18h45</p>
+        <p>Segunda a sexta, das 6:30 às 18:45</p>
         <p><a href="{ESCOLA["fone_link"]}">{ESCOLA["fone"]}</a> · <a href="{zap()}" target="_blank" rel="noopener">WhatsApp {ESCOLA["zap"]}</a></p>
         <p><a href="mailto:{ESCOLA["email"]}">{ESCOLA["email"]}</a></p></div>
     </div>
@@ -245,7 +245,7 @@ def planner():
           </fieldset>
           <label class="planner__q" for="entry">Que horas ele chega?</label>
           <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
-          <div class="range__ends"><span>06h30</span><span>mais tarde</span></div>
+          <div class="range__ends"><span>6:30</span><span>mais tarde</span></div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>
@@ -253,8 +253,8 @@ def planner():
           <div class="planner__out">
             <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no semi integral.</p>
             <div class="day__bar" style="margin-top:16px"><div class="day__fill" data-fill></div></div>
-            <div class="day__ticks"><span>06h30</span><span>09h</span><span>12h</span><span>15h</span><span>18h45</span></div>
-            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Chega às <b>07h00</b> e sai às <b>15h00</b>.</p>
+            <div class="day__ticks"><span>6:30</span><span>9:00</span><span>12:00</span><span>15:00</span><span>18:45</span></div>
+            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Chega às <b>7:00</b> e sai às <b>15:00</b>.</p>
             <p class="day__note">Os horários de cada período são combinados com a escola na matrícula.</p>
           </div>
           <div class="planner__cta">
@@ -297,7 +297,7 @@ def visit(above="white"):
         <summary>Adicionar mais detalhes <small>(opcional)</small></summary>
         <div class="more__body">
           <div class="row2">
-            <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 07h30"></div>
+            <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 7:30"></div>
             <div class="field"><label for="c-dia">Melhor horário da visita</label><select id="c-dia" name="dia"><option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option></select></div>
           </div>
           <div class="field"><label for="c-msg">Quer contar mais alguma coisa?</label><textarea id="c-msg" name="mensagem" placeholder="Dúvidas, cuidados especiais, quando pretende começar..."></textarea></div>
@@ -318,7 +318,7 @@ def where():
     <div class="where">
       <div class="infos" data-stagger>
         <a class="info" href="{ESCOLA["maps"]}" target="_blank" rel="noopener"><span class="info__i">{ICON["pin"]}</span><span><b>{ESCOLA["rua"]}</b><span>{ESCOLA["bairro"]}, {ESCOLA["cidade"]}, CEP {ESCOLA["cep"]}</span></span></a>
-        <div class="info"><span class="info__i">{ICON["clock"]}</span><span><b>06h30 às 18h45</b><span>Segunda a sexta-feira</span></span></div>
+        <div class="info"><span class="info__i">{ICON["clock"]}</span><span><b>6:30 às 18:45</b><span>Segunda a sexta-feira</span></span></div>
         <a class="info" href="{ESCOLA["fone_link"]}"><span class="info__i">{ICON["tel"]}</span><span><b>{ESCOLA["fone"]}</b><span>Telefone fixo</span></span></a>
         <a class="info" href="{zap()}" target="_blank" rel="noopener"><span class="info__i">{ICON["zap"]}</span><span><b>{ESCOLA["zap"]}</b><span>WhatsApp</span></span></a>
       </div>

@@ -44,9 +44,9 @@
   const TURMAS = ['Berçário', 'Nível 1', 'Nível 2', 'Nível 3', 'Nível 4'];
   const TURMA_OPT = ['Berçário (4 meses a 2 anos)', 'Nível 1 (2 a 3 anos)', 'Nível 2 (3 a 4 anos)', 'Nível 3 (4 a 5 anos)', 'Nível 4 (5 a 6 anos)'];
   const PERIODO_OPT = { 5: 'Meio período (5 horas)', 8: 'Semi integral (8 horas)', 12: 'Integral (12 horas)' };
-  const OPEN = 390; // 06h30
-  const CLOSE = 1125; // 18h45
-  const hhmm = (m) => `${String(Math.floor(m / 60)).padStart(2, '0')}h${String(m % 60).padStart(2, '0')}`;
+  const OPEN = 390; // 6:30
+  const CLOSE = 1125; // 18:45
+  const hhmm = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
   const ageText = (m) => {
     const y = Math.floor(m / 12), r = m % 12;
     if (y === 0) return `${r} meses`;
