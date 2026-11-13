@@ -55,7 +55,7 @@
       </div>
       <aside class="info-card" id="periodos" aria-label="Horários e períodos">
         <h2>Horários e períodos</h2>
-        <ul><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Meio período manhã</b>7:00 às 12:00</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Meio período tarde</b>13:00 às 18:00</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Semi integral</b>8 horas por dia</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Integral</b>6:30 às 18:45</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><b>Horários fixos</b>Iguais para todas as crianças do período</span></li></ul>
+        <ul><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Meio período manhã</b>7:00 às 12:00</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Meio período tarde</b>13:00 às 18:00</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Semi integral</b>8 horas, horário escolhido na matrícula</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><b>Integral</b>6:30 às 18:45</span></li><li><span class="info-card__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><b>Horário fixo</b>No meio período e no integral</span></li></ul>
       </aside>
     </div>
   </div>
@@ -128,6 +128,11 @@
               <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
+          <div class="semi-pick" data-semi hidden>
+            <label class="planner__q" for="entry">Que horas ele chega?</label>
+            <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
+            <div class="range__ends"><span>6:30</span><span>10:45</span></div>
+          </div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>

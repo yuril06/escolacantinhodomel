@@ -802,3 +802,6 @@ a.info:hover { transform: translateX(6px) rotate(-1deg); }
 .info-card li:has(> a) { cursor: pointer; transition: transform 200ms var(--ease); }
 .info-card li:has(> a):hover { transform: translateX(6px); }
 .info-card li:has(> a):hover b { color: var(--orange); }
+
+.semi-pick[hidden] { display: none; }
+.semi-pick { animation: rise 400ms var(--ease) both; }

@@ -244,6 +244,11 @@ def planner():
               <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
+          <div class="semi-pick" data-semi hidden>
+            <label class="planner__q" for="entry">Que horas ele chega?</label>
+            <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
+            <div class="range__ends"><span>6:30</span><span>10:45</span></div>
+          </div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>

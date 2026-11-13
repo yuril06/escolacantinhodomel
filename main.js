@@ -59,6 +59,8 @@
     const age = $('[data-age]', root);
     const ageOut = $('[data-age-out]', root);
     const note = $('[data-note]', root);
+    const semi = $('[data-semi]', root);
+    const entry = $('[data-entry]', root);
     const fill = $('[data-fill]', root);
     const say = $('[data-say]', root);
     const times = $('[data-times]', root);
@@ -78,19 +80,23 @@
         times.innerHTML = `Das <b>${hhmm(from)}</b> às <b>${hhmm(to)}</b>.`;
         note.textContent = 'Horário fixo, igual para todas as crianças do período.';
       } else {
-        fill.style.setProperty('--from', '0%');
-        fill.style.setProperty('--len', '0%');
-        times.innerHTML = '<b>8 horas</b> por dia.';
-        note.textContent = 'O horário do semi integral é informado pela escola.';
+        const from = +entry.value, to = from + 480;
+        fill.style.setProperty('--from', `${((from - OPEN) / span) * 100}%`);
+        fill.style.setProperty('--len', `${(480 / span) * 100}%`);
+        times.innerHTML = `Das <b>${hhmm(from)}</b> às <b>${hhmm(to)}</b>.`;
+        entry.setAttribute('aria-valuetext', `chega às ${hhmm(from)}`);
+        note.textContent = 'No semi integral são 8 horas por dia, e a família escolhe o horário na matrícula.';
       }
+      semi.hidden = !!r.dataset.from;
       ageOut.textContent = ageText(months);
       age.setAttribute('aria-valuetext', ageText(months));
       cells.forEach((c, i) => { c.classList.toggle('is-on', i === t); c.setAttribute('aria-pressed', String(i === t)); });
       say.innerHTML = `Turma <b>${TURMAS[t]}</b>, no ${r.dataset.label}.`;
       const q = new URLSearchParams({ turma: String(t), periodo: r.value, idade: ageText(months) });
+      if (!r.dataset.from) q.set('horario', `${hhmm(+entry.value)} às ${hhmm(+entry.value + 480)}`);
       go.href = `contato.html?${q}#agendar`;
     };
-    [age, ...radios].forEach((el) => el.addEventListener('input', update));
+    [age, entry, ...radios].forEach((el) => el.addEventListener('input', update));
     cells.forEach((c) => c.addEventListener('click', () => { age.value = c.dataset.months; update(); }));
     update();
   });
@@ -178,6 +184,7 @@
       else if (params.get('idade')) lines.push(`*Idade:* ${params.get('idade')}`);
       if (v('turma')) lines.push(`*Turma de interesse:* ${v('turma')}`);
       if (v('periodo')) lines.push(`*Período:* ${v('periodo')}`);
+      if (params.get('horario') && v('periodo').startsWith('Semi')) lines.push(`*Horário pretendido:* ${params.get('horario')}`);
       if (v('chegada')) lines.push(`*Chegada pretendida:* ${v('chegada')}`);
       if (v('dia')) lines.push(`*Melhor horário para a visita:* ${v('dia')}`);
       if (v('telefone')) lines.push(`*Telefone:* ${v('telefone')}`);

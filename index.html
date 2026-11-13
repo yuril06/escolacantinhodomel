@@ -129,7 +129,7 @@
     <p class="swipe-hint">Arraste para o lado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
     <div class="periods periods--compact" style="margin-top:40px" data-stagger>
       <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Manhã: 7:00 às 12:00. Tarde: 13:00 às 18:00.</p></div>
-      <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
+      <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>8 horas, no horário escolhido na matrícula.</p></div>
       <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Das 6:30 às 18:45.</p></div>
     </div>
   </div>
@@ -155,6 +155,11 @@
               <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
+          <div class="semi-pick" data-semi hidden>
+            <label class="planner__q" for="entry">Que horas ele chega?</label>
+            <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
+            <div class="range__ends"><span>6:30</span><span>10:45</span></div>
+          </div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>
@@ -229,7 +234,7 @@
     </div>
     <div class="faq" data-stagger>
       <details class="qa" name="faq" open><summary>A partir de que idade vocês atendem?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>De 4 meses a 6 anos. O berçário recebe bebês de 4 meses a 2 anos, e a educação infantil vai do Nível 1 (2 a 3 anos) ao Nível 4 (5 a 6 anos).</p></div></details>
-      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Meio período da manhã, das 7:00 às 12:00, ou da tarde, das 13:00 às 18:00. Semi integral, com 8 horas por dia. E integral, das 6:30 às 18:45. Os horários são fixos, iguais para todas as crianças do período.</p></div></details>
+      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Meio período da manhã, das 7:00 às 12:00, ou da tarde, das 13:00 às 18:00. Semi integral, com 8 horas por dia, no horário que a família escolhe na matrícula. E integral, das 6:30 às 18:45. O meio período e o integral têm horário fixo, igual para todas as crianças.</p></div></details>
       <details class="qa" name="faq"><summary>Como é a alimentação?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Tudo é feito na cozinha própria da escola, com cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança.</p></div></details>
       <details class="qa" name="faq"><summary>Qual é o material pedagógico?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>A educação infantil usa o Sistema de Ensino Positivo. O berçário tem planejamento próprio, feito para cada faixa de idade.</p></div></details>
       <details class="qa" name="faq"><summary>Como acompanho o dia do meu filho?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Pelo Kid Note, a agenda digital escolar. E a equipe está sempre disponível pelo telefone e pelo WhatsApp.</p></div></details>
