@@ -128,9 +128,9 @@
     </ul>
     <p class="swipe-hint">Arraste para o lado <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
     <div class="periods periods--compact" style="margin-top:40px" data-stagger>
-      <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Cinco horas por dia.</p></div>
+      <div class="period"><div class="period__h">5<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i></div><h3>Meio período</h3><p>Manhã: 7:00 às 12:00. Tarde: 13:00 às 18:00.</p></div>
       <div class="period"><div class="period__h">8<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Semi integral</h3><p>Oito horas por dia.</p></div>
-      <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Doze horas por dia.</p></div>
+      <div class="period"><div class="period__h">12<small>h</small></div><div class="period__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Integral</h3><p>Das 6:30 às 18:45.</p></div>
     </div>
   </div>
 </section>
@@ -139,7 +139,7 @@
 <div style="background:#ffffff" aria-hidden="true"><svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 36C240 0 480 70 720 36S1200 2 1440 36V70H0Z" fill="#e3f5ff"/></svg></div>
 <section class="section bg-sky" id="monte-o-dia" aria-labelledby="planner-title">
   <div class="wrap">
-    <div class="head" data-reveal><span class="tag tag--white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.4 15a1 1 0 0 0 .6-.9V10a1 1 0 0 0-1-1h-3.1a2 2 0 1 0-3.8 0H9a1 1 0 0 0-1 1v3.1a2 2 0 1 0 0 3.8V20a1 1 0 0 0 1 1h4.1a2 2 0 1 1 3.8 0H19a1 1 0 0 0 1-1v-4.1a2 2 0 0 1-.6-.9Z"/></svg> Experimente</span><h2 id="planner-title">Monte o dia do seu filho</h2><svg class="squiggle" viewBox="0 0 130 16" aria-hidden="true"><path d="M3 9c10-8 20 8 31 0s20-8 31 0 20 8 31 0 20-8 31 0" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg><p>Arraste até a idade, escolha o período e veja a turma e o horário de chegada e saída.</p></div>
+    <div class="head" data-reveal><span class="tag tag--white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.4 15a1 1 0 0 0 .6-.9V10a1 1 0 0 0-1-1h-3.1a2 2 0 1 0-3.8 0H9a1 1 0 0 0-1 1v3.1a2 2 0 1 0 0 3.8V20a1 1 0 0 0 1 1h4.1a2 2 0 1 1 3.8 0H19a1 1 0 0 0 1-1v-4.1a2 2 0 0 1-.6-.9Z"/></svg> Experimente</span><h2 id="planner-title">Monte o dia do seu filho</h2><svg class="squiggle" viewBox="0 0 130 16" aria-hidden="true"><path d="M3 9c10-8 20 8 31 0s20-8 31 0 20 8 31 0 20-8 31 0" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg><p>Arraste até a idade, escolha o período e veja a turma e o horário do seu filho.</p></div>
     <div class="planner" data-planner data-reveal>
       <div class="planner__grid">
         <div>
@@ -149,24 +149,22 @@
           <div class="range__ends"><span>4 meses</span><span>6 anos</span></div>
           <fieldset><legend class="planner__q">Qual período?</legend>
             <div class="opts">
-              <label class="opt"><input type="radio" name="periodo" value="5" data-label="Meio período"><span>Meio período<small>5 horas</small></span></label>
-              <label class="opt"><input type="radio" name="periodo" value="8" data-label="Semi integral" checked><span>Semi integral<small>8 horas</small></span></label>
-              <label class="opt"><input type="radio" name="periodo" value="12" data-label="Integral"><span>Integral<small>12 horas</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="manha" data-label="meio período da manhã" data-from="420" data-to="720" checked><span>Meio período manhã<small>7:00 às 12:00</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="tarde" data-label="meio período da tarde" data-from="780" data-to="1080"><span>Meio período tarde<small>13:00 às 18:00</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="semi" data-label="semi integral"><span>Semi integral<small>8 horas</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
-          <label class="planner__q" for="entry">Que horas ele chega?</label>
-          <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
-          <div class="range__ends"><span>6:30</span><span>mais tarde</span></div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>
           <div class="bubbles" role="group" aria-label="Escolher turma"><button type="button" class="bubble" data-turma="0" data-months="12" aria-pressed="false" aria-label="Berçário, 4 meses a 2 anos"><b>Berçário</b><span>4m a 2 anos</span></button><button type="button" class="bubble" data-turma="1" data-months="30" aria-pressed="false" aria-label="Nível 1, 2 a 3 anos"><b>Nível 1</b><span>2 a 3 anos</span></button><button type="button" class="bubble" data-turma="2" data-months="42" aria-pressed="false" aria-label="Nível 2, 3 a 4 anos"><b>Nível 2</b><span>3 a 4 anos</span></button><button type="button" class="bubble" data-turma="3" data-months="54" aria-pressed="false" aria-label="Nível 3, 4 a 5 anos"><b>Nível 3</b><span>4 a 5 anos</span></button><button type="button" class="bubble" data-turma="4" data-months="66" aria-pressed="false" aria-label="Nível 4, 5 a 6 anos"><b>Nível 4</b><span>5 a 6 anos</span></button></div>
           <div class="planner__out">
-            <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no semi integral.</p>
+            <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no meio período da manhã.</p>
             <div class="day__bar" style="margin-top:16px"><div class="day__fill" data-fill></div></div>
             <div class="day__ticks"><span>6:30</span><span>9:00</span><span>12:00</span><span>15:00</span><span>18:45</span></div>
-            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Chega às <b>7:00</b> e sai às <b>15:00</b>.</p>
-            <p class="day__note">Os horários de cada período são combinados com a escola na matrícula.</p>
+            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Das <b>7:00</b> às <b>12:00</b>.</p>
+            <p class="day__note" data-note>Horário fixo, igual para todas as crianças do período.</p>
           </div>
           <div class="planner__cta">
             <a class="btn btn--zap" href="contato.html#agendar" data-planner-go><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Agendar visita com essas escolhas</a>
@@ -231,7 +229,7 @@
     </div>
     <div class="faq" data-stagger>
       <details class="qa" name="faq" open><summary>A partir de que idade vocês atendem?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>De 4 meses a 6 anos. O berçário recebe bebês de 4 meses a 2 anos, e a educação infantil vai do Nível 1 (2 a 3 anos) ao Nível 4 (5 a 6 anos).</p></div></details>
-      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Meio período (5 horas), semi integral (8 horas) e integral (12 horas). A escola funciona de segunda a sexta, das 6:30 às 18:45, e o horário de cada criança é combinado na matrícula.</p></div></details>
+      <details class="qa" name="faq"><summary>Quais são os períodos e horários?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Meio período da manhã, das 7:00 às 12:00, ou da tarde, das 13:00 às 18:00. Semi integral, com 8 horas por dia. E integral, das 6:30 às 18:45. Os horários são fixos, iguais para todas as crianças do período.</p></div></details>
       <details class="qa" name="faq"><summary>Como é a alimentação?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Tudo é feito na cozinha própria da escola, com cardápio da nutricionista Aline Fregozzi, que respeita a orientação do pediatra de cada criança.</p></div></details>
       <details class="qa" name="faq"><summary>Qual é o material pedagógico?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>A educação infantil usa o Sistema de Ensino Positivo. O berçário tem planejamento próprio, feito para cada faixa de idade.</p></div></details>
       <details class="qa" name="faq"><summary>Como acompanho o dia do meu filho?<span class="qa__plus" aria-hidden="true"></span></summary><div class="qa__a"><p>Pelo Kid Note, a agenda digital escolar. E a equipe está sempre disponível pelo telefone e pelo WhatsApp.</p></div></details>
@@ -261,13 +259,12 @@
       <p class="hint" data-age-hint aria-live="polite">Pela data de nascimento, a gente sugere a turma.</p>
       <div class="row2">
         <div class="field"><label for="c-turma">Turma de interesse</label><select id="c-turma" name="turma" required><option value="">Escolha a turma</option><option>Berçário (4 meses a 2 anos)</option><option>Nível 1 (2 a 3 anos)</option><option>Nível 2 (3 a 4 anos)</option><option>Nível 3 (4 a 5 anos)</option><option>Nível 4 (5 a 6 anos)</option></select></div>
-        <div class="field"><label for="c-periodo">Período</label><select id="c-periodo" name="periodo"><option value="">Escolha o período</option><option>Meio período (5 horas)</option><option>Semi integral (8 horas)</option><option>Integral (12 horas)</option><option>Ainda não sei</option></select></div>
+        <div class="field"><label for="c-periodo">Período</label><select id="c-periodo" name="periodo"><option value="">Escolha o período</option><option>Meio período manhã (7:00 às 12:00)</option><option>Meio período tarde (13:00 às 18:00)</option><option>Semi integral (8 horas)</option><option>Integral (6:30 às 18:45)</option><option>Ainda não sei</option></select></div>
       </div>
       <details class="more" data-more>
         <summary>Adicionar mais detalhes <small>(opcional)</small></summary>
         <div class="more__body">
           <div class="row2">
-            <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 7:30"></div>
             <div class="field"><label for="c-dia">Melhor horário da visita</label><select id="c-dia" name="dia"><option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option></select></div>
           </div>
           <div class="field"><label for="c-msg">Quer contar mais alguma coisa?</label><textarea id="c-msg" name="mensagem" placeholder="Dúvidas, cuidados especiais, quando pretende começar..."></textarea></div>

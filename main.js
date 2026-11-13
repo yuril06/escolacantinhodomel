@@ -43,7 +43,7 @@
   /* ---------- monte o dia do seu filho ---------- */
   const TURMAS = ['Berçário', 'Nível 1', 'Nível 2', 'Nível 3', 'Nível 4'];
   const TURMA_OPT = ['Berçário (4 meses a 2 anos)', 'Nível 1 (2 a 3 anos)', 'Nível 2 (3 a 4 anos)', 'Nível 3 (4 a 5 anos)', 'Nível 4 (5 a 6 anos)'];
-  const PERIODO_OPT = { 5: 'Meio período (5 horas)', 8: 'Semi integral (8 horas)', 12: 'Integral (12 horas)' };
+  const PERIODO_OPT = { manha: 'Meio período manhã (7:00 às 12:00)', tarde: 'Meio período tarde (13:00 às 18:00)', semi: 'Semi integral (8 horas)', integral: 'Integral (6:30 às 18:45)' };
   const OPEN = 390; // 6:30
   const CLOSE = 1125; // 18:45
   const hhmm = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
@@ -58,7 +58,7 @@
   $$('[data-planner]').forEach((root) => {
     const age = $('[data-age]', root);
     const ageOut = $('[data-age-out]', root);
-    const entry = $('[data-entry]', root);
+    const note = $('[data-note]', root);
     const fill = $('[data-fill]', root);
     const say = $('[data-say]', root);
     const times = $('[data-times]', root);
@@ -69,28 +69,28 @@
     const update = () => {
       const months = +age.value;
       const t = turmaOf(months);
-      const r = radios.find((x) => x.checked) || radios[1];
-      const hours = +r.value;
-      const len = hours * 60;
-      const maxEntry = CLOSE - len;
-      entry.max = String(Math.max(OPEN, maxEntry));
-      if (+entry.value > maxEntry) entry.value = String(maxEntry);
-      entry.disabled = maxEntry <= OPEN;
-      const from = +entry.value;
-      const to = from + len;
+      const r = radios.find((x) => x.checked) || radios[0];
       const span = CLOSE - OPEN;
-      fill.style.setProperty('--from', `${((from - OPEN) / span) * 100}%`);
-      fill.style.setProperty('--len', `${(len / span) * 100}%`);
+      if (r.dataset.from) {
+        const from = +r.dataset.from, to = +r.dataset.to;
+        fill.style.setProperty('--from', `${((from - OPEN) / span) * 100}%`);
+        fill.style.setProperty('--len', `${((to - from) / span) * 100}%`);
+        times.innerHTML = `Das <b>${hhmm(from)}</b> às <b>${hhmm(to)}</b>.`;
+        note.textContent = 'Horário fixo, igual para todas as crianças do período.';
+      } else {
+        fill.style.setProperty('--from', '0%');
+        fill.style.setProperty('--len', '0%');
+        times.innerHTML = '<b>8 horas</b> por dia.';
+        note.textContent = 'O horário do semi integral é informado pela escola.';
+      }
       ageOut.textContent = ageText(months);
       age.setAttribute('aria-valuetext', ageText(months));
-      entry.setAttribute('aria-valuetext', `chega às ${hhmm(from)}`);
       cells.forEach((c, i) => { c.classList.toggle('is-on', i === t); c.setAttribute('aria-pressed', String(i === t)); });
-      say.innerHTML = `Turma <b>${TURMAS[t]}</b>, no ${r.dataset.label.toLowerCase()}.`;
-      times.innerHTML = `Chega às <b>${hhmm(from)}</b> e sai às <b>${hhmm(to)}</b>.`;
-      const q = new URLSearchParams({ turma: String(t), periodo: String(hours), idade: ageText(months), chegada: hhmm(from) });
+      say.innerHTML = `Turma <b>${TURMAS[t]}</b>, no ${r.dataset.label}.`;
+      const q = new URLSearchParams({ turma: String(t), periodo: r.value, idade: ageText(months) });
       go.href = `contato.html?${q}#agendar`;
     };
-    [age, entry, ...radios].forEach((el) => el.addEventListener('input', update));
+    [age, ...radios].forEach((el) => el.addEventListener('input', update));
     cells.forEach((c) => c.addEventListener('click', () => { age.value = c.dataset.months; update(); }));
     update();
   });

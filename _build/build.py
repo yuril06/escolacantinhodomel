@@ -228,7 +228,7 @@ def planner():
     return f'''{wave("white", "sky")}
 <section class="section bg-sky" id="monte-o-dia" aria-labelledby="planner-title">
   <div class="wrap">
-    <div class="head" data-reveal><span class="tag tag--white">{ICON["puzzle"]} Experimente</span><h2 id="planner-title">Monte o dia do seu filho</h2>{SQUIGGLE}<p>Arraste até a idade, escolha o período e veja a turma e o horário de chegada e saída.</p></div>
+    <div class="head" data-reveal><span class="tag tag--white">{ICON["puzzle"]} Experimente</span><h2 id="planner-title">Monte o dia do seu filho</h2>{SQUIGGLE}<p>Arraste até a idade, escolha o período e veja a turma e o horário do seu filho.</p></div>
     <div class="planner" data-planner data-reveal>
       <div class="planner__grid">
         <div>
@@ -238,24 +238,22 @@ def planner():
           <div class="range__ends"><span>4 meses</span><span>6 anos</span></div>
           <fieldset><legend class="planner__q">Qual período?</legend>
             <div class="opts">
-              <label class="opt"><input type="radio" name="periodo" value="5" data-label="Meio período"><span>Meio período<small>5 horas</small></span></label>
-              <label class="opt"><input type="radio" name="periodo" value="8" data-label="Semi integral" checked><span>Semi integral<small>8 horas</small></span></label>
-              <label class="opt"><input type="radio" name="periodo" value="12" data-label="Integral"><span>Integral<small>12 horas</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="manha" data-label="meio período da manhã" data-from="420" data-to="720" checked><span>Meio período manhã<small>7:00 às 12:00</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="tarde" data-label="meio período da tarde" data-from="780" data-to="1080"><span>Meio período tarde<small>13:00 às 18:00</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="semi" data-label="semi integral"><span>Semi integral<small>8 horas</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
-          <label class="planner__q" for="entry">Que horas ele chega?</label>
-          <input class="range" type="range" id="entry" min="390" max="645" step="15" value="420" data-entry>
-          <div class="range__ends"><span>6:30</span><span>mais tarde</span></div>
         </div>
         <div>
           <p class="bubbles__label">Ou toque na turma:</p>
           <div class="bubbles" role="group" aria-label="Escolher turma">{bubbles}</div>
           <div class="planner__out">
-            <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no semi integral.</p>
+            <p class="say" aria-live="polite" data-say>Turma <b>Berçário</b>, no meio período da manhã.</p>
             <div class="day__bar" style="margin-top:16px"><div class="day__fill" data-fill></div></div>
             <div class="day__ticks"><span>6:30</span><span>9:00</span><span>12:00</span><span>15:00</span><span>18:45</span></div>
-            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Chega às <b>7:00</b> e sai às <b>15:00</b>.</p>
-            <p class="day__note">Os horários de cada período são combinados com a escola na matrícula.</p>
+            <p class="say" style="margin-top:12px;font-size:1.15rem" data-times>Das <b>7:00</b> às <b>12:00</b>.</p>
+            <p class="day__note" data-note>Horário fixo, igual para todas as crianças do período.</p>
           </div>
           <div class="planner__cta">
             <a class="btn btn--zap" href="contato.html#agendar" data-planner-go>{ICON["cal"]} Agendar visita com essas escolhas</a>
@@ -269,7 +267,7 @@ def planner():
 
 def visit(above="white"):
     opts_t = '<option value="">Escolha a turma</option>' + "".join(f'<option>{n} ({a})</option>' for n, a in TURMAS)
-    opts_p = '<option value="">Escolha o período</option><option>Meio período (5 horas)</option><option>Semi integral (8 horas)</option><option>Integral (12 horas)</option><option>Ainda não sei</option>'
+    opts_p = '<option value="">Escolha o período</option><option>Meio período manhã (7:00 às 12:00)</option><option>Meio período tarde (13:00 às 18:00)</option><option>Semi integral (8 horas)</option><option>Integral (6:30 às 18:45)</option><option>Ainda não sei</option>'
     return f'''{wave(above, "green")}
 <section class="section visit" id="agendar" aria-labelledby="visit-title">
   <div class="wrap visit__grid">
@@ -297,7 +295,6 @@ def visit(above="white"):
         <summary>Adicionar mais detalhes <small>(opcional)</small></summary>
         <div class="more__body">
           <div class="row2">
-            <div class="field"><label for="c-chegada">Horário de chegada</label><input id="c-chegada" name="chegada" placeholder="Ex.: 7:30"></div>
             <div class="field"><label for="c-dia">Melhor horário da visita</label><select id="c-dia" name="dia"><option value="">Tanto faz</option><option>De manhã</option><option>À tarde</option></select></div>
           </div>
           <div class="field"><label for="c-msg">Quer contar mais alguma coisa?</label><textarea id="c-msg" name="mensagem" placeholder="Dúvidas, cuidados especiais, quando pretende começar..."></textarea></div>
