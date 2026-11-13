@@ -240,7 +240,7 @@ def planner():
             <div class="opts">
               <label class="opt"><input type="radio" name="periodo" value="manha" data-label="meio período da manhã" data-from="420" data-to="720" checked><span>Meio período manhã<small>7:00 às 12:00</small></span></label>
               <label class="opt"><input type="radio" name="periodo" value="tarde" data-label="meio período da tarde" data-from="780" data-to="1080"><span>Meio período tarde<small>13:00 às 18:00</small></span></label>
-              <label class="opt"><input type="radio" name="periodo" value="semi" data-label="semi integral"><span>Semi integral<small>8 horas</small></span></label>
+              <label class="opt"><input type="radio" name="periodo" value="semi" data-label="semi integral"><span>Semi integral<small>8 horas · horário flexível</small></span></label>
               <label class="opt"><input type="radio" name="periodo" value="integral" data-label="integral" data-from="390" data-to="1125"><span>Integral<small>6:30 às 18:45</small></span></label>
             </div>
           </fieldset>
